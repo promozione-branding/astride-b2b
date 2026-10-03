@@ -37,7 +37,7 @@ const processItems = [
         description:
             "From seat depth to back support, every element is carefully considered to provide a comfortable and balanced sitting experience.",
         type: "chair",
-        chairImage: "http://localhost:3001/Png1/chair10_FitWell.webp",
+        chairImage: "/chair10_FitWell.webp",
     },
 
     {

@@ -1,5 +1,6 @@
 import AboutUsSection from "@/components/home/AboutUsSection";
 import CategoryShowcase from "@/components/home/Category";
+import CertificatesSection from "@/components/home/CertificatesSection";
 import ChairHero from "@/components/home/ChairHero";
 import ChairProcessSection from "@/components/home/ChairProcessSection";
 import ContactSection from "@/components/home/ContactSection";
@@ -20,6 +21,7 @@ export default function Home() {
       <WhyChooseUs />
       <ProductShowcase />
       <StatsSection />
+      <CertificatesSection />
       <ChairProcessSection />
       <ReviewSection />
       <FAQSection />

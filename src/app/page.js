@@ -1,5 +1,7 @@
+import FurnitureRules from "@/components/home/About";
 import AboutUsSection from "@/components/home/AboutUsSection";
 import CategoryShowcase from "@/components/home/Category";
+import CategorySlider from "@/components/home/CategorySlider";
 import CertificatesSection from "@/components/home/CertificatesSection";
 import ChairHero from "@/components/home/ChairHero";
 import ChairProcessSection from "@/components/home/ChairProcessSection";
@@ -15,13 +17,15 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <CategorySlider />
+      <FurnitureRules />
       <CategoryShowcase />
       <AboutUsSection />
       <ChairHero />
       <WhyChooseUs />
       <ProductShowcase />
       <StatsSection />
-      <CertificatesSection />
+      {/* <CertificatesSection /> */}
       <ChairProcessSection />
       <ReviewSection />
       <FAQSection />

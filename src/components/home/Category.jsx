@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectCreative } from "swiper/modules";
 import { ArrowRight } from "lucide-react";
 import "swiper/css";
+import Link from "next/link";
 
 const categories = [
     {
@@ -152,17 +153,16 @@ export default function CategoryShowcase() {
 
     return (
         <section className="w-full overflow-hidden bg-white py-10 md:py-12 lg:py-15">
-            <div className="mx-auto grid min-h-[560px] w-[92%] max-w-[1400px] grid-cols-1 items-center lg:grid-cols-[44%_56%]">
+            <div className="mx-auto grid min-h-[450px] w-[92%] max-w-7xl grid-cols-1 items-center lg:grid-cols-[44%_56%]">
 
                 {/* ================= LEFT CONTENT ================= */}
                 <div className="relative z-10 px-0 lg:pr-12">
-
                     <div
                         key={activeCategory.id}
                         className="animate-[categoryText_.7s_ease]"
                     >
                         {/* Heading */}
-                        <h2 className="max-w-[560px] text-[42px] font-medium leading-[1.04] tracking-[-2px] text-[#111] sm:text-[50px] md:text-[56px] lg:text-[60px]">
+                        <h2 className="max-w-[700px] text-[42px] font-medium leading-[1.04] tracking-[-2px] text-[#111] sm:text-[50px] md:text-[56px] lg:text-[80px]">
 
                             <span className="font-serif font-normal italic">
                                 {activeCategory.name}
@@ -181,13 +181,13 @@ export default function CategoryShowcase() {
                         </p>
 
                         {/* Buttons */}
-                        <div className="mt-5 flex items-center gap-2">
-                            <button
+                        <div className="mt-8 flex items-center gap-4">
+                            <Link href={"/products"}
                                 className="
                                     rounded-full
                                     border border-[#222]
                                     bg-[#222]
-                                    px-4 py-3 flex items-center gap-3
+                                    px-6 py-3 flex items-center gap-3
                                     text-sm
                                     text-white
                                     transition-all
@@ -196,6 +196,10 @@ export default function CategoryShowcase() {
                                 "
                             >
                                 Explore <ArrowRight size={15} />
+                            </Link>
+
+                            <button className="bg-white flex items-center gap-3 px-6 py-3 rounded-full border transition-all duration-300 border-black text-sm hover:bg-black hover:text-white">
+                                Inquiry Now  <ArrowRight size={15} />
                             </button>
                         </div>
                     </div>
@@ -262,7 +266,7 @@ export default function CategoryShowcase() {
                         watchSlidesProgress={true}
 
                         autoplay={{
-                            delay: 4500,
+                            delay: 6000,
                             disableOnInteraction: false,
                             pauseOnMouseEnter: true,
                         }}

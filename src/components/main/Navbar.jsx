@@ -13,12 +13,14 @@ import {
     FaLinkedinIn,
     FaYoutube,
 } from "react-icons/fa";
-
+import { GiOfficeChair } from "react-icons/gi";
+import { PiOfficeChairFill, PiStoolBold } from "react-icons/pi";
 import {
     FiArrowUpRight,
     FiMenu,
     FiX,
 } from "react-icons/fi";
+import { CircleUserRound, Home, Info, Newspaper, Search } from "lucide-react";
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
@@ -62,22 +64,47 @@ export default function Navbar() {
     const navItems = [
         {
             name: "Home",
+            icon: Home,
             href: "/",
         },
         {
-            name: "About",
-            href: "/about-us",
-        },
-        {
-            name: "Products",
+            name: "Staff Chair",
+            icon: GiOfficeChair,
             href: "/products",
         },
         {
+            name: "Office Chair",
+            icon: PiOfficeChairFill,
+            href: "/products",
+        },
+        {
+            name: "Gaming Chair",
+            icon: GiOfficeChair,
+            href: "/products",
+        },
+        {
+            name: "Study Chair",
+            icon: PiOfficeChairFill,
+            href: "/products",
+        },
+        {
+            name: "Bar Stool",
+            icon: PiStoolBold,
+            href: "/products",
+        },
+        {
+            name: "About",
+            icon: Info,
+            href: "/about-us",
+        },
+        {
             name: "Our Articles",
+            icon: Newspaper,
             href: "/our-articles",
         },
         {
             name: "Contact",
+            icon: CircleUserRound,
             href: "/contact-us",
         },
     ];
@@ -98,9 +125,9 @@ export default function Navbar() {
                 {/* ================================================= */}
 
                 <div
-                    className={`relative z-30 border-b border-black/10 bg-white transition-shadow duration-500 ${scrolled
-                            ? "shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
-                            : "shadow-none"
+                    className={`relative overflow-hidden z-30 border-b border-black/10 bg-white transition-shadow duration-500 ${scrolled
+                        ? "shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
+                        : "shadow-none"
                         }`}
                 >
                     <div className="relative mx-auto flex h-[72px] max-w-[1500px] items-center justify-between px-6 lg:px-10">
@@ -115,12 +142,12 @@ export default function Navbar() {
                                 <FaPhoneAlt size={15} />
                             </a>
 
-                            <a
+                            {/* <a
                                 href="mailto:info@example.com"
                                 className="rounded-full border bg-white p-2.5 transition-all duration-300 hover:bg-black hover:text-white"
                             >
                                 <FaEnvelope size={14} />
-                            </a>
+                            </a> */}
 
                             <a
                                 href="#"
@@ -159,7 +186,7 @@ export default function Navbar() {
 
                         <Link
                             href="/"
-                            className="absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2"
+                            className="absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2 bg-white overflow-hidden"
                         >
                             <motion.div
                                 whileHover={{
@@ -168,15 +195,15 @@ export default function Navbar() {
                                 transition={{
                                     duration: 0.3,
                                 }}
-                                className="relative h-[80px] w-48"
+                                className="relative h-[80px] w-48 bg-white"
                             >
                                 <Image
-                                    src="/logo.webp"
+                                    src="/logo.gif"
                                     alt="Logo"
                                     fill
                                     priority
                                     sizes="170px"
-                                    className="object-contain"
+                                    className="object-contain bg-white"
                                 />
                             </motion.div>
                         </Link>
@@ -203,10 +230,6 @@ export default function Navbar() {
                     </div>
                 </div>
 
-                {/* ================================================= */}
-                {/* SECOND NAVIGATION BAR - HIDE ON SCROLL DOWN */}
-                {/* ================================================= */}
-
                 <motion.div
                     initial={false}
                     animate={{
@@ -219,37 +242,143 @@ export default function Navbar() {
                     }}
                     className="absolute left-0 top-[72px] z-20 hidden w-full border-b border-black/10 bg-white lg:block"
                 >
-                    <nav className="mx-auto flex h-[62px] max-w-[1500px] items-center justify-center px-6">
-                        <div className="flex items-center gap-12">
-                            {navItems.map((item, index) => (
-                                <motion.div
-                                    key={item.name}
-                                    initial={{
-                                        opacity: 0,
-                                        y: -8,
-                                    }}
-                                    animate={{
-                                        opacity: 1,
-                                        y: 0,
-                                    }}
-                                    transition={{
-                                        delay: 0.15 + index * 0.07,
-                                        duration: 0.4,
-                                    }}
-                                >
-                                    <Link
-                                        href={item.href}
-                                        className="group relative block py-5 text-[14px] font-medium tracking-wide"
-                                    >
-                                        <span className="transition-opacity duration-300 group-hover:opacity-60">
-                                            {item.name}
-                                        </span>
+                    <nav className="relative mx-auto flex h-[62px] max-w-[1500px] items-center justify-between px-6 lg:px-10">
 
-                                        <span className="absolute bottom-2 left-1/2 h-[2px] w-0 -translate-x-1/2 bg-black transition-all duration-300 group-hover:w-full" />
-                                    </Link>
-                                </motion.div>
-                            ))}
+                        {/* NAV TABS */}
+                        <div className="flex items-center gap-4">
+                            {navItems.map((item, index) => {
+                                const Icon = item.icon;
+
+                                return (
+                                    <motion.div
+                                        key={item.name}
+                                        initial={{
+                                            opacity: 0,
+                                            y: -8,
+                                        }}
+                                        animate={{
+                                            opacity: 1,
+                                            y: 0,
+                                        }}
+                                        transition={{
+                                            delay: 0.15 + index * 0.07,
+                                            duration: 0.4,
+                                        }}
+                                    >
+                                        <Link
+                                            href={item.href}
+                                            className="
+                                group
+                                relative
+                                flex
+                                items-center
+                                gap-2
+                                whitespace-nowrap
+                                rounded-md
+                                px-3
+                                py-3
+                                text-[13px]
+                                font-medium
+                                tracking-wide
+                                transition-all
+                                duration-300
+                                hover:bg-[#f8f7f3]
+                                hover:text-black
+                            "
+                                        >
+                                            {/* ICON */}
+                                            <Icon
+                                                size={16}
+                                                strokeWidth={1.8}
+                                                className="shrink-0 transition-transform duration-300 group-hover:scale-110"
+                                            />
+
+                                            {/* NAME */}
+                                            <span>
+                                                {item.name}
+                                            </span>
+
+                                            {/* UNDERLINE */}
+                                            <span
+                                                className="
+                                    absolute
+                                    bottom-1
+                                    left-1/2
+                                    h-[2px]
+                                    w-0
+                                    -translate-x-1/2
+                                    bg-black
+                                    transition-all
+                                    duration-300
+                                    group-hover:w-[calc(100%-24px)]
+                                "
+                                            />
+                                        </Link>
+                                    </motion.div>
+                                );
+                            })}
                         </div>
+
+                        {/* SEARCH */}
+                        {/* <div className="ml-6 shrink-0">
+                            <div
+                                className="
+                    group
+                    flex
+                    h-10
+                    w-[190px]
+                    items-center
+                    overflow-hidden
+                    rounded-md
+                    border
+                    border-black/15
+                    bg-white
+                    transition-all
+                    duration-300
+                    focus-within:border-black
+                "
+                            >
+                                <input
+                                    type="text"
+                                    placeholder="Search..."
+                                    className="
+                        h-full
+                        w-full
+                        bg-transparent
+                        px-3
+                        text-[13px]
+                        text-black
+                        outline-none
+                        placeholder:text-black/40
+                    "
+                                />
+
+                                <button
+                                    type="button"
+                                    className="
+                        flex
+                        h-full
+                        w-10
+                        shrink-0
+                        items-center
+                        justify-center
+                        border-l
+                        border-black/10
+                        text-black
+                        transition-all
+                        duration-300
+                        hover:bg-black
+                        hover:text-white
+                    "
+                                    aria-label="Search"
+                                >
+                                    <Search
+                                        size={17}
+                                        strokeWidth={1.8}
+                                    />
+                                </button>
+                            </div>
+                        </div> */}
                     </nav>
                 </motion.div>
 

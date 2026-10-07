@@ -129,7 +129,7 @@ export default function ProductShowcase() {
     };
 
     return (
-        <section className="relative w-full overflow-hidden bg-[#f2f3f3] text-[#111] border border-black/6">
+        <section className="relative w-full overflow-hidden bg-[#fff] text-[#111] border border-black/6">
 
             <div className="mx-auto flex max-w-[1600px] flex-col px-5 pt-6 sm:px-10 lg:px-16">
 

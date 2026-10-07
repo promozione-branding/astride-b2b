@@ -18,7 +18,7 @@ export default function AboutUsSection() {
     const badgesRef = useRef(null);
 
     const fullText =
-        "We design and present a premium collection of chairs with the best comfort, high quality, and contemporary design.";
+        "We create premium ergonomic chairs designed for comfort, elegance, and productivity. From work-from-home setups to executive seating, every chair is crafted with modern aesthetics and serious support.";
 
     const [typedText, setTypedText] = useState("");
 
@@ -195,7 +195,7 @@ export default function AboutUsSection() {
     return (
         <section
             ref={sectionRef}
-            className="relative min-h-screen w-full overflow-hidden bg-[#f1f3f2] py-12 lg:min-h-[900px] lg:pb-16 pt-0"
+            className="relative min-h-screen w-full overflow-hidden bg-[#f8f7f3] py-6 lg:min-h-[600px] lg:pb-6 pt-0"
         >
             {/* Background subtle gradient */}
             <div className="pointer-events-none absolute inset-0">
@@ -203,14 +203,14 @@ export default function AboutUsSection() {
                 <div className="absolute bottom-0 right-0 h-[350px] w-[350px] rounded-full bg-[#dfe4df]/50 blur-[120px]" />
             </div>
 
-            <div className="relative mx-auto h-full min-h-[760px] w-full max-w-[1600px] px-5 sm:px-8 lg:px-10">
+            <div className="relative mx-auto h-full min-h-[600px] w-full max-w-[1600px] px-5 sm:px-8 lg:px-10">
 
                 {/* =========================================================
                     TOP LEFT PARAGRAPH
                 ========================================================== */}
                 <div
                     ref={paragraphRef}
-                    className="absolute left-5 top-8 z-30 w-[270px] sm:left-10 sm:w-[310px] lg:left-12 lg:top-40 lg:w-[350px]"
+                    className="absolute left-5 top-8 z-30 w-[270px] sm:left-10 sm:w-[310px] lg:left-15 lg:top-20 lg:w-[350px]"
                 >
                     <p className="font-sans text-[15px] font-medium leading-[1.65] tracking-wide text-[#142322] sm:text-[16px] lg:text-[17px]">
                         {typedText}
@@ -223,20 +223,19 @@ export default function AboutUsSection() {
                 ========================================================== */}
                 <div
                     ref={valuesRef}
-                    className="absolute right-4 top-12 z-30 sm:right-8 lg:right-20 lg:top-45"
+                    className="absolute right-4 top-12 z-30 sm:right-8 lg:right-[15%] lg:top-36"
                 >
                     <h2
                         className="
-                        font-sans
-                        text-[62px]
+                        text-[70px]
                         font-[900]
                         leading-[0.78]
                         tracking-[-0.065em]
                         text-[#102321]
-                        sm:text-[85px]
-                        md:text-[105px]
-                        lg:text-[135px]
-                        xl:text-[155px]
+                        sm:text-[70px]
+                        md:text-[80px]
+                        lg:text-[90px]
+                        xl:text-[110px]
                     "
                     >
                         VALUES
@@ -253,14 +252,14 @@ export default function AboutUsSection() {
                         left-1/2
                         top-[115px]
                         z-10
-                        w-[500px]
+                        w-[350px]
                         -translate-x-1/2
                         sm:top-[125px]
-                        sm:w-[600px]
-                        md:w-[700px]
-                        lg:top-[90px]
-                        lg:w-[750px]
-                        xl:w-[800px]
+                        sm:w-[400px]
+                        md:w-[450px]
+                        lg:top-[50px]
+                        lg:w-[500px]
+                        xl:w-[600px]
                     "
                 >
                     <div className="relative aspect-[1/1] w-full">
@@ -284,22 +283,21 @@ export default function AboutUsSection() {
                         absolute
                         left-0
                         z-20
-                        lg:left-0
-                        lg:bottom-30
+                        lg:left-10
+                        lg:bottom-45
                     "
                 >
                     <h1
                         className="
-                        font-sans
-                        text-[75px]
-                        font-[950]
+                        text-[60px]
+                        font-[900]
                         leading-[0.78]
                         tracking-[-0.065em]
                         text-[#102321]
-                        sm:text-[100px]
-                        md:text-[120px]
-                        lg:text-[140px]
-                        xl:text-[160px]
+                        sm:text-[70px]
+                        md:text-[80px]
+                        lg:text-[90px]
+                        xl:text-[110px]
                     "
                     >
                         MODERN
@@ -310,23 +308,22 @@ export default function AboutUsSection() {
                     ref={chairTextRef}
                     className="
                         absolute
-                        left-0
+                        left-10
                         z-20
-                       lg:bottom-0
+                       lg:bottom-20
                     "
                 >
                     <h2
                         className="
-                        font-sans
-                        text-[75px]
-                        font-[950]
+                        text-[60px]
+                        font-[900]
                         leading-[0.78]
                         tracking-[-0.065em]
                         text-[#102321]
-                        sm:text-[100px]
-                        md:text-[120px]
-                        lg:text-[140px]
-                        xl:text-[160px]
+                        sm:text-[70px]
+                        md:text-[80px]
+                        lg:text-[90px]
+                        xl:text-[110px]
                     "
                     >
                         CHAIR
@@ -393,7 +390,7 @@ export default function AboutUsSection() {
                 {/* =========================================================
                     BOTTOM DECORATIVE LINE
                 ========================================================== */}
-                <div className="absolute bottom-5 left-0 right-0 px-5 sm:px-10">
+                <div className="absolute bottom-4 left-0 right-0 px-5 sm:px-10">
                     <div className="h-[1px] w-full bg-[#102321]/15" />
                 </div>
             </div>

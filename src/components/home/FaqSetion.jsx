@@ -62,13 +62,7 @@ export default function FAQSection() {
             ===================================================== */}
 
             <div
-                className="
-                    absolute
-                    inset-0
-                    bg-cover
-                    bg-center
-                    bg-no-repeat
-                "
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                 style={{
                     backgroundImage: "url('/banner/4.png')",
                 }}
@@ -79,46 +73,17 @@ export default function FAQSection() {
 
             {/* Left readability gradient */}
             <div
-                className="
-                    absolute
-                    inset-y-0
-                    left-0
-                    w-full
-                    lg:w-[65%]
-                    bg-gradient-to-r
-                    from-[#f4f0e8]/95
-                    via-[#f4f0e8]/85
-                    to-transparent
-                "
+                className="absolute inset-y-0 left-0 w-full lg:w-[65%] bg-gradient-to-r from-[#f4f0e8]/95 via-[#f4f0e8]/85 to-transparent"
             />
 
             {/* Bottom soft fade */}
             <div
-                className="
-                    pointer-events-none
-                    absolute
-                    inset-x-0
-                    bottom-0
-                    h-32
-                    bg-gradient-to-t
-                    from-black/[0.08]
-                    to-transparent
-                "
+                className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/[0.08] to-transparent"
             />
 
             {/* Decorative circle */}
             <div
-                className="
-                    pointer-events-none
-                    absolute
-                    -left-[220px]
-                    top-[-220px]
-                    h-[550px]
-                    w-[550px]
-                    rounded-full
-                    border
-                    border-black/[0.05]
-                "
+                className="pointer-events-none absolute -left-[220px] top-[-220px] h-[550px] w-[550px] rounded-full border border-black/[0.05]"
             />
 
             {/* =====================================================
@@ -158,16 +123,7 @@ export default function FAQSection() {
                         </p>
 
                         <h2
-                            className="
-                                max-w-[520px]
-                                font-serif
-                                text-[44px]
-                                leading-[0.94]
-                                tracking-[-2px]
-                                text-[#171717]
-                                sm:text-[56px]
-                                lg:text-[66px]
-                            "
+                            className="max-w-[520px] font-serif text-[44px] leading-[0.94] tracking-[-2px] text-[#171717] sm:text-[56px] lg:text-[66px]"
                         >
                             Everything you
                             <br />
@@ -175,16 +131,7 @@ export default function FAQSection() {
                         </h2>
 
                         <div
-                            className="
-                                mt-5
-                                overflow-hidden
-                                rounded-[24px]
-                                border
-                                border-black/[0.08]
-                                bg-white/75
-                                backdrop-blur-xl
-                                shadow-[0_20px_70px_rgba(0,0,0,0.08)]
-                            "
+                            className="mt-5 overflow-hidden rounded-[24px] border border-black/[0.08] bg-white/75 backdrop-blur-xl shadow-[0_20px_70px_rgba(0,0,0,0.08)]"
                         >
 
                             {faqs.map((faq, index) => {
@@ -210,11 +157,7 @@ export default function FAQSection() {
                                             delay: index * 0.06,
                                             ease: [0.16, 1, 0.3, 1],
                                         }}
-                                        className="
-                                            border-b
-                                            border-black/[0.08]
-                                            last:border-b-0
-                                        "
+                                        className="border-b border-black/[0.08] last:border-b-0"
                                     >
 
                                         {/* QUESTION */}
@@ -223,18 +166,7 @@ export default function FAQSection() {
                                             onClick={() =>
                                                 toggleFAQ(index)
                                             }
-                                            className="
-                                                group
-                                                flex
-                                                w-full
-                                                items-center
-                                                gap-4
-                                                px-5
-                                                py-5
-                                                text-left
-                                                sm:px-6
-                                                sm:py-6
-                                            "
+                                            className="group flex w-full items-center gap-4 px-5 py-5 text-left sm:px-6 sm:py-6"
                                         >
 
                                             {/* Number */}
@@ -264,14 +196,7 @@ export default function FAQSection() {
                                             {/* Question */}
 
                                             <span
-                                                className="
-                                                    flex-1
-                                                    text-[14px]
-                                                    font-medium
-                                                    tracking-[-0.2px]
-                                                    text-[#222]
-                                                    sm:text-[15px]
-                                                "
+                                                className="flex-1 text-[14px] font-medium tracking-[-0.2px] text-[#222] sm:text-[15px]"
                                             >
                                                 {faq.question}
                                             </span>
@@ -340,13 +265,7 @@ export default function FAQSection() {
                                                             transition={{
                                                                 duration: 0.3,
                                                             }}
-                                                            className="
-                                                                max-w-[560px]
-                                                                text-[12px]
-                                                                leading-[1.75]
-                                                                text-[#707070]
-                                                                sm:text-[13px]
-                                                            "
+                                                            className="max-w-[560px] text-[12px] leading-[1.75] text-[#707070] sm:text-[13px]"
                                                         >
                                                             {faq.answer}
                                                         </motion.p>
@@ -386,33 +305,13 @@ export default function FAQSection() {
                             duration: 1,
                             ease: [0.16, 1, 0.3, 1],
                         }}
-                        className="
-                            relative
-                            hidden
-                            min-h-[620px]
-                            lg:block
-                        "
+                        className="relative hidden min-h-[620px] lg:block"
                     >
 
                         {/* Product label */}
 
                         <div
-                            className="
-                                absolute
-                                bottom-8
-                                right-5
-                                z-20
-                                flex
-                                items-center
-                                gap-3
-                                rounded-full
-                                border
-                                border-white/40
-                                bg-white/50
-                                px-4
-                                py-2
-                                backdrop-blur-md
-                            "
+                            className="absolute bottom-8 right-5 z-20 flex items-center gap-3 rounded-full border border-white/40 bg-white/50 px-4 py-2 backdrop-blur-md"
                         >
                             <span className="h-2 w-2 rounded-full bg-black" />
 
@@ -424,14 +323,7 @@ export default function FAQSection() {
                         {/* Decorative vertical line */}
 
                         <div
-                            className="
-                                absolute
-                                right-0
-                                top-10
-                                h-40
-                                w-px
-                                bg-black/10
-                            "
+                            className="absolute right-0 top-10 h-40 w-px bg-black/10"
                         />
 
                     </motion.div>

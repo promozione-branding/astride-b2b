@@ -183,17 +183,7 @@ export default function CategoryShowcase() {
                         {/* Buttons */}
                         <div className="mt-8 flex items-center gap-4">
                             <Link href={"/products"}
-                                className="
-                                    rounded-full
-                                    border border-[#222]
-                                    bg-[#222]
-                                    px-6 py-3 flex items-center gap-3
-                                    text-sm
-                                    text-white
-                                    transition-all
-                                    duration-300
-                                    hover:bg-black
-                                "
+                                className="rounded-full border border-[#222] bg-[#222] px-6 py-3 flex items-center gap-3 text-sm text-white transition-all duration-300 hover:bg-black"
                             >
                                 Explore <ArrowRight size={15} />
                             </Link>
@@ -279,43 +269,19 @@ export default function CategoryShowcase() {
                             setActiveIndex(swiper.realIndex);
                         }}
 
-                        className="
-            category-swiper
-            !h-full
-            !w-full
-            !overflow-visible
-        "
+                        className="category-swiper !h-full !w-full !overflow-visible"
                     >
 
                         {categories.map((category) => (
                             <SwiperSlide
                                 key={category.id}
-                                className="
-                    !flex
-                    !h-full
-                    !w-full
-                    !items-center
-                    !justify-center
-                    !overflow-visible
-                "
+                                className="!flex !h-full !w-full !items-center !justify-center !overflow-visible"
                             >
                                 <div className="relative flex h-full w-full items-center justify-center">
 
                                     {/* PRODUCT SHADOW */}
                                     <div
-                                        className="
-                            pointer-events-none
-                            absolute
-                            bottom-[80px]
-                            left-1/2
-                            z-0
-                            h-[30px]
-                            w-[50%]
-                            -translate-x-1/2
-                            rounded-full
-                            bg-black/[0.07]
-                            blur-[18px]
-                        "
+                                        className="pointer-events-none absolute bottom-[80px] left-1/2 z-0 h-[30px] w-[50%] -translate-x-1/2 rounded-full bg-black/[0.07] blur-[18px]"
                                     />
 
                                     {/* ACTIVE / NEXT PRODUCT */}
@@ -323,20 +289,7 @@ export default function CategoryShowcase() {
                                         src={category.image}
                                         alt={category.name}
                                         draggable="false"
-                                        className="
-                            relative
-                            z-10
-                            h-auto
-                            max-h-[420px]
-                            w-[84%]
-                            select-none
-                            object-contain
-                            drop-shadow-[0_25px_25px_rgba(0,0,0,0.11)]
-                            sm:max-h-[475px]
-                            sm:w-[80%]
-                            lg:max-h-[510px]
-                            lg:w-[82%]
-                        "
+                                        className="relative z-10 h-auto max-h-[420px] w-[84%] select-none object-contain drop-shadow-[0_25px_25px_rgba(0,0,0,0.11)] sm:max-h-[475px] sm:w-[80%] lg:max-h-[510px] lg:w-[82%]"
                                     />
 
                                 </div>
@@ -349,40 +302,12 @@ export default function CategoryShowcase() {
                     <button
                         onClick={() => swiperRef.current?.slideNext()}
                         aria-label="Next category"
-                        className="
-            group
-            absolute
-            bottom-[65px]
-            right-1
-            z-30
-            flex
-            h-[42px]
-            w-[42px]
-            items-center
-            justify-center
-            rounded-full
-            border
-            border-[#d4d4d4]
-            bg-white
-            text-[#222]
-            shadow-[0_5px_20px_rgba(0,0,0,0.05)]
-            transition-all
-            duration-300
-            hover:-translate-x-1
-            hover:border-[#111]
-            hover:bg-[#111]
-            hover:text-white
-            active:scale-90
-        "
+                        className="group absolute bottom-[65px] right-1 z-30 flex h-[42px] w-[42px] items-center justify-center rounded-full border border-[#d4d4d4] bg-white text-[#222] shadow-[0_5px_20px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-x-1 hover:border-[#111] hover:bg-[#111] hover:text-white active:scale-90"
                     >
                         <ArrowRight
                             size={19}
                             strokeWidth={1.5}
-                            className="
-                transition-transform
-                duration-300
-                group-hover:translate-x-[2px]
-            "
+                            className="transition-transform duration-300 group-hover:translate-x-[2px]"
                         />
                     </button>
 

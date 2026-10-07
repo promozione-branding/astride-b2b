@@ -254,7 +254,7 @@ export default function ProductShowcase() {
                                         alt={`${activeProduct.name} detail`}
                                         fill
                                         sizes="220px"
-                                        className="object-"
+                                        className="object-contain"
                                     />
                                 </motion.div>
                             </AnimatePresence>

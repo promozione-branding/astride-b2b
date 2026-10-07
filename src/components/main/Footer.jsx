@@ -193,17 +193,7 @@ export default function Footer() {
 
                 </div>
 
-                <div className="
-                    flex
-                    flex-col
-                    gap-7
-                    pt-4
-                    mt-8
-border-t border-white/[0.1]
-                    sm:flex-row
-                    sm:items-center
-                    sm:justify-between
-                ">
+                <div className="flex flex-col gap-7 pt-4 mt-8 border-t border-white/[0.1] sm:flex-row sm:items-center sm:justify-between">
 
                     <p className="text-xs text-white/85">
                         © {new Date().getFullYear()} ASTRIDE. All rights reserved.
@@ -240,22 +230,7 @@ border-t border-white/[0.1]
                                     whileHover={{
                                         y: -4,
                                     }}
-                                    className="
-                                        flex
-                                        h-8
-                                        w-8
-                                        items-center
-                                        justify-center
-                                        rounded-full
-                                        border
-                                        border-white/[0.3]
-                                        text-white/85
-                                        transition-all
-                                        duration-300
-                                        hover:border-white
-                                        hover:bg-white
-                                        hover:text-black
-                                    "
+                                    className="flex h-8 w-8 items-center justify-center rounded-full border border-white/[0.3] text-white/85 transition-all duration-300 hover:border-white hover:bg-white hover:text-black"
                                 >
                                     <Icon size={16} />
                                 </motion.a>
@@ -317,18 +292,7 @@ function FooterColumn({ title, items, delay = 0 }) {
 
                         <a
                             href="#"
-                            className="
-                                group
-                                flex
-                                w-fit
-                                items-center
-                                gap-2
-                                text-[12px]
-                                text-white/85
-                                transition-colors
-                                duration-300
-                                hover:text-white
-                            "
+                            className="group flex w-fit items-center gap-2 text-[12px] text-white/85 transition-colors duration-300 hover:text-white"
                         >
                             <span>
                                 {item}
@@ -336,14 +300,7 @@ function FooterColumn({ title, items, delay = 0 }) {
 
                             <FiArrowUpRight
                                 size={11}
-                                className="
-                                    opacity-0
-                                    -translate-x-1
-                                    transition-all
-                                    duration-300
-                                    group-hover:translate-x-0
-                                    group-hover:opacity-100
-                                "
+                                className="opacity-0 -translate-x-1 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
                             />
                         </a>
 
@@ -361,24 +318,7 @@ function ChairOutlineSVG() {
             viewBox="0 0 500 500"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="
-                pointer-events-none
-                absolute
-                bottom-[-120px]
-                right-[-70px]
-                z-0
-                h-[500px]
-                w-[500px]
-                opacity-[0.07]
-
-                sm:h-[580px]
-                sm:w-[580px]
-
-                lg:bottom-[-170px]
-                lg:right-[-80px]
-                lg:h-[650px]
-                lg:w-[650px]
-            "
+            className="pointer-events-none absolute bottom-[-120px] right-[-70px] z-0 h-[500px] w-[500px] opacity-[0.07] sm:h-[580px] sm:w-[580px] lg:bottom-[-170px] lg:right-[-80px] lg:h-[650px] lg:w-[650px]"
             initial={{
                 opacity: 0,
                 x: 80,

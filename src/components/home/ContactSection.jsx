@@ -36,46 +36,16 @@ export default function ContactSection() {
                             duration: 0.8,
                             ease: [0.16, 1, 0.3, 1],
                         }}
-                        className="
-        relative
-        min-h-[520px]
-        overflow-hidden
-        rounded-[28px]
-        bg-[#171717]
-        p-7
-        text-white
-        sm:p-9
-        lg:p-10
-    "
+                        className="relative min-h-[520px] overflow-hidden rounded-[28px] bg-[#171717] p-7 text-white sm:p-9 lg:p-10"
                     >
                         {/* Background arc */}
 
                         <div
-                            className="
-            pointer-events-none
-            absolute
-            -bottom-[180px]
-            -right-[180px]
-            h-[500px]
-            w-[500px]
-            rounded-full
-            border
-            border-white/[0.08]
-        "
+                            className="pointer-events-none absolute -bottom-[180px] -right-[180px] h-[500px] w-[500px] rounded-full border border-white/[0.08]"
                         />
 
                         <div
-                            className="
-            pointer-events-none
-            absolute
-            -bottom-[110px]
-            -right-[110px]
-            h-[350px]
-            w-[350px]
-            rounded-full
-            border
-            border-white/[0.05]
-        "
+                            className="pointer-events-none absolute -bottom-[110px] -right-[110px] h-[350px] w-[350px] rounded-full border border-white/[0.05]"
                         />
 
                         {/* Small label */}
@@ -87,18 +57,7 @@ export default function ContactSection() {
                         {/* Heading */}
 
                         <h3
-                            className="
-            relative
-            z-10
-            mt-8
-            max-w-[350px]
-            font-serif
-            text-[38px]
-            leading-[1]
-            tracking-[-1.5px]
-            text-white
-            sm:text-[44px]
-        "
+                            className="relative z-10 mt-8 max-w-[350px] font-serif text-[38px] leading-[1] tracking-[-1.5px] text-white sm:text-[44px]"
                         >
                             We’re here
                             <br />
@@ -167,53 +126,19 @@ export default function ContactSection() {
                                 y: -8,
                                 scale: 1.03,
                             }}
-                            className="
-            pointer-events-none
-            absolute
-            bottom-[-10px]
-            right-[-5px]
-            z-[2]
-            w-[190px]
-            object-contain
-            sm:w-[220px] scale-x-[-1]
-            lg:bottom-[0px]
-            lg:right-[-5px]
-            lg:w-[260px]
-        "
+                            className="pointer-events-none absolute bottom-[-10px] right-[-5px] z-[2] w-[190px] object-contain sm:w-[220px] scale-x-[-1] lg:bottom-[0px] lg:right-[-5px] lg:w-[260px]"
                         />
 
                         {/* Soft image glow */}
 
                         <div
-                            className="
-            pointer-events-none
-            absolute
-            bottom-[30px]
-            right-[40px]
-            z-[1]
-            h-[180px]
-            w-[180px]
-            rounded-full
-            bg-white/[0.035]
-            blur-3xl
-        "
+                            className="pointer-events-none absolute bottom-[30px] right-[40px] z-[1] h-[180px] w-[180px] rounded-full bg-white/[0.035] blur-3xl"
                         />
 
                         {/* Bottom text */}
 
                         <div
-                            className="
-            absolute
-            bottom-8
-            left-7
-            right-7
-            z-10
-            flex
-            items-center
-            justify-between
-            sm:left-9
-            sm:right-9
-        "
+                            className="absolute bottom-8 left-7 right-7 z-10 flex items-center justify-between sm:left-9 sm:right-9"
                         >
                             <span className="text-[9px] uppercase tracking-[0.18em] text-white/30">
                                 Premium seating
@@ -244,17 +169,7 @@ export default function ContactSection() {
                             delay: 0.1,
                             ease: [0.16, 1, 0.3, 1],
                         }}
-                        className="
-                            rounded-[28px]
-                            border
-                            border-black/[0.07]
-                            bg-white/80
-                            p-6
-                            shadow-[0_20px_80px_rgba(0,0,0,0.06)]
-                            backdrop-blur-xl
-                            sm:p-8
-                            lg:p-10
-                        "
+                        className="rounded-[28px] border border-black/[0.07] bg-white/80 p-6 shadow-[0_20px_80px_rgba(0,0,0,0.06)] backdrop-blur-xl sm:p-8 lg:p-10"
                     >
 
                         <div className="mb-8 flex items-start justify-between">
@@ -313,20 +228,7 @@ export default function ContactSection() {
 
                                 <select
                                     defaultValue=""
-                                    className="
-                                        w-full
-                                        appearance-none
-                                        border-b
-                                        border-black/15
-                                        bg-transparent
-                                        py-3
-                                        pr-8
-                                        text-[13px]
-                                        text-[#222]
-                                        outline-none
-                                        transition-colors
-                                        focus:border-black
-                                    "
+                                    className="w-full appearance-none border-b border-black/15 bg-transparent py-3 pr-8 text-[13px] text-[#222] outline-none transition-colors focus:border-black"
                                 >
                                     <option value="" disabled>
                                         Select an option
@@ -358,20 +260,7 @@ export default function ContactSection() {
                                 <textarea
                                     rows={4}
                                     placeholder="Tell us a little about what you need..."
-                                    className="
-                                        w-full
-                                        resize-none
-                                        border-b
-                                        border-black/15
-                                        bg-transparent
-                                        py-3
-                                        text-[13px]
-                                        text-[#222]
-                                        outline-none
-                                        placeholder:text-[#aaa]
-                                        transition-colors
-                                        focus:border-black
-                                    "
+                                    className="w-full resize-none border-b border-black/15 bg-transparent py-3 text-[13px] text-[#222] outline-none placeholder:text-[#aaa] transition-colors focus:border-black"
                                 />
 
                             </div>
@@ -387,44 +276,12 @@ export default function ContactSection() {
 
                                 <button
                                     type="submit"
-                                    className="
-                                        group
-                                        flex
-                                        w-full
-                                        items-center
-                                        justify-center
-                                        gap-4
-                                        rounded-full
-                                        bg-[#171717]
-                                        px-6
-                                        py-4
-                                        text-[11px]
-                                        font-medium
-                                        uppercase
-                                        tracking-[0.12em]
-                                        text-white
-                                        transition-all
-                                        duration-300
-                                        hover:bg-black
-                                        sm:w-auto
-                                    "
+                                    className="group flex w-full items-center justify-center gap-4 rounded-full bg-[#171717] px-6 py-4 text-[11px] font-medium uppercase tracking-[0.12em] text-white transition-all duration-300 hover:bg-black sm:w-auto"
                                 >
                                     Send Enquiry
 
                                     <span
-                                        className="
-                                            flex
-                                            h-7
-                                            w-7
-                                            items-center
-                                            justify-center
-                                            rounded-full
-                                            bg-white
-                                            text-black
-                                            transition-transform
-                                            duration-300
-                                            group-hover:rotate-45
-                                        "
+                                        className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-black transition-transform duration-300 group-hover:rotate-45"
                                     >
                                         <FiArrowUpRight size={14} />
                                     </span>
@@ -462,19 +319,7 @@ function InputField({
             <input
                 type={type}
                 placeholder={placeholder}
-                className="
-                    w-full
-                    border-b
-                    border-black/15
-                    bg-transparent
-                    py-3
-                    text-[13px]
-                    text-[#222]
-                    outline-none
-                    placeholder:text-black/60
-                    transition-colors
-                    focus:border-black
-                "
+                className="w-full border-b border-black/15 bg-transparent py-3 text-[13px] text-[#222] outline-none placeholder:text-black/60 transition-colors focus:border-black"
             />
 
         </div>
@@ -495,19 +340,7 @@ function ContactInfo({
         <div className="flex items-center gap-4">
 
             <div
-                className="
-                    flex
-                    h-10
-                    w-10
-                    shrink-0
-                    items-center
-                    justify-center
-                    rounded-full
-                    border
-                    border-white/10
-                    bg-white/[0.04]
-                    text-white/70
-                "
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-white/70"
             >
                 {icon}
             </div>

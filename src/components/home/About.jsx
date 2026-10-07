@@ -70,16 +70,7 @@ export default function FurnitureRules() {
                         duration: 0.7,
                         ease: [0.22, 1, 0.36, 1],
                     }}
-                    className="
-            relative z-20
-            mb-3
-            text-[27px]
-            font-bold
-            leading-none
-            tracking-[-0.7px]
-            text-[#171717]
-            sm:text-[29px]
-          "
+                    className="relative z-20 mb-3 text-[27px] font-bold leading-none tracking-[-0.7px] text-[#171717] sm:text-[29px]"
                 >
                     Rules for choosing furniture
                 </motion.h2>
@@ -108,20 +99,7 @@ export default function FurnitureRules() {
                                 duration: 1.1,
                                 ease: [0.16, 1, 0.3, 1],
                             }}
-                            className="
-                absolute
-                left-1/2
-                top-8
-                z-[1]
-                h-[480px]
-                w-[430px]
-                -translate-x-1/2
-                sm:top-10
-                sm:h-[550px]
-                sm:w-[480px]
-                lg:left-0
-                lg:translate-x-0
-              "
+                            className="absolute left-1/2 top-8 z-[1] h-[480px] w-[430px] -translate-x-1/2 sm:top-10 sm:h-[550px] sm:w-[480px] lg:left-0 lg:translate-x-0"
                         >
                             <motion.path
                                 fill="#E8E2D8"
@@ -207,23 +185,7 @@ export default function FurnitureRules() {
                                 delay: 0.15,
                                 ease: [0.16, 1, 0.3, 1],
                             }}
-                            className="
-                absolute
-                left-1/2
-                top-[285px]
-                z-[2]
-                h-[135px]
-                w-[430px]
-                -translate-x-1/2
-                rotate-[7deg]
-                rounded-[50%]
-                bg-[#e8e2d8]
-                sm:top-[350px]
-                sm:h-[155px]
-                sm:w-[520px]
-                lg:left-0
-                lg:translate-x-0
-              "
+                            className="absolute left-1/2 top-[285px] z-[2] h-[135px] w-[430px] -translate-x-1/2 rotate-[7deg] rounded-[50%] bg-[#e8e2d8] sm:top-[350px] sm:h-[155px] sm:w-[520px] lg:left-0 lg:translate-x-0"
                         />
 
                         <motion.img
@@ -260,33 +222,10 @@ export default function FurnitureRules() {
                                     ease: "easeOut",
                                 },
                             }}
-                            className="
-                absolute
-                left-1/2
-                top-[60px]
-                z-[5]
-                w-[330px]
-                -translate-x-1/2
-                object-contain
-                drop-shadow-[0_15px_15px_rgba(0,0,0,0.07)]
-                sm:top-[75px]
-                sm:w-[300px]
-                lg:left-[70px]
-                lg:translate-x-0
-              "
+                            className="absolute left-1/2 top-[60px] z-[5] w-[330px] -translate-x-1/2 object-contain drop-shadow-[0_15px_15px_rgba(0,0,0,0.07)] sm:top-[75px] sm:w-[300px] lg:left-[70px] lg:translate-x-0"
                         />
 
-                        <div className="
-              absolute
-              bottom-[25px]
-              left-[20px]
-              z-[6]
-              h-[115px]
-              w-[150px]
-              sm:bottom-[45px]
-              lg:left-[45px]
-              lg:bottom-[65px]
-            ">
+                        <div className="absolute bottom-[25px] left-[20px] z-[6] h-[115px] w-[150px] sm:bottom-[45px] lg:left-[45px] lg:bottom-[65px]">
 
                             {[
                                 "left-[8px] top-[18px] h-[17px] w-[25px]",
@@ -337,14 +276,7 @@ export default function FurnitureRules() {
 
                             <motion.h3
                                 variants={fadeUp}
-                                className="
-                  max-w-[710px]
-                  text-[16px]
-                  font-bold
-                  leading-[1.45]
-                  text-[#171717]
-                  sm:text-[17px]
-                "
+                                className="max-w-[710px] text-[16px] font-bold leading-[1.45] text-[#171717] sm:text-[17px]"
                             >
                                 Whether living on your own or with a family, your living room
                                 is an important space.
@@ -353,15 +285,7 @@ export default function FurnitureRules() {
 
                             <motion.p
                                 variants={fadeUp}
-                                className="
-                  mt-4
-                  max-w-[710px]
-                  text-[14px]
-                  leading-[1.65]
-                  tracking-[0.1px]
-                  text-[#777]
-                  sm:text-[15px]
-                "
+                                className="mt-4 max-w-[710px] text-[14px] leading-[1.65] tracking-[0.1px] text-[#777] sm:text-[15px]"
                             >
                                 This room is where your family spends time together, and it is
                                 the room most of your guests will spend the majority of their
@@ -389,21 +313,9 @@ export default function FurnitureRules() {
                                     <motion.li
                                         key={index}
                                         variants={fadeRight}
-                                        className="
-                      flex
-                      items-center
-                      gap-2.5
-                      text-[14px]
-                      text-[#777]
-                      sm:text-[15px]
-                    "
+                                        className="flex items-center gap-2.5 text-[14px] text-[#777] sm:text-[15px]"
                                     >
-                                        <span className="
-                      h-[6px]
-                      w-[6px]
-                      shrink-0
-                      rounded-full
-                      bg-[#f29a56]"
+                                        <span className="h-[6px] w-[6px] shrink-0 rounded-full bg-[#f29a56]"
                                         />
 
                                         {item}
@@ -433,21 +345,7 @@ export default function FurnitureRules() {
                                 delay: 0.15,
                                 ease: [0.16, 1, 0.3, 1],
                             }}
-                            className="
-                relative
-                mt-7
-                h-[250px]
-                w-full
-                overflow-hidden
-                rounded-[100px]
-                bg-[#222]
-                shadow-[0_18px_45px_rgba(0,0,0,0.06)]
-                sm:h-[310px]
-                sm:rounded-[150px]
-                lg:h-[357px]
-                lg:w-180
-                lg:rounded-[200px]
-              "
+                            className="relative mt-7 h-[250px] w-full overflow-hidden rounded-[100px] bg-[#222] shadow-[0_18px_45px_rgba(0,0,0,0.06)] sm:h-[310px] sm:rounded-[150px] lg:h-[357px] lg:w-180 lg:rounded-[200px]"
                         >
                             {/* YouTube */}
                             <iframe

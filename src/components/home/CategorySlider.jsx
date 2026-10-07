@@ -114,19 +114,7 @@ export default function CategorySlider() {
                                 {/* Category Name */}
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     <span
-                                        className="
-                                            rounded-full
-                                            bg-white
-                                            px-6
-                                            py-2.5
-                                            text-[18px]
-                                            font-semibold
-                                            text-[#071a3d]
-                                            shadow-sm
-                                            transition-all
-                                            duration-300
-                                            group-hover:px-7
-                                        "
+                                        className="rounded-full bg-white px-6 py-2.5 text-[18px] font-semibold text-[#071a3d] shadow-sm transition-all duration-300 group-hover:px-7"
                                     >
                                         {category.name}
                                     </span>

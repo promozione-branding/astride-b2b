@@ -42,17 +42,7 @@ export default function StatsSection() {
     return (
         <section className="relative w-full overflow-hidden bg-[#f4f4f2]">
             <div
-                className="
-                    relative
-                    min-h-[760px]
-                    w-full
-                    bg-cover
-                    bg-center
-                    bg-no-repeat
-
-                    sm:min-h-[820px]
-                    lg:min-h-[650px]
-                "
+                className="relative min-h-[760px] w-full bg-cover bg-center bg-no-repeat sm:min-h-[820px] lg:min-h-[650px]"
                 style={{
                     backgroundImage:
                         "url('/banner/3.png')",
@@ -68,17 +58,7 @@ export default function StatsSection() {
                     ================================================= */}
 
                     <div
-                        className="
-                            ml-auto
-                            flex
-                            w-full
-                            flex-col
-
-                            sm:max-w-[650px]
-
-                            lg:w-[54%]
-                            lg:max-w-[780px]
-                        "
+                        className="ml-auto flex w-full flex-col sm:max-w-[650px] lg:w-[54%] lg:max-w-[780px]"
                     >
                         {/* =================================================
                             STAT CARDS
@@ -116,26 +96,7 @@ export default function StatsSection() {
                                 delay: 0.4,
                                 ease: [0.16, 1, 0.3, 1],
                             }}
-                            className="
-                                mt-5
-                                flex
-                                min-h-[145px]
-                                w-full
-                                flex-col
-                                items-center
-                                justify-center
-                                rounded-[24px]
-                                border
-                                border-black/[0.08]
-                                bg-white/90
-                                px-6
-                                py-7
-                                shadow-[0_20px_60px_rgba(0,0,0,0.08)]
-                                backdrop-blur-md
-
-                                lg:min-h-[155px]
-                                lg:rounded-[26px]
-                            "
+                            className="mt-5 flex min-h-[145px] w-full flex-col items-center justify-center rounded-[24px] border border-black/[0.08] bg-white/90 px-6 py-7 shadow-[0_20px_60px_rgba(0,0,0,0.08)] backdrop-blur-md lg:min-h-[155px] lg:rounded-[26px]"
                         >
                             {/* Heading */}
                             <div className="flex w-full items-center justify-center gap-4">
@@ -231,42 +192,11 @@ function StatCard({ stat, index }) {
                 boxShadow:
                     "0 20px 50px rgba(0,0,0,0.10)",
             }}
-            className="
-                group
-                relative
-                flex
-                min-h-[150px]
-                items-center
-                overflow-hidden
-                rounded-[22px]
-                border
-                border-black/[0.08]
-                bg-white/90
-                px-5
-                py-6
-                backdrop-blur-md
-                transition-shadow
-                duration-500
-
-                sm:min-h-[160px]
-                lg:min-h-[175px]
-                lg:px-7
-            "
+            className="group relative flex min-h-[150px] items-center overflow-hidden rounded-[22px] border border-black/[0.08] bg-white/90 px-5 py-6 backdrop-blur-md transition-shadow duration-500 sm:min-h-[160px] lg:min-h-[175px] lg:px-7"
         >
             {/* Subtle hover background */}
             <div
-                className="
-                    absolute
-                    inset-0
-                    bg-gradient-to-br
-                    from-black/[0.025]
-                    via-transparent
-                    to-black/[0.04]
-                    opacity-0
-                    transition-opacity
-                    duration-500
-                    group-hover:opacity-100
-                "
+                className="absolute inset-0 bg-gradient-to-br from-black/[0.025] via-transparent to-black/[0.04] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
             />
 
             {/* =====================================================
@@ -292,22 +222,7 @@ function StatCard({ stat, index }) {
                     stiffness: 180,
                     damping: 14,
                 }}
-                className="
-                    relative
-                    z-10
-                    flex
-                    h-[62px]
-                    w-[62px]
-                    shrink-0
-                    items-center
-                    justify-center
-                    rounded-full
-                    bg-[#171717]
-                    text-white
-
-                    sm:h-[68px]
-                    sm:w-[68px]
-                "
+                className="relative z-10 flex h-[62px] w-[62px] shrink-0 items-center justify-center rounded-full bg-[#171717] text-white sm:h-[68px] sm:w-[68px]"
             >
                 <Icon
                     strokeWidth={1.5}
@@ -321,17 +236,7 @@ function StatCard({ stat, index }) {
 
             <div className="relative z-10 ml-5">
                 <div
-                    className="
-                        font-serif
-                        text-[40px]
-                        leading-[0.9]
-                        tracking-[-2px]
-                        text-[#151515]
-
-                        sm:text-[46px]
-
-                        lg:text-[52px]
-                    "
+                    className="font-serif text-[40px] leading-[0.9] tracking-[-2px] text-[#151515] sm:text-[46px] lg:text-[52px]"
                 >
                     <CountUp
                         end={stat.value}

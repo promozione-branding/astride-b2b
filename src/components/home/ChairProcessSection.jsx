@@ -150,15 +150,7 @@ function TechnicalChairSVG({ index }) {
             viewBox="0 0 400 300"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="
-                pointer-events-none
-                absolute
-                -right-[65px]
-                -top-[50px]
-                z-[1]
-                h-[330px]
-                w-[430px]
-            "
+            className="pointer-events-none absolute -right-[65px] -top-[50px] z-[1] h-[330px] w-[430px]"
             initial={{
                 opacity: 0,
                 scale: 0.9,
@@ -247,13 +239,7 @@ function ProcessCard({ item, index }) {
                     <motion.img
                         src={item.image}
                         alt={item.title}
-                        className="
-                            absolute
-                            inset-0
-                            h-full
-                            w-full
-                            object-cover
-                        "
+                        className="absolute inset-0 h-full w-full object-cover"
                         initial={{
                             scale: 1,
                         }}
@@ -376,17 +362,7 @@ function ProcessCard({ item, index }) {
                             duration: 1,
                             delay: index * 0.08,
                         }}
-                        className="
-                absolute
-                right-[-80px]
-                top-[-80px]
-                z-[0]
-                h-[250px]
-                w-[250px]
-                rounded-full
-                border
-                border-black/[0.1]
-            "
+                        className="absolute right-[-80px] top-[-80px] z-[0] h-[250px] w-[250px] rounded-full border border-black/[0.1]"
                     />
 
                     {/* =====================================================
@@ -394,17 +370,7 @@ function ProcessCard({ item, index }) {
         ===================================================== */}
 
                     <div
-                        className="
-                absolute
-                bottom-[-120px]
-                left-[-100px]
-                z-[0]
-                h-[260px]
-                w-[260px]
-                rounded-full
-                border
-                border-black/[0.2]
-            "
+                        className="absolute bottom-[-120px] left-[-100px] z-[0] h-[260px] w-[260px] rounded-full border border-black/[0.2]"
                     />
 
                     {/* Decorative circle */}
@@ -455,16 +421,7 @@ function ProcessCard({ item, index }) {
                     <motion.img
                         src={item.chairImage}
                         alt="ASTRIDE Chair"
-                        className="
-                            absolute
-                            bottom-0
-                            right-[0px]
-                            z-[5]
-                            w-[40%]
-                            max-w-[190px]
-                            object-contain
-                            drop-shadow-[0_18px_18px_rgba(0,0,0,0.16)]
-                        "
+                        className="absolute bottom-0 right-[0px] z-[5] w-[40%] max-w-[190px] object-contain drop-shadow-[0_18px_18px_rgba(0,0,0,0.16)]"
                         initial={{
                             opacity: 0,
                             x: 50,

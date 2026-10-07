@@ -226,17 +226,7 @@ export default function AboutUsSection() {
                     className="absolute right-4 top-12 z-30 sm:right-8 lg:right-[15%] lg:top-36"
                 >
                     <h2
-                        className="
-                        text-[70px]
-                        font-[900]
-                        leading-[0.78]
-                        tracking-[-0.065em]
-                        text-[#102321]
-                        sm:text-[70px]
-                        md:text-[80px]
-                        lg:text-[90px]
-                        xl:text-[110px]
-                    "
+                        className="text-[70px] font-[900] leading-[0.78] tracking-[-0.065em] text-[#102321] sm:text-[70px] md:text-[80px] lg:text-[90px] xl:text-[110px]"
                     >
                         VALUES
                     </h2>
@@ -247,20 +237,7 @@ export default function AboutUsSection() {
                 ========================================================== */}
                 <div
                     ref={chairRef}
-                    className="
-                        absolute
-                        left-1/2
-                        top-[115px]
-                        z-10
-                        w-[350px]
-                        -translate-x-1/2
-                        sm:top-[125px]
-                        sm:w-[400px]
-                        md:w-[450px]
-                        lg:top-[50px]
-                        lg:w-[500px]
-                        xl:w-[600px]
-                    "
+                    className="absolute left-1/2 top-[115px] z-10 w-[350px] -translate-x-1/2 sm:top-[125px] sm:w-[400px] md:w-[450px] lg:top-[50px] lg:w-[500px] xl:w-[600px]"
                 >
                     <div className="relative aspect-[1/1] w-full">
                         <Image
@@ -279,26 +256,10 @@ export default function AboutUsSection() {
                 ========================================================== */}
                 <div
                     ref={modernRef}
-                    className="
-                        absolute
-                        left-0
-                        z-20
-                        lg:left-10
-                        lg:bottom-45
-                    "
+                    className="absolute left-0 z-20 lg:left-10 lg:bottom-45"
                 >
                     <h1
-                        className="
-                        text-[60px]
-                        font-[900]
-                        leading-[0.78]
-                        tracking-[-0.065em]
-                        text-[#102321]
-                        sm:text-[70px]
-                        md:text-[80px]
-                        lg:text-[90px]
-                        xl:text-[110px]
-                    "
+                        className="text-[60px] font-[900] leading-[0.78] tracking-[-0.065em] text-[#102321] sm:text-[70px] md:text-[80px] lg:text-[90px] xl:text-[110px]"
                     >
                         MODERN
                     </h1>
@@ -306,25 +267,10 @@ export default function AboutUsSection() {
 
                 <div
                     ref={chairTextRef}
-                    className="
-                        absolute
-                        left-10
-                        z-20
-                       lg:bottom-20
-                    "
+                    className="absolute left-10 z-20 lg:bottom-20"
                 >
                     <h2
-                        className="
-                        text-[60px]
-                        font-[900]
-                        leading-[0.78]
-                        tracking-[-0.065em]
-                        text-[#102321]
-                        sm:text-[70px]
-                        md:text-[80px]
-                        lg:text-[90px]
-                        xl:text-[110px]
-                    "
+                        className="text-[60px] font-[900] leading-[0.78] tracking-[-0.065em] text-[#102321] sm:text-[70px] md:text-[80px] lg:text-[90px] xl:text-[110px]"
                     >
                         CHAIR
                     </h2>
@@ -335,20 +281,7 @@ export default function AboutUsSection() {
                 ========================================================== */}
                 <div
                     ref={badgesRef}
-                    className="
-                        absolute
-                        right-4
-                        z-30
-                        flex
-                        w-[185px]
-                        flex-col
-                        gap-4
-                        sm:right-8
-                        sm:w-[210px]
-                        lg:right-8
-                    bottom-10
-                        lg:w-[220px]
-                    "
+                    className="absolute right-4 z-30 flex w-[185px] flex-col gap-4 sm:right-8 sm:w-[210px] lg:right-8 bottom-10 lg:w-[220px]"
                 >
                     <motion.div
                         className="about-badge rounded-full bg-[#ffd8cc] px-5 py-3 text-center"

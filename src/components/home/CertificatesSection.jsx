@@ -126,46 +126,15 @@ export default function CertificatesSection() {
             ===================================================== */}
 
             <div
-                className="
-                    pointer-events-none
-                    absolute
-                    -right-[250px]
-                    -top-[250px]
-                    h-[600px]
-                    w-[600px]
-                    rounded-full
-                    border
-                    border-black/[0.045]
-                "
+                className="pointer-events-none absolute -right-[250px] -top-[250px] h-[600px] w-[600px] rounded-full border border-black/[0.045]"
             />
 
             <div
-                className="
-                    pointer-events-none
-                    absolute
-                    -bottom-[300px]
-                    -left-[250px]
-                    h-[650px]
-                    w-[650px]
-                    rounded-full
-                    border
-                    border-black/[0.045]
-                "
+                className="pointer-events-none absolute -bottom-[300px] -left-[250px] h-[650px] w-[650px] rounded-full border border-black/[0.045]"
             />
 
             <div
-                className="
-                    pointer-events-none
-                    absolute
-                    left-[50%]
-                    top-[45%]
-                    h-[300px]
-                    w-[300px]
-                    -translate-x-1/2
-                    rounded-full
-                    bg-white/40
-                    blur-[100px]
-                "
+                className="pointer-events-none absolute left-[50%] top-[45%] h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-white/40 blur-[100px]"
             />
 
             {/* =====================================================
@@ -195,43 +164,19 @@ export default function CertificatesSection() {
                         duration: 0.8,
                         ease: [0.16, 1, 0.3, 1],
                     }}
-                    className="
-                        mb-14
-                        flex
-                        flex-col
-                        justify-between
-                        gap-8
-                        lg:flex-row
-                        lg:items-end
-                    "
+                    className="mb-14 flex flex-col justify-between gap-8 lg:flex-row lg:items-end"
                 >
 
                     <div>
 
                         <p
-                            className="
-                                mb-4
-                                text-[10px]
-                                font-medium
-                                uppercase
-                                tracking-[0.25em]
-                                text-[#777]
-                            "
+                            className="mb-4 text-[10px] font-medium uppercase tracking-[0.25em] text-[#777]"
                         >
                             Certifications & Standards
                         </p>
 
                         <h2
-                            className="
-                                max-w-[700px]
-                                font-serif
-                                text-[46px]
-                                leading-[0.94]
-                                tracking-[-2px]
-                                text-[#171717]
-                                sm:text-[60px]
-                                lg:text-[72px]
-                            "
+                            className="max-w-[700px] font-serif text-[46px] leading-[0.94] tracking-[-2px] text-[#171717] sm:text-[60px] lg:text-[72px]"
                         >
                             Built on standards.
                             <br />
@@ -241,12 +186,7 @@ export default function CertificatesSection() {
                     </div>
 
                     <p
-                        className="
-                            max-w-[330px]
-                            text-[12px]
-                            leading-[1.8]
-                            text-[#777]
-                        "
+                        className="max-w-[330px] text-[12px] leading-[1.8] text-[#777]"
                     >
                         Every ASTRIDE chair is developed with a focus on
                         quality, durability, safety and consistent
@@ -276,17 +216,7 @@ export default function CertificatesSection() {
                         duration: 0.7,
                         delay: 0.15,
                     }}
-                    className="
-                        mb-8
-                        flex
-                        overflow-x-auto
-                        rounded-[18px]
-                        border
-                        border-black/[0.08]
-                        bg-white/50
-                        p-1
-                        backdrop-blur-sm
-                    "
+                    className="mb-8 flex overflow-x-auto rounded-[18px] border border-black/[0.08] bg-white/50 p-1 backdrop-blur-sm"
                 >
 
                     {CERTS_DATA.map((cert, index) => {
@@ -352,15 +282,7 @@ export default function CertificatesSection() {
                                 {isActive && (
                                     <motion.span
                                         layoutId="activeCertificate"
-                                        className="
-                                            absolute
-                                            bottom-0
-                                            left-5
-                                            right-5
-                                            h-[2px]
-                                            rounded-full
-                                            bg-white
-                                        "
+                                        className="absolute bottom-0 left-5 right-5 h-[2px] rounded-full bg-white"
                                     />
                                 )}
 
@@ -394,12 +316,7 @@ export default function CertificatesSection() {
                             duration: 0.55,
                             ease: [0.16, 1, 0.3, 1],
                         }}
-                        className="
-                            grid
-                            grid-cols-1
-                            gap-8
-                            lg:grid-cols-[0.8fr_1.2fr]
-                        "
+                        className="grid grid-cols-1 gap-8 lg:grid-cols-[0.8fr_1.2fr]"
                     >
 
                         {/* =================================================
@@ -407,75 +324,33 @@ export default function CertificatesSection() {
                         ================================================= */}
 
                         <div
-                            className="
-                                relative
-                                min-h-[520px]
-                                overflow-hidden
-                                rounded-[28px]
-                                bg-[#171717]
-                                p-6
-                                sm:p-8
-                            "
+                            className="relative min-h-[520px] overflow-hidden rounded-[28px] bg-[#171717] p-6 sm:p-8"
                         >
 
                             {/* Decorative circles */}
 
                             <div
-                                className="
-                                    pointer-events-none
-                                    absolute
-                                    -bottom-[220px]
-                                    -right-[220px]
-                                    h-[520px]
-                                    w-[520px]
-                                    rounded-full
-                                    border
-                                    border-white/[0.08]
-                                "
+                                className="pointer-events-none absolute -bottom-[220px] -right-[220px] h-[520px] w-[520px] rounded-full border border-white/[0.08]"
                             />
 
                             <div
-                                className="
-                                    pointer-events-none
-                                    absolute
-                                    -bottom-[130px]
-                                    -right-[130px]
-                                    h-[340px]
-                                    w-[340px]
-                                    rounded-full
-                                    border
-                                    border-white/[0.06]
-                                "
+                                className="pointer-events-none absolute -bottom-[130px] -right-[130px] h-[340px] w-[340px] rounded-full border border-white/[0.06]"
                             />
 
                             {/* Top information */}
 
                             <div
-                                className="
-                                    relative
-                                    z-10
-                                    flex
-                                    items-center
-                                    justify-between
-                                "
+                                className="relative z-10 flex items-center justify-between"
                             >
 
                                 <span
-                                    className="
-                                        text-[9px]
-                                        uppercase
-                                        tracking-[0.2em]
-                                        text-white/40
-                                    "
+                                    className="text-[9px] uppercase tracking-[0.2em] text-white/40"
                                 >
                                     ASTRIDE CERTIFIED
                                 </span>
 
                                 <span
-                                    className="
-                                        text-[9px]
-                                        text-white/30
-                                    "
+                                    className="text-[9px] text-white/30"
                                 >
                                     {certificate.regNo}
                                 </span>
@@ -500,90 +375,37 @@ export default function CertificatesSection() {
                                     delay: 0.1,
                                     ease: [0.16, 1, 0.3, 1],
                                 }}
-                                className="
-                                    absolute
-                                    left-[12%]
-                                    right-[12%]
-                                    top-[15%]
-                                    aspect-[0.72]
-                                    overflow-hidden
-                                    rounded-[4px]
-                                    bg-[#f8f6ef]
-                                    shadow-[0_35px_70px_rgba(0,0,0,0.3)]
-                                "
+                                className="absolute left-[12%] right-[12%] top-[15%] aspect-[0.72] overflow-hidden rounded-[4px] bg-[#f8f6ef] shadow-[0_35px_70px_rgba(0,0,0,0.3)]"
                             >
 
                                 {/* Outer border */}
 
                                 <div
-                                    className="
-                                        absolute
-                                        inset-4
-                                        border
-                                        border-[#b9b09f]/60
-                                        sm:inset-5
-                                    "
+                                    className="absolute inset-4 border border-[#b9b09f]/60 sm:inset-5"
                                 />
 
                                 {/* Inner border */}
 
                                 <div
-                                    className="
-                                        absolute
-                                        inset-7
-                                        border
-                                        border-[#b9b09f]/30
-                                        sm:inset-8
-                                    "
+                                    className="absolute inset-7 border border-[#b9b09f]/30 sm:inset-8"
                                 />
 
                                 {/* Certificate content */}
 
                                 <div
-                                    className="
-                                        absolute
-                                        inset-0
-                                        flex
-                                        flex-col
-                                        items-center
-                                        justify-center
-                                        px-6
-                                        text-center
-                                        sm:px-10
-                                    "
+                                    className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center sm:px-10"
                                 >
 
                                     {/* Logo circle */}
 
                                     <div
-                                        className="
-                                            mb-5
-                                            h-12
-                                            w-12
-                                            rounded-full
-                                            border
-                                            border-[#b5a98f]
-                                            p-1
-                                        "
+                                        className="mb-5 h-12 w-12 rounded-full border border-[#b5a98f] p-1"
                                     >
                                         <div
-                                            className="
-                                                flex
-                                                h-full
-                                                w-full
-                                                items-center
-                                                justify-center
-                                                rounded-full
-                                                border
-                                                border-[#b5a98f]
-                                            "
+                                            className="flex h-full w-full items-center justify-center rounded-full border border-[#b5a98f]"
                                         >
                                             <span
-                                                className="
-                                                    font-serif
-                                                    text-[15px]
-                                                    text-[#4b463c]
-                                                "
+                                                className="font-serif text-[15px] text-[#4b463c]"
                                             >
                                                 A
                                             </span>
@@ -591,25 +413,13 @@ export default function CertificatesSection() {
                                     </div>
 
                                     <span
-                                        className="
-                                            text-[7px]
-                                            uppercase
-                                            tracking-[0.3em]
-                                            text-[#999]
-                                            sm:text-[8px]
-                                        "
+                                        className="text-[7px] uppercase tracking-[0.3em] text-[#999] sm:text-[8px]"
                                     >
                                         Certificate of Compliance
                                     </span>
 
                                     <h3
-                                        className="
-                                            mt-4
-                                            font-serif
-                                            text-[22px]
-                                            text-[#292722]
-                                            sm:text-[28px]
-                                        "
+                                        className="mt-4 font-serif text-[22px] text-[#292722] sm:text-[28px]"
                                     >
                                         {certificate.title}
                                     </h3>
@@ -617,26 +427,13 @@ export default function CertificatesSection() {
                                     <div className="mt-5 h-px w-16 bg-[#b5a98f]" />
 
                                     <p
-                                        className="
-                                            mt-5
-                                            max-w-[220px]
-                                            text-[7px]
-                                            leading-[1.7]
-                                            text-[#888]
-                                            sm:text-[8px]
-                                        "
+                                        className="mt-5 max-w-[220px] text-[7px] leading-[1.7] text-[#888] sm:text-[8px]"
                                     >
                                         {certificate.subtitle}
                                     </p>
 
                                     <div
-                                        className="
-                                            mt-8
-                                            text-[7px]
-                                            uppercase
-                                            tracking-[0.15em]
-                                            text-[#999]
-                                        "
+                                        className="mt-8 text-[7px] uppercase tracking-[0.15em] text-[#999]"
                                     >
                                         {certificate.regNo}
                                     </div>
@@ -644,12 +441,7 @@ export default function CertificatesSection() {
                                     {/* Signature lines */}
 
                                     <div
-                                        className="
-                                            mt-8
-                                            flex
-                                            items-center
-                                            gap-10
-                                        "
+                                        className="mt-8 flex items-center gap-10"
                                     >
 
                                         <div>
@@ -677,31 +469,11 @@ export default function CertificatesSection() {
                             {/* Verified badge */}
 
                             <div
-                                className="
-                                    absolute
-                                    bottom-7
-                                    left-7
-                                    z-10
-                                    flex
-                                    items-center
-                                    gap-3
-                                    sm:left-8
-                                "
+                                className="absolute bottom-7 left-7 z-10 flex items-center gap-3 sm:left-8"
                             >
 
                                 <span
-                                    className="
-                                        flex
-                                        h-9
-                                        w-9
-                                        items-center
-                                        justify-center
-                                        rounded-full
-                                        border
-                                        border-white/10
-                                        bg-white/[0.05]
-                                        text-white
-                                    "
+                                    className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.05] text-white"
                                 >
                                     <FiCheck size={14} />
                                 </span>
@@ -709,12 +481,7 @@ export default function CertificatesSection() {
                                 <div>
 
                                     <p
-                                        className="
-                                            text-[9px]
-                                            uppercase
-                                            tracking-[0.15em]
-                                            text-white/35
-                                        "
+                                        className="text-[9px] uppercase tracking-[0.15em] text-white/35"
                                     >
                                         Verified Standard
                                     </p>
@@ -734,52 +501,25 @@ export default function CertificatesSection() {
                         ================================================= */}
 
                         <div
-                            className="
-                                rounded-[28px]
-                                border
-                                border-black/[0.07]
-                                bg-white/70
-                                p-7
-                                backdrop-blur-xl
-                                sm:p-9
-                                lg:p-10
-                            "
+                            className="rounded-[28px] border border-black/[0.07] bg-white/70 p-7 backdrop-blur-xl sm:p-9 lg:p-10"
                         >
 
                             {/* Title */}
 
                             <div
-                                className="
-                                    flex
-                                    items-start
-                                    justify-between
-                                    gap-5
-                                "
+                                className="flex items-start justify-between gap-5"
                             >
 
                                 <div>
 
                                     <p
-                                        className="
-                                            text-[9px]
-                                            uppercase
-                                            tracking-[0.2em]
-                                            text-[#999]
-                                        "
+                                        className="text-[9px] uppercase tracking-[0.2em] text-[#999]"
                                     >
                                         Certification 0{active + 1}
                                     </p>
 
                                     <h3
-                                        className="
-                                            mt-3
-                                            font-serif
-                                            text-[38px]
-                                            leading-none
-                                            tracking-[-1px]
-                                            text-[#171717]
-                                            sm:text-[48px]
-                                        "
+                                        className="mt-3 font-serif text-[38px] leading-none tracking-[-1px] text-[#171717] sm:text-[48px]"
                                     >
                                         {certificate.title}
                                     </h3>
@@ -791,21 +531,7 @@ export default function CertificatesSection() {
                                 <button
                                     type="button"
                                     onClick={() => setPdfOpen(true)}
-                                    className="
-                                        group
-                                        flex
-                                        h-11
-                                        w-11
-                                        shrink-0
-                                        items-center
-                                        justify-center
-                                        rounded-full
-                                        bg-[#171717]
-                                        text-white
-                                        transition-transform
-                                        duration-300
-                                        hover:rotate-45
-                                    "
+                                    className="group flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#171717] text-white transition-transform duration-300 hover:rotate-45"
                                     aria-label="View certificate"
                                 >
                                     <FiExternalLink size={15} />
@@ -816,13 +542,7 @@ export default function CertificatesSection() {
                             {/* Subtitle */}
 
                             <p
-                                className="
-                                    mt-6
-                                    max-w-[600px]
-                                    text-[13px]
-                                    leading-[1.8]
-                                    text-[#707070]
-                                "
+                                className="mt-6 max-w-[600px] text-[13px] leading-[1.8] text-[#707070]"
                             >
                                 {certificate.subtitle}
                             </p>
@@ -836,13 +556,7 @@ export default function CertificatesSection() {
                             <div className="mb-7">
 
                                 <p
-                                    className="
-                                        text-[9px]
-                                        font-medium
-                                        uppercase
-                                        tracking-[0.2em]
-                                        text-[#999]
-                                    "
+                                    className="text-[9px] font-medium uppercase tracking-[0.2em] text-[#999]"
                                 >
                                     {certificate.whyTitle}
                                 </p>
@@ -874,36 +588,13 @@ export default function CertificatesSection() {
                                             delay: 0.12 + index * 0.07,
                                             ease: [0.16, 1, 0.3, 1],
                                         }}
-                                        className="
-                                            group
-                                            flex
-                                            gap-5
-                                            border-b
-                                            border-black/[0.07]
-                                            py-5
-                                            last:border-b-0
-                                        "
+                                        className="group flex gap-5 border-b border-black/[0.07] py-5 last:border-b-0"
                                     >
 
                                         {/* Number */}
 
                                         <span
-                                            className="
-                                                flex
-                                                h-8
-                                                w-8
-                                                shrink-0
-                                                items-center
-                                                justify-center
-                                                rounded-full
-                                                bg-[#eeece6]
-                                                text-[9px]
-                                                text-[#777]
-                                                transition-all
-                                                duration-300
-                                                group-hover:bg-[#171717]
-                                                group-hover:text-white
-                                            "
+                                            className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#eeece6] text-[9px] text-[#777] transition-all duration-300 group-hover:bg-[#171717] group-hover:text-white"
                                         >
                                             0{index + 1}
                                         </span>
@@ -917,13 +608,7 @@ export default function CertificatesSection() {
                                             </h4>
 
                                             <p
-                                                className="
-                                                    mt-2
-                                                    max-w-[600px]
-                                                    text-[11px]
-                                                    leading-[1.7]
-                                                    text-[#7c7c7c]
-                                                "
+                                                className="mt-2 max-w-[600px] text-[11px] leading-[1.7] text-[#7c7c7c]"
                                             >
                                                 {point.desc}
                                             </p>
@@ -943,42 +628,13 @@ export default function CertificatesSection() {
                                 <button
                                     type="button"
                                     onClick={() => setPdfOpen(true)}
-                                    className="
-                                        group
-                                        inline-flex
-                                        items-center
-                                        gap-4
-                                        rounded-full
-                                        bg-[#171717]
-                                        px-5
-                                        py-3
-                                        text-[10px]
-                                        font-medium
-                                        uppercase
-                                        tracking-[0.14em]
-                                        text-white
-                                        transition-all
-                                        duration-300
-                                        hover:bg-black
-                                    "
+                                    className="group inline-flex items-center gap-4 rounded-full bg-[#171717] px-5 py-3 text-[10px] font-medium uppercase tracking-[0.14em] text-white transition-all duration-300 hover:bg-black"
                                 >
 
                                     View Certificate
 
                                     <span
-                                        className="
-                                            flex
-                                            h-6
-                                            w-6
-                                            items-center
-                                            justify-center
-                                            rounded-full
-                                            bg-white
-                                            text-black
-                                            transition-transform
-                                            duration-300
-                                            group-hover:rotate-45
-                                        "
+                                        className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-black transition-transform duration-300 group-hover:rotate-45"
                                     >
                                         <FiArrowUpRight size={12} />
                                     </span>
@@ -1004,18 +660,7 @@ export default function CertificatesSection() {
                 {pdfOpen && (
 
                     <motion.div
-                        className="
-                            fixed
-                            inset-0
-                            z-[9999]
-                            flex
-                            items-center
-                            justify-center
-                            bg-black/80
-                            p-3
-                            backdrop-blur-md
-                            sm:p-6
-                        "
+                        className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 p-3 backdrop-blur-md sm:p-6"
                         initial={{
                             opacity: 0,
                         }}
@@ -1053,20 +698,7 @@ export default function CertificatesSection() {
                                 ease: [0.16, 1, 0.3, 1],
                             }}
                             onClick={(e) => e.stopPropagation()}
-                            className="
-                                relative
-                                flex
-                                h-[92vh]
-                                w-full
-                                max-w-[1100px]
-                                flex-col
-                                overflow-hidden
-                                rounded-[20px]
-                                bg-[#171717]
-                                shadow-[0_40px_120px_rgba(0,0,0,0.5)]
-                                sm:h-[90vh]
-                                sm:rounded-[28px]
-                            "
+                            className="relative flex h-[92vh] w-full max-w-[1100px] flex-col overflow-hidden rounded-[20px] bg-[#171717] shadow-[0_40px_120px_rgba(0,0,0,0.5)] sm:h-[90vh] sm:rounded-[28px]"
                         >
 
                             {/* =================================================
@@ -1074,33 +706,13 @@ export default function CertificatesSection() {
                             ================================================= */}
 
                             <div
-                                className="
-                                    flex
-                                    h-[64px]
-                                    shrink-0
-                                    items-center
-                                    justify-between
-                                    border-b
-                                    border-white/[0.08]
-                                    bg-[#171717]
-                                    px-4
-                                    sm:px-6
-                                "
+                                className="flex h-[64px] shrink-0 items-center justify-between border-b border-white/[0.08] bg-[#171717] px-4 sm:px-6"
                             >
 
                                 <div className="flex items-center gap-3">
 
                                     <div
-                                        className="
-                                            flex
-                                            h-9
-                                            w-9
-                                            items-center
-                                            justify-center
-                                            rounded-full
-                                            bg-white/[0.08]
-                                            text-white
-                                        "
+                                        className="flex h-9 w-9 items-center justify-center rounded-full bg-white/[0.08] text-white"
                                     >
                                         <FiCheck size={14} />
                                     </div>
@@ -1108,12 +720,7 @@ export default function CertificatesSection() {
                                     <div>
 
                                         <p
-                                            className="
-                                                text-[9px]
-                                                uppercase
-                                                tracking-[0.2em]
-                                                text-white/35
-                                            "
+                                            className="text-[9px] uppercase tracking-[0.2em] text-white/35"
                                         >
                                             ASTRIDE CERTIFICATE
                                         </p>
@@ -1131,21 +738,7 @@ export default function CertificatesSection() {
                                 <button
                                     type="button"
                                     onClick={() => setPdfOpen(false)}
-                                    className="
-                                        flex
-                                        h-10
-                                        w-10
-                                        items-center
-                                        justify-center
-                                        rounded-full
-                                        border
-                                        border-white/10
-                                        text-white/70
-                                        transition-all
-                                        duration-300
-                                        hover:bg-white
-                                        hover:text-black
-                                    "
+                                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white/70 transition-all duration-300 hover:bg-white hover:text-black"
                                     aria-label="Close certificate"
                                 >
                                     <FiX size={18} />
@@ -1158,23 +751,14 @@ export default function CertificatesSection() {
                             ================================================= */}
 
                             <div
-                                className="
-                                    relative
-                                    min-h-0
-                                    flex-1
-                                    bg-[#303030]
-                                "
+                                className="relative min-h-0 flex-1 bg-[#303030]"
                             >
 
                                 <iframe
                                     key={certificate.pdfUrl}
                                     src={`${certificate.pdfUrl}#toolbar=1&navpanes=0&scrollbar=1`}
                                     title={certificate.title}
-                                    className="
-                                        h-full
-                                        w-full
-                                        border-0
-                                    "
+                                    className="h-full w-full border-0"
                                 />
 
                             </div>
@@ -1184,32 +768,13 @@ export default function CertificatesSection() {
                             ================================================= */}
 
                             <div
-                                className="
-                                    flex
-                                    shrink-0
-                                    flex-col
-                                    gap-3
-                                    border-t
-                                    border-white/[0.08]
-                                    bg-[#171717]
-                                    px-4
-                                    py-3
-                                    sm:flex-row
-                                    sm:items-center
-                                    sm:justify-between
-                                    sm:px-6
-                                "
+                                className="flex shrink-0 flex-col gap-3 border-t border-white/[0.08] bg-[#171717] px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-6"
                             >
 
                                 <div>
 
                                     <p
-                                        className="
-                                            text-[9px]
-                                            uppercase
-                                            tracking-[0.15em]
-                                            text-white/30
-                                        "
+                                        className="text-[9px] uppercase tracking-[0.15em] text-white/30"
                                     >
                                         {certificate.regNo}
                                     </p>
@@ -1224,25 +789,7 @@ export default function CertificatesSection() {
                                     href={certificate.pdfUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="
-                                        inline-flex
-                                        items-center
-                                        justify-center
-                                        gap-2
-                                        rounded-full
-                                        border
-                                        border-white/10
-                                        px-4
-                                        py-2.5
-                                        text-[9px]
-                                        uppercase
-                                        tracking-[0.12em]
-                                        text-white/70
-                                        transition-all
-                                        duration-300
-                                        hover:bg-white
-                                        hover:text-black
-                                    "
+                                    className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 px-4 py-2.5 text-[9px] uppercase tracking-[0.12em] text-white/70 transition-all duration-300 hover:bg-white hover:text-black"
                                 >
                                     Open Full PDF
 

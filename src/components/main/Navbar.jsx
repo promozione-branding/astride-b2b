@@ -267,24 +267,7 @@ export default function Navbar() {
                                     >
                                         <Link
                                             href={item.href}
-                                            className="
-                                group
-                                relative
-                                flex
-                                items-center
-                                gap-2
-                                whitespace-nowrap
-                                rounded-md
-                                px-3
-                                py-3
-                                text-[13px]
-                                font-medium
-                                tracking-wide
-                                transition-all
-                                duration-300
-                                hover:bg-[#f8f7f3]
-                                hover:text-black
-                            "
+                                            className="group relative flex items-center gap-2 whitespace-nowrap rounded-md px-3 py-3 text-[13px] font-medium tracking-wide transition-all duration-300 hover:bg-[#f8f7f3] hover:text-black"
                                         >
                                             {/* ICON */}
                                             <Icon
@@ -300,18 +283,7 @@ export default function Navbar() {
 
                                             {/* UNDERLINE */}
                                             <span
-                                                className="
-                                    absolute
-                                    bottom-1
-                                    left-1/2
-                                    h-[2px]
-                                    w-0
-                                    -translate-x-1/2
-                                    bg-black
-                                    transition-all
-                                    duration-300
-                                    group-hover:w-[calc(100%-24px)]
-                                "
+                                                className="absolute bottom-1 left-1/2 h-[2px] w-0 -translate-x-1/2 bg-black transition-all duration-300 group-hover:w-[calc(100%-24px)]"
                                             />
                                         </Link>
                                     </motion.div>
@@ -322,54 +294,17 @@ export default function Navbar() {
                         {/* SEARCH */}
                         {/* <div className="ml-6 shrink-0">
                             <div
-                                className="
-                    group
-                    flex
-                    h-10
-                    w-[190px]
-                    items-center
-                    overflow-hidden
-                    rounded-md
-                    border
-                    border-black/15
-                    bg-white
-                    transition-all
-                    duration-300
-                    focus-within:border-black
-                "
+                                className="group flex h-10 w-[190px] items-center overflow-hidden rounded-md border border-black/15 bg-white transition-all duration-300 focus-within:border-black"
                             >
                                 <input
                                     type="text"
                                     placeholder="Search..."
-                                    className="
-                        h-full
-                        w-full
-                        bg-transparent
-                        px-3
-                        text-[13px]
-                        text-black
-                        outline-none
-                        placeholder:text-black/40
-                    "
+                                    className="h-full w-full bg-transparent px-3 text-[13px] text-black outline-none placeholder:text-black/40"
                                 />
 
                                 <button
                                     type="button"
-                                    className="
-                        flex
-                        h-full
-                        w-10
-                        shrink-0
-                        items-center
-                        justify-center
-                        border-l
-                        border-black/10
-                        text-black
-                        transition-all
-                        duration-300
-                        hover:bg-black
-                        hover:text-white
-                    "
+                                    className="flex h-full w-10 shrink-0 items-center justify-center border-l border-black/10 text-black transition-all duration-300 hover:bg-black hover:text-white"
                                     aria-label="Search"
                                 >
                                     <Search

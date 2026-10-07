@@ -150,7 +150,7 @@ export default function Products() {
     }, [activeCategory, searchQuery]);
 
     return (
-        <main className="min-h-screen bg-[#f2f3f3] px-4 pb-10 pt-15 text-[#171717] sm:px-6 lg:px-10 lg:pb-16 lg:pt-20">
+        <main className="min-h-screen bg-[#fbfaf8] px-4 pb-10 pt-15 text-[#171717] sm:px-6 lg:px-10 lg:pb-16 lg:pt-20">
             <div className="mx-auto max-w-[1440px]">
                 <motion.header
                     initial={{ opacity: 0, y: 20 }}
@@ -211,14 +211,14 @@ export default function Products() {
                                         type="button"
                                         onClick={() => setActiveCategory(category)}
                                         aria-pressed={isActive}
-                                        className={`flex shrink-0 items-center justify-between gap-5 rounded-full border px-4 py-3 text-left text-[10px] transition lg:w-full lg:rounded-xl lg:px-4 ${isActive
+                                        className={`flex shrink-0 items-center justify-between gap-5 rounded-full border px-4 py-3 text-left text-xs transition lg:w-full lg:rounded-xl lg:px-4 ${isActive
                                             ? "border-[#171717] bg-[#171717] text-white"
                                             : "border-black/[0.07] bg-white text-black/60 hover:border-black/25 hover:text-black"
                                             }`}
                                     >
                                         <span>{category}</span>
                                         <span
-                                            className={`text-[9px] ${isActive
+                                            className={`text-xs ${isActive
                                                 ? "text-white/55"
                                                 : "text-black/35"
                                                 }`}
@@ -245,7 +245,7 @@ export default function Products() {
                         <div className="mb-5 flex items-center justify-between">
                             <p
                                 aria-live="polite"
-                                className="text-[10px] uppercase tracking-[0.14em] text-black/50"
+                                className="text-[11px] uppercase tracking-[0.14em] text-black/50"
                             >
                                 {visibleProducts.length}{" "}
                                 {visibleProducts.length === 1 ? "product" : "products"}
@@ -253,7 +253,7 @@ export default function Products() {
                                     <span> / {activeCategory}</span>
                                 )}
                             </p>
-                            <p className="hidden text-[9px] uppercase tracking-[0.14em] text-black/35 sm:block">
+                            <p className="hidden text-[11px] uppercase tracking-[0.14em] text-black/55 sm:block">
                                 ASTRIDE seating collection
                             </p>
                         </div>
@@ -269,7 +269,7 @@ export default function Products() {
                                     className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3"
                                 >
                                     {visibleProducts.map((product, index) => (
-                                        <motion.article
+                                        <motion.a href={`/products/${product.slug}`}
                                             key={product.id}
                                             initial={{ opacity: 0, y: 16 }}
                                             animate={{ opacity: 1, y: 0 }}
@@ -313,7 +313,7 @@ export default function Products() {
                                                     />
                                                 </Link>
                                             </div>
-                                        </motion.article>
+                                        </motion.a>
                                     ))}
                                 </motion.div>
                             ) : (

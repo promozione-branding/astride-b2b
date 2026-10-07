@@ -237,11 +237,11 @@ export default function AboutUsSection() {
                 ========================================================== */}
                 <div
                     ref={chairRef}
-                    className="absolute left-1/2 top-[115px] z-10 w-[350px] -translate-x-1/2 sm:top-[125px] sm:w-[400px] md:w-[450px] lg:top-[50px] lg:w-[500px] xl:w-[600px]"
+                    className="absolute left-1/2 top-[115px] z-10 w-[350px] -translate-x-1/2 sm:top-[125px] sm:w-[400px] md:w-[450px] lg:top-[30px] lg:w-[500px] xl:w-[600px]"
                 >
                     <div className="relative aspect-[1/1] w-full">
                         <Image
-                            src="/categories/1.webp"
+                            src="https://pub-c853b438c28f4099b37f01f2c65a7031.r2.dev/products/1785182121187-best-gaming-chair-Green-c3cc.webp"
                             alt="Modern Chair"
                             fill
                             priority

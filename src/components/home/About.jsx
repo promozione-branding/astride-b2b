@@ -189,7 +189,7 @@ export default function FurnitureRules() {
                         />
 
                         <motion.img
-                            src="https://pub-c853b438c28f4099b37f01f2c65a7031.r2.dev/products/1785218157138-staff-chair-Black-bbcf.webp"
+                            src="https://pub-c853b438c28f4099b37f01f2c65a7031.r2.dev/products/1785180491682-gaming-chair-with-adjustable-armrest-White-3491.webp"
                             alt="Modern wooden chair"
                             initial={{
                                 opacity: 0,

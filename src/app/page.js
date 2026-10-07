@@ -8,6 +8,7 @@ import ChairProcessSection from "@/components/home/ChairProcessSection";
 import ContactSection from "@/components/home/ContactSection";
 import FAQSection from "@/components/home/FaqSetion";
 import Hero from "@/components/home/Hero";
+import ProductCollections from "@/components/home/ProductCollections";
 import ProductShowcase from "@/components/home/ProductShowcase";
 import ReviewSection from "@/components/home/ReviewSection";
 import StatsSection from "@/components/home/StatsSection";
@@ -24,6 +25,7 @@ export default function Home() {
       <ChairHero />
       <WhyChooseUs />
       <ProductShowcase />
+      <ProductCollections />
       <StatsSection />
       {/* <CertificatesSection /> */}
       <ChairProcessSection />

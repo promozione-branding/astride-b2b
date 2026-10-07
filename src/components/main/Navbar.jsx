@@ -12,6 +12,7 @@ import {
     FaInstagram,
     FaLinkedinIn,
     FaYoutube,
+    FaWhatsapp,
 } from "react-icons/fa";
 import { GiOfficeChair } from "react-icons/gi";
 import { PiOfficeChairFill, PiStoolBold } from "react-icons/pi";
@@ -68,30 +69,30 @@ export default function Navbar() {
             href: "/",
         },
         {
-            name: "Staff Chair",
+            name: "Products",
             icon: GiOfficeChair,
             href: "/products",
         },
-        {
-            name: "Office Chair",
-            icon: PiOfficeChairFill,
-            href: "/products",
-        },
-        {
-            name: "Gaming Chair",
-            icon: GiOfficeChair,
-            href: "/products",
-        },
-        {
-            name: "Study Chair",
-            icon: PiOfficeChairFill,
-            href: "/products",
-        },
-        {
-            name: "Bar Stool",
-            icon: PiStoolBold,
-            href: "/products",
-        },
+        // {
+        //     name: "Office Chair",
+        //     icon: PiOfficeChairFill,
+        //     href: "/products",
+        // },
+        // {
+        //     name: "Gaming Chair",
+        //     icon: GiOfficeChair,
+        //     href: "/products",
+        // },
+        // {
+        //     name: "Study Chair",
+        //     icon: PiOfficeChairFill,
+        //     href: "/products",
+        // },
+        // {
+        //     name: "Bar Stool",
+        //     icon: PiStoolBold,
+        //     href: "/products",
+        // },
         {
             name: "About",
             icon: Info,
@@ -136,23 +137,9 @@ export default function Navbar() {
 
                         <div className="hidden items-center gap-2 lg:flex">
                             <a
-                                href="tel:+919999999999"
-                                className="rounded-full border bg-white p-2.5 transition-all duration-300 hover:bg-black hover:text-white"
-                            >
-                                <FaPhoneAlt size={15} />
-                            </a>
-
-                            {/* <a
-                                href="mailto:info@example.com"
-                                className="rounded-full border bg-white p-2.5 transition-all duration-300 hover:bg-black hover:text-white"
-                            >
-                                <FaEnvelope size={14} />
-                            </a> */}
-
-                            <a
                                 href="#"
                                 aria-label="Facebook"
-                                className="rounded-full border bg-white p-2.5 transition-all duration-300 hover:bg-black hover:text-white"
+                                className="rounded-full border bg-blue-500 p-2.5 transition-all duration-300 hover:bg-blue-600 text-white"
                             >
                                 <FaFacebookF size={13} />
                             </a>
@@ -160,7 +147,7 @@ export default function Navbar() {
                             <a
                                 href="#"
                                 aria-label="Instagram"
-                                className="rounded-full border bg-white p-2.5 transition-all duration-300 hover:bg-black hover:text-white"
+                                className="rounded-full p-2.5 text-white transition-all duration-300 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 hover:from-yellow-500 hover:via-pink-600 hover:to-purple-700"
                             >
                                 <FaInstagram size={15} />
                             </a>
@@ -168,7 +155,7 @@ export default function Navbar() {
                             <a
                                 href="#"
                                 aria-label="LinkedIn"
-                                className="rounded-full border bg-white p-2.5 transition-all duration-300 hover:bg-black hover:text-white"
+                                className="rounded-full border bg-blue-500 p-2.5 transition-all duration-300 hover:bg-blue-600 text-white"
                             >
                                 <FaLinkedinIn size={14} />
                             </a>
@@ -176,7 +163,7 @@ export default function Navbar() {
                             <a
                                 href="#"
                                 aria-label="Youtube"
-                                className="rounded-full border bg-white p-2.5 transition-all duration-300 hover:bg-black hover:text-white"
+                                className="rounded-full border bg-red-500 p-2.5 transition-all duration-300 hover:bg-red-600 text-white"
                             >
                                 <FaYoutube size={15} />
                             </a>
@@ -210,7 +197,16 @@ export default function Navbar() {
 
                         {/* RIGHT QUOTE */}
 
-                        <div className="ml-auto">
+                        <div className="ml-auto flex items-center gap-2">
+                            <a
+                                href="tel:+919999999999"
+                                className="rounded-full border bg-red-600 text-white p-2.5 transition-all duration-300 hover:bg-red-700"
+                            >
+                                <FaPhoneAlt size={15} />
+                            </a>
+                            <a href="" className="rounded-full bg-green-600 text-white p-2 hover:bg-green-700 transition-all duration-300">
+                                <FaWhatsapp size={18} />
+                            </a>
                             <Link
                                 href="/contact"
                                 className="group relative flex items-center overflow-hidden bg-black px-6 py-3 text-[13px] font-semibold text-white"
@@ -292,19 +288,19 @@ export default function Navbar() {
                         </div>
 
                         {/* SEARCH */}
-                        {/* <div className="ml-6 shrink-0">
+                        <div className="ml-6 shrink-0">
                             <div
-                                className="group flex h-10 w-[190px] items-center overflow-hidden rounded-md border border-black/15 bg-white transition-all duration-300 focus-within:border-black"
+                                className="group flex h-10 w-[220px] items-center overflow-hidden rounded-full border border-black/40 bg-white transition-all duration-300 focus-within:border-black"
                             >
                                 <input
                                     type="text"
                                     placeholder="Search..."
-                                    className="h-full w-full bg-transparent px-3 text-[13px] text-black outline-none placeholder:text-black/40"
+                                    className="h-full w-full bg-transparent px-4 text-[13px] text-black outline-none placeholder:text-black/60"
                                 />
 
                                 <button
                                     type="button"
-                                    className="flex h-full w-10 shrink-0 items-center justify-center border-l border-black/10 text-black transition-all duration-300 hover:bg-black hover:text-white"
+                                    className="flex h-full w-12 shrink-0 items-center justify-center border-l border-black/20 text-black transition-all duration-300 hover:bg-black hover:text-white"
                                     aria-label="Search"
                                 >
                                     <Search
@@ -313,7 +309,7 @@ export default function Navbar() {
                                     />
                                 </button>
                             </div>
-                        </div> */}
+                        </div>
                     </nav>
                 </motion.div>
 

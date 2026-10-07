@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import ContactSection from "@/components/home/ContactSection";
 
 const productImages = [
     {
@@ -39,14 +40,39 @@ const productImages = [
 
 const specifications = [
     ["Category", "Office seating"],
-    ["Designed for", "Workspaces, institutions & commercial use"],
+    ["Dimensions", "Length (18.5 inches), Width (18.5 inches), Seating Height (18 to 24 inches), Overall Height (36 inches)"],
+    ["Designed for", "Offices and workspaces"],
     ["Availability", "Ask our team about current options"],
+    ["Available colours", "Black, blue, red, orange, green"],
+    ["Back Style", "Comfort rest back"],
+    ["Frame Material", "Polypropylene"],
+    ["Item Weight", "15 Kilograms"],
+    ["Material", "Nylon"],
+    ["Product Dimensions", "54D x 58W x 110H Centimeters"],
+    ["Recommended Uses", "Office"],
+    ["Size", "Standard"],
+    ["Special Feature", "Adjustable Height"],
+];
+
+const detailsBullets = [
+    "DIY INSTALLATION: Do it Yourself in 10 Minutes, No Extra Tools Required.",
+    "BIONIC CURVE BACKREST: The design of the backrest is based on the natural curve of the human spine and dynamic digital model of the human body. The back of this ergonomic chair naturally fits the physiological bends of the spine, providing excellent lumbar support.",
+    "RISK FREE PURCHASE: The chair has commercial-grade & BIFMA Certified components, Weight supports up to 100kgs. The installation guide is very simple to follow, no extra tools and fittings needed.",
+    "STABLE CHAIR: Passed stability testing with a load of 100 kg on seat and backrest to avoid tip-over. Passed seat and back rest durability test with a load of 100 Kg and 32 Kg respectively for 1,00,000 cycles.",
+    "SOLID CONSTRUCTION: Heavy-duty Polypropylene Mesh Back Chair, BIFMA Certified Class - 4 Hydraulic Gas Spring, BIFMA Certified 50mm Wheel Castors, for great stability and mobility, more reliable and sturdy, maximum weight handling capacity up to 100 Kgs.",
 ];
 
 const benefits = [
     "Made for everyday work",
     "A considered, practical design",
     "B2B enquiry support",
+];
+
+const colorOptions = [
+    { name: "Black", hex: "#171717" },
+    { name: "Walnut", hex: "#8e6949" },
+    { name: "Sand", hex: "#d4b186" },
+    { name: "Slate", hex: "#5e6976" },
 ];
 
 const keyFeatures = [
@@ -91,10 +117,38 @@ const whyAstride = [
     },
 ];
 
+const reviews = [
+    {
+        name: "Karan M.",
+        title: "Excellent office chair",
+        text: "Comfortable for long hours, very easy to assemble, and the design fits perfectly in our studio. The build quality feels premium and durable.",
+        rating: 5,
+    },
+    {
+        name: "Neha S.",
+        title: "Great value for money",
+        text: "The chair feels sturdy and supportive, especially for daily work. We ordered for multiple workstations and the experience was smooth.",
+        rating: 5,
+    },
+    {
+        name: "Rohit P.",
+        title: "Strong ergonomic support",
+        text: "The backrest support is really good and the finish looks clean. It has made our office setup much more comfortable and professional.",
+        rating: 4,
+    },
+    {
+        name: "Aisha K.",
+        title: "Very reliable purchase",
+        text: "Assembly is straightforward and the chair feels balanced and stable. It looks premium and works great in a retail workspace.",
+        rating: 5,
+    },
+];
+
 export default function Product() {
     const swiperRef = useRef(null);
     const [activeImage, setActiveImage] = useState(0);
     const [activeTab, setActiveTab] = useState("details");
+    const [selectedColor, setSelectedColor] = useState("Black");
     const [isSaved, setIsSaved] = useState(false);
 
     const showPreviousImage = () => swiperRef.current?.slidePrev();
@@ -121,7 +175,7 @@ export default function Product() {
     };
 
     return (
-        <main className="min-h-screen bg-[#f2f3f3] px-4 pb-20 pt-28 text-[#171717] sm:px-6 lg:px-10 lg:pb-12 lg:pt-32">
+        <main className="min-h-screen bg-[#fbfaf8] px-4 pb-20 pt-28 text-[#171717] sm:px-6 lg:px-10 lg:pb-12 lg:pt-32">
             <motion.div
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -131,7 +185,7 @@ export default function Product() {
                 <div className="px-5 pt-6 sm:px-8 sm:pt-8 lg:px-12 lg:pt-10">
                     <nav
                         aria-label="Breadcrumb"
-                        className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[9px] font-medium uppercase tracking-[0.14em] text-black/40 sm:text-[10px]"
+                        className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs font-medium uppercase tracking-[0.14em] text-black/50"
                     >
                         <Link className="transition-colors hover:text-black" href="/">
                             Home
@@ -252,7 +306,7 @@ export default function Product() {
                         transition={{ duration: 0.7, delay: 0.2 }}
                         className="flex min-w-0 flex-col lg:py-2"
                     >
-                        <div className="flex items-center gap-2 text-[9px] font-medium uppercase tracking-[0.2em] text-black/45 sm:text-[10px]">
+                        <div className="flex items-center gap-2 text-[9px] font-medium uppercase tracking-[0.2em] text-black/45 sm:text-xs">
                             <span className="h-px w-6 bg-[#c9a227]" />
                             ASTRIDE office seating
                         </div>
@@ -283,6 +337,61 @@ export default function Product() {
                             </button>
                         </div>
 
+                        <div className="mt-2 flex items-center gap-3">
+                            <div className="flex items-center gap-1 text-lg text-[#d4a93a]" aria-label="4.7 out of 5 stars">
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                                <span>★</span>
+                                <span className="text-[#d4a93a]/60">★</span>
+                            </div>
+                            <span className="text-sm font-medium text-black/75">4.7</span>
+                            <span className="text-sm text-black/70">[512 verified reviews]</span>
+                        </div>
+
+                        <div className="flex gap-4 items-center">
+                            <div className="mt-2 flex items-end gap-3">
+                                <div className="flex items-baseline gap-2">
+                                    <span className="text-[28px] font-semibold tracking-[-0.06em] text-black">
+                                        ₹6,499
+                                    </span>
+                                    <span className="text-lg text-black/40 line-through">₹10,000</span>
+                                </div>
+                            </div>
+                            <p className="rounded-md text-sm mt-1 text-black/60 bg-amber-400 p-1.5">You save ₹3,501</p>
+                        </div>
+
+                        <p className="mt-1 text-xs uppercase tracking-[0.12em] text-black/45">
+                            Inclusive of all taxes.
+                        </p>
+
+                        <div className="mt-4">
+                            <p className="mb-3 text-[10px] font-medium uppercase tracking-[0.18em] text-black/45">
+                                Choose colour
+                            </p>
+                            <div className="flex flex-wrap gap-2">
+                                {colorOptions.map((color) => (
+                                    <button
+                                        key={color.name}
+                                        type="button"
+                                        aria-label={`Select ${color.name} color`}
+                                        aria-pressed={selectedColor === color.name}
+                                        onClick={() => setSelectedColor(color.name)}
+                                        className={`flex items-center gap-2 rounded-full border px-2.5 py-1.5 text-[10px] font-medium uppercase tracking-[0.12em] transition ${selectedColor === color.name
+                                            ? "border-black bg-black text-white"
+                                            : "border-black/10 bg-white text-black/70 hover:border-black/30"
+                                            }`}
+                                    >
+                                        <span
+                                            className="h-3.5 w-3.5 rounded-full border border-black/10"
+                                            style={{ backgroundColor: color.hex }}
+                                        />
+                                        {color.name}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
                         <p className="mt-5 max-w-[540px] text-[13px] leading-[1.9] text-black/60 sm:text-sm">
                             A dependable seating solution for the rhythm of a modern
                             workplace. The ASTRIDE Staff Chair brings together practical
@@ -290,94 +399,16 @@ export default function Product() {
                             workstations, and shared spaces.
                         </p>
 
-                        <div className="mt-5 border-y border-black/10">
-                            <div
-                                role="tablist"
-                                aria-label="Product information"
-                                className="flex gap-7"
-                            >
-                                {[
-                                    ["details", "Details"],
-                                    ["description", "Description"],
-                                ].map(([tab, label]) => (
-                                    <button
-                                        key={tab}
-                                        id={`product-tab-${tab}`}
-                                        type="button"
-                                        role="tab"
-                                        aria-selected={activeTab === tab}
-                                        aria-controls="product-tab-panel"
-                                        onClick={() => setActiveTab(tab)}
-                                        className={`relative py-4 text-[10px] font-medium uppercase tracking-[0.13em] transition ${activeTab === tab
-                                            ? "text-black"
-                                            : "text-black/40 hover:text-black"
-                                            }`}
-                                    >
-                                        {label}
-                                        {activeTab === tab && (
-                                            <motion.span
-                                                layoutId="product-tab-indicator"
-                                                className="absolute inset-x-0 bottom-0 h-[2px] bg-[#c9a227]"
-                                            />
-                                        )}
-                                    </button>
-                                ))}
-                            </div>
-                            <div
-                                id="product-tab-panel"
-                                role="tabpanel"
-                                aria-labelledby={`product-tab-${activeTab}`}
-                                className="min-h-[150px] py-5"
-                            >
-                                <AnimatePresence mode="wait">
-                                    {activeTab === "details" ? (
-                                        <motion.dl
-                                            key="details"
-                                            initial={{ opacity: 0, y: 7 }}
-                                            animate={{ opacity: 1, y: 0 }}
-                                            exit={{ opacity: 0, y: -5 }}
-                                            transition={{ duration: 0.2 }}
-                                            className="space-y-4"
-                                        >
-                                            {specifications.map(([label, value]) => (
-                                                <div
-                                                    key={label}
-                                                    className="grid grid-cols-[110px_1fr] gap-4 text-[11px] sm:text-xs"
-                                                >
-                                                    <dt className="font-medium text-black/80">
-                                                        {label}
-                                                    </dt>
-                                                    <dd className="leading-relaxed text-black/55">
-                                                        {value}
-                                                    </dd>
-                                                </div>
-                                            ))}
-                                        </motion.dl>
-                                    ) : (
-                                        <motion.p
-                                            key="description"
-                                            initial={{ opacity: 0, y: 7 }}
-                                            animate={{ opacity: 1, y: 0 }}
-                                            exit={{ opacity: 0, y: -5 }}
-                                            transition={{ duration: 0.2 }}
-                                            className="max-w-[540px] text-[12px] leading-[1.9] text-black/60"
-                                        >
-                                            Designed to fit naturally into busy work
-                                            environments, the ASTRIDE Staff Chair offers a
-                                            straightforward, comfortable seat for teams and
-                                            everyday office use. Contact us to discuss
-                                            configurations, availability, and bulk
-                                            requirements.
-                                        </motion.p>
-                                    )}
-                                </AnimatePresence>
-                            </div>
-                        </div>
-
                         <div className="mt-4">
-                            <h2 className="text-xs font-medium uppercase tracking-[0.18em] text-black/45">
-                                At a glance
-                            </h2>
+                            <div className="flex items-center justify-between gap-3">
+                                <h2 className="text-xs font-medium uppercase tracking-[0.18em] text-black/45">
+                                    At a glance
+                                </h2>
+                                <span className="text-[10px] font-medium uppercase tracking-[0.16em] text-black/35">
+                                    {selectedColor}
+                                </span>
+                            </div>
+
                             <div className="mt-4 flex flex-wrap gap-2">
                                 {benefits.map((benefit) => (
                                     <span
@@ -412,14 +443,129 @@ export default function Product() {
                 </div>
             </motion.div>
 
+            <section className="bg-white px-4 rounded-md">
+                <div className="mt-5 border-y border-black/10">
+                    {/* <div
+                        role="tablist"
+                        aria-label="Product information"
+                        className="flex gap-7"
+                    >
+                        {[
+                            ["details", "Details"],
+                            ["description", "Description"],
+                        ].map(([tab, label]) => (
+                            <button
+                                key={tab}
+                                id={`product-tab-${tab}`}
+                                type="button"
+                                role="tab"
+                                aria-selected={activeTab === tab}
+                                aria-controls="product-tab-panel"
+                                onClick={() => setActiveTab(tab)}
+                                className={`relative py-4 text-[10px] font-medium uppercase tracking-[0.13em] transition ${activeTab === tab
+                                    ? "text-black"
+                                    : "text-black/40 hover:text-black"
+                                    }`}
+                            >
+                                {label}
+                                {activeTab === tab && (
+                                    <motion.span
+                                        layoutId="product-tab-indicator"
+                                        className="absolute inset-x-0 bottom-0 h-[2px] bg-[#c9a227]"
+                                    />
+                                )}
+                            </button>
+                        ))}
+                    </div> */}
+                    <div
+                        id="product-tab-panel"
+                        role="tabpanel"
+                        aria-labelledby={`product-tab-${activeTab}`}
+                        className="min-h-[150px] py-5"
+                    >
+                        <AnimatePresence mode="wait">
+                            {activeTab === "details" ? (
+                                <motion.div
+                                    key="details"
+                                    initial={{ opacity: 0, y: 7 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -5 }}
+                                    transition={{ duration: 0.2 }}
+                                    className="grid gap-5 lg:grid-cols-[1.2fr_0.8fr]"
+                                >
+                                    <div className="rounded-[18px] border border-black/10 bg-[#f8f5f1] p-4 sm:p-5">
+                                        <div className="mb-4 flex items-center justify-between gap-3">
+                                            <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-black/45">
+                                                Product details
+                                            </p>
+                                            <span className="rounded-full border border-[#c9a227]/40 bg-[#c9a227]/10 px-2 py-1 text-[9px] font-medium uppercase tracking-[0.14em] text-[#8f6d1f]">
+                                                Premium build
+                                            </span>
+                                        </div>
+
+                                        <div className="grid gap-3 md:grid-cols-2">
+                                            {specifications.map(([label, value]) => (
+                                                <div
+                                                    key={label}
+                                                    className="rounded-2xl border border-black/8 bg-white p-3 shadow-[0_10px_20px_rgba(24,24,24,0.02)]"
+                                                >
+                                                    <dt className="mb-1 text-[9px] font-medium uppercase tracking-[0.14em] text-black/45">
+                                                        {label}
+                                                    </dt>
+                                                    <dd className="text-[12px] leading-[1.7] text-black/70">
+                                                        {value}
+                                                    </dd>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-[18px] bg-[#171717] p-4 text-white sm:p-5">
+                                        <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-[#d6b54c]">
+                                            Why this chair
+                                        </p>
+                                        <ul className="mt-4 space-y-4">
+                                            {detailsBullets.map((bullet, index) => (
+                                                <li
+                                                    key={bullet}
+                                                    className="flex gap-3 rounded-xl border border-white/8 bg-white/[0.03] p-3"
+                                                >
+                                                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#c9a227] text-[10px] font-semibold text-black">
+                                                        {index + 1}
+                                                    </span>
+                                                    <span className="text-[12px] leading-[1.8] text-white/75">
+                                                        {bullet}
+                                                    </span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </motion.div>
+                            ) : (
+                                <motion.p
+                                    key="description"
+                                    initial={{ opacity: 0, y: 7 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -5 }}
+                                    transition={{ duration: 0.2 }}
+                                    className="max-w-[540px] text-[12px] leading-[1.9] text-black/60"
+                                >
+                                    Designed to fit naturally into busy work environments, the ASTRIDE Staff Chair offers a straightforward, comfortable seat for teams and everyday office use. Contact us to discuss configurations, availability, and bulk requirements.
+                                </motion.p>
+                            )}
+                        </AnimatePresence>
+                    </div>
+                </div>
+            </section>
+
             <section
                 aria-labelledby="key-features-heading"
-                className="mx-auto mt-5 max-w-[1440px] lg:mt-8"
+                className="mx-auto mt-10 max-w-[1440px] lg:mt-12"
             >
                 <motion.div
                     initial={{ opacity: 0, y: 24 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.2 }}
+                    viewport={{ once: false, amount: 0.2 }}
                     transition={{ duration: 0.65 }}
                     className="mb-5 flex flex-col justify-between gap-4 sm:flex-row sm:items-end"
                 >
@@ -445,7 +591,7 @@ export default function Product() {
                             key={number}
                             initial={{ opacity: 0, y: 22 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.2 }}
+                            viewport={{ once: false, amount: 0.2 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             className="rounded-2xl border border-black/[0.06] bg-white p-6 sm:p-8"
                         >
@@ -478,7 +624,7 @@ export default function Product() {
                 <motion.div
                     initial={{ opacity: 0, x: -18 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, amount: 0.2 }}
+                    viewport={{ once: false, amount: 0.2 }}
                     transition={{ duration: 0.6 }}
                 >
                     <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-[#d6b54c]">
@@ -502,7 +648,7 @@ export default function Product() {
                             key={title}
                             initial={{ opacity: 0, y: 14 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.2 }}
+                            viewport={{ once: false, amount: 0.2 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             className="grid gap-2 py-5 first:pt-0 last:pb-0 sm:grid-cols-[0.8fr_1.2fr] sm:gap-6"
                         >
@@ -514,6 +660,62 @@ export default function Product() {
                     ))}
                 </div>
             </section>
+
+            <section className="mx-auto mt-8 max-w-[1440px]">
+                <div className="mb-5 flex items-end justify-between gap-4">
+                    <div>
+                        <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-[#9b7b19]">
+                            Customer feedback
+                        </p>
+                        <h2 className="mt-3 text-3xl font-medium tracking-[-0.06em] sm:text-4xl">
+                            Verified reviews
+                        </h2>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-black/70">
+                        <span className="text-lg text-[#d4a93a]">★★★★★</span>
+                        <span className="font-medium text-black">4.7</span>
+                    </div>
+                </div>
+
+                <Swiper
+                    spaceBetween={20}
+                    slidesPerView={1}
+                    breakpoints={{
+                        640: { slidesPerView: 2 },
+                        1024: { slidesPerView: 3 },
+                    }}
+                    className="reviews-swiper"
+                >
+                    {reviews.map(({ name, title, text, rating }) => (
+                        <SwiperSlide key={name}>
+                            <article className="h-full rounded-[22px] border border-black/[0.08] bg-white p-6 shadow-[0_18px_30px_rgba(19,19,19,0.04)]">
+                                <div className="flex items-center justify-between gap-3">
+                                    <div>
+                                        <p className="text-sm font-medium text-black">{name}</p>
+                                        <p className="mt-1 text-[10px] uppercase tracking-[0.15em] text-black/40">
+                                            Verified buyer
+                                        </p>
+                                    </div>
+                                    <div className="text-sm text-[#d4a93a]" aria-label={`${rating} out of 5 stars`}>
+                                        {"★".repeat(rating)}
+                                    </div>
+                                </div>
+
+                                <h3 className="mt-5 text-lg font-medium tracking-[-0.04em] text-black">
+                                    {title}
+                                </h3>
+                                <p className="mt-3 text-sm leading-7 text-black/60">
+                                    “{text}”
+                                </p>
+                            </article>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </section>
+
+            <div className="mt-5 rounded-md">
+                <ContactSection />
+            </div>
 
         </main>
     );

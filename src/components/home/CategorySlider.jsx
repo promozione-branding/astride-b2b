@@ -120,7 +120,7 @@ export default function CategorySlider() {
                                 <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10" />
 
                                 {/* Category Name */}
-                                <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-300 group-hover:opacity-100">
+                                <div className="absolute inset-0 flex items-center justify-center transition-all duration-300">
                                     <span className="rounded-full bg-white px-6 py-2.5 text-[18px] font-semibold text-[#071a3d] shadow-sm transition-all duration-300 group-hover:px-7">
                                         {category.name}
                                     </span>

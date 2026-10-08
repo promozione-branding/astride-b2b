@@ -20,13 +20,13 @@ export default function Home() {
       <Hero />
       <CategorySlider />
       <FurnitureRules />
+      <StatsSection />
       <CategoryShowcase />
       <AboutUsSection />
       <ChairHero />
       <WhyChooseUs />
       <ProductShowcase />
       <ProductCollections />
-      <StatsSection />
       {/* <CertificatesSection /> */}
       <ChairProcessSection />
       <ReviewSection />

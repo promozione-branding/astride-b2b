@@ -241,7 +241,7 @@ export default function AboutUsSection() {
                 >
                     <div className="relative aspect-[1/1] w-full">
                         <Image
-                            src="https://pub-c853b438c28f4099b37f01f2c65a7031.r2.dev/products/1785182121187-best-gaming-chair-Green-c3cc.webp"
+                            src="/categories/7.png"
                             alt="Modern Chair"
                             fill
                             priority

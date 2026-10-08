@@ -69,7 +69,7 @@ export default function Navbar() {
             href: "/",
         },
         {
-            name: "Products",
+            name: "Categories",
             icon: GiOfficeChair,
             href: "/products",
         },

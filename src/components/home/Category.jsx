@@ -15,7 +15,7 @@ const categories = [
         highlight: "Your Workspace",
         description:
             "Explore comfortable staff chairs designed to create a professional, supportive, and productive workspace.",
-        image: "/categories/2.webp",
+        image: "/categories/6.png",
     },
     {
         id: 2,
@@ -33,7 +33,7 @@ const categories = [
         highlight: "Your Gaming Setup",
         description:
             "Experience superior comfort and support with gaming chairs designed for long gaming sessions and immersive gameplay.",
-        image: "/categories/4.webp",
+        image: "https://pub-c853b438c28f4099b37f01f2c65a7031.r2.dev/products/1785180491683-gaming-chair-with-adjustable-armrest-Green-1b77.webp",
     },
     {
         id: 4,
@@ -42,7 +42,7 @@ const categories = [
         highlight: "Your Study Space",
         description:
             "Bring comfort and focus to your study area with thoughtfully designed chairs made for everyday learning.",
-        image: "/categories/3.webp",
+        image: "/categories/7.png",
     },
     {
         id: 5,
@@ -60,7 +60,7 @@ const categories = [
         highlight: "Your Workspace",
         description:
             "Explore comfortable staff chairs designed to create a professional, supportive, and productive workspace.",
-        image: "/categories/2.webp",
+        image: "/categories/6.png",
     },
     {
         id: 7,
@@ -78,7 +78,7 @@ const categories = [
         highlight: "Your Gaming Setup",
         description:
             "Experience superior comfort and support with gaming chairs designed for long gaming sessions and immersive gameplay.",
-        image: "/categories/4.webp",
+        image: "https://pub-c853b438c28f4099b37f01f2c65a7031.r2.dev/products/1785180491683-gaming-chair-with-adjustable-armrest-Green-1b77.webp",
     },
     {
         id: 9,
@@ -87,7 +87,7 @@ const categories = [
         highlight: "Your Study Space",
         description:
             "Bring comfort and focus to your study area with thoughtfully designed chairs made for everyday learning.",
-        image: "/categories/3.webp",
+        image: "/categories/7.png",
     },
     {
         id: 10,
@@ -105,7 +105,7 @@ const categories = [
         highlight: "Your Workspace",
         description:
             "Explore comfortable staff chairs designed to create a professional, supportive, and productive workspace.",
-        image: "/categories/2.webp",
+        image: "/categories/6.png",
     },
     {
         id: 12,
@@ -123,7 +123,7 @@ const categories = [
         highlight: "Your Gaming Setup",
         description:
             "Experience superior comfort and support with gaming chairs designed for long gaming sessions and immersive gameplay.",
-        image: "/categories/4.webp",
+        image: "https://pub-c853b438c28f4099b37f01f2c65a7031.r2.dev/products/1785180491683-gaming-chair-with-adjustable-armrest-Green-1b77.webp",
     },
     {
         id: 14,
@@ -132,7 +132,7 @@ const categories = [
         highlight: "Your Study Space",
         description:
             "Bring comfort and focus to your study area with thoughtfully designed chairs made for everyday learning.",
-        image: "/categories/3.webp",
+        image: "/categories/7.png",
     },
     {
         id: 15,

@@ -40,7 +40,7 @@ const COLLECTIONS = {
     executive: {
         id: "executive",
         title: "Executive Chairs",
-        image: "/bento/Modern Ergonomic Chair Workspace (1).png",
+        image: "/bento/Neon Accent Ergonomic Chair Workspace (1).png",
         hotspots: [
             {
                 id: "executive-head",
@@ -72,7 +72,7 @@ const COLLECTIONS = {
     visitor: {
         id: "visitor",
         title: "Visitor Chairs",
-        image: "/bento/Modern Black Mesh Office Chair (2).png",
+        image: "/bento/Red Mesh Chair in a Sunlit Office (1).png",
         hotspots: [
             {
                 id: "visitor-back",
@@ -144,7 +144,7 @@ const COLLECTIONS = {
     workspace: {
         id: "workspace",
         title: "Create Better Workspaces",
-        image: "/bento/Modern Ergonomic Chair in Warm Home Office (1).png",
+        image: "/bento/Modern Ergonomic Chair in Sunlit Office (3).png",
         hotspots: [
             {
                 id: "workspace-back",
@@ -176,7 +176,7 @@ const COLLECTIONS = {
     mesh: {
         id: "mesh",
         title: "Mesh Chairs",
-        image: "/bento/Modern Ergonomic Chair in Stylish Office (1).png",
+        image: "/bento/Modern Ergonomic Chair in Sunlit Office (2) (1).png",
         hotspots: [
             {
                 id: "mesh-back",

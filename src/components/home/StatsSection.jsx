@@ -12,13 +12,13 @@ import {
 
 const stats = [
     {
-        value: 75000,
+        value: 500000,
         suffix: "+",
         label: "Orders delivered",
         icon: Package,
     },
     {
-        value: 50000,
+        value: 400000,
         suffix: "+",
         label: "Happy customers",
         icon: Users,

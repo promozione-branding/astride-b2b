@@ -2,7 +2,7 @@ import FurnitureRules from "@/components/home/About";
 import AboutUsSection from "@/components/home/AboutUsSection";
 import CategoryShowcase from "@/components/home/Category";
 import CategorySlider from "@/components/home/CategorySlider";
-import CertificatesSection from "@/components/home/CertificatesSection";
+import Exhibition from "@/components/home/Exhibition";
 import ChairHero from "@/components/home/ChairHero";
 import ChairProcessSection from "@/components/home/ChairProcessSection";
 import ContactSection from "@/components/home/ContactSection";
@@ -19,6 +19,7 @@ export default function Home() {
     <>
       <Hero />
       <CategorySlider />
+      <Exhibition />
       <FurnitureRules />
       <StatsSection />
       <CategoryShowcase />
@@ -29,6 +30,7 @@ export default function Home() {
       <ProductCollections />
       {/* <CertificatesSection /> */}
       <ChairProcessSection />
+      <Exhibition />
       <ReviewSection />
       <FAQSection />
       <ContactSection />

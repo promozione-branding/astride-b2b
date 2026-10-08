@@ -7,6 +7,7 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 export default function CategorySlider() {
     const categories = [
@@ -17,7 +18,7 @@ export default function CategorySlider() {
             highlight: "Your Workspace",
             description:
                 "Explore comfortable staff chairs designed to create a professional, supportive, and productive workspace.",
-            image: "/categories/Modern Black Ergonomic Chair Showcase (1).png",
+            image: "/categories/Modern Blue Mesh Office Chair Display (1).png",
         },
         {
             id: 2,
@@ -26,7 +27,7 @@ export default function CategorySlider() {
             highlight: "Your Office",
             description:
                 "Discover ergonomic office chairs that combine comfort, functionality, and contemporary design for modern workspaces.",
-            image: "/categories/Minimalist Ergonomic Office Chair Showcase (1).png",
+            image: "/categories/Ergonomic Gray Chair in Beige Studio (1).png",
         },
         {
             id: 3,
@@ -35,16 +36,7 @@ export default function CategorySlider() {
             highlight: "Your Gaming Setup",
             description:
                 "Experience superior comfort and support with gaming chairs designed for long gaming sessions and immersive gameplay.",
-            image: "/categories/Minimalist Black Ergonomic Chair (1).png",
-        },
-        {
-            id: 5,
-            name: "Bar Stool & Cafe Chair",
-            title: "Elevate",
-            highlight: "Your Bar Area",
-            description:
-                "Add a stylish and functional touch to your counter or bar area with contemporary bar chairs.",
-            image: "/categories/Modern Black Leather Bar Stool (1).png",
+            image: "/categories/Modern Ergonomic Chair in Beige Studio (1).png",
         },
         {
             id: 4,
@@ -53,7 +45,16 @@ export default function CategorySlider() {
             highlight: "Your Study Space",
             description:
                 "Bring comfort and focus to your study area with thoughtfully designed chairs made for everyday learning.",
-            image: "/categories/Modern Black Ergonomic Chair Showcase (1).png",
+            image: "/categories/Minimalist Ergonomic Office Chair Showcase (1).png",
+        },
+        {
+            id: 5,
+            name: "Bar Stool & Cafe Chair",
+            title: "Elevate",
+            highlight: "Your Bar Area",
+            description:
+                "Add a stylish and functional touch to your counter or bar area with contemporary bar chairs.",
+            image: "/categories/Modern Burgundy Leather Bar Stool (1).png",
         },
     ];
 
@@ -61,14 +62,22 @@ export default function CategorySlider() {
         <section className="w-full bg-white px-6 py-12 md:px-12 lg:px-24">
 
             {/* Heading */}
-            <div className="mb-8">
-                <h2 className="text-[36px] font-semibold leading-tight tracking-[-1.5px] text-[#071a3d] md:text-[40px]">
-                    Our categories
-                </h2>
+            <div className="mb-8 flex justify-between items-center">
+                <div>
+                    <h2 className="text-[36px] font-semibold leading-tight tracking-[-1.5px] text-[#071a3d] md:text-[40px]">
+                        Our categories
+                    </h2>
 
-                <p className="mt-2 text-[17px] tracking-[0.5px] text-[#777]">
-                    Lots of new products and product collections
-                </p>
+                    <p className="mt-2 text-[17px] tracking-[0.5px] text-[#777]">
+                        Lots of new products and product collections
+                    </p>
+                </div>
+
+                <div>
+                    <Link href={"/products"} className="flex items-center gap-2 hover:underline">
+                        View All <ArrowRight size={20} />
+                    </Link>
+                </div>
             </div>
 
             {/* Slider */}
@@ -97,8 +106,7 @@ export default function CategorySlider() {
             >
                 {categories.map((category) => (
                     <SwiperSlide key={category.id}>
-                        <Link href={"/products"} className="group flex justify-center">
-
+                        <Link href="/products" className="group flex justify-center">
                             <div className="relative aspect-square w-full max-w-[300px] overflow-hidden rounded-full">
 
                                 {/* Image */}
@@ -109,12 +117,23 @@ export default function CategorySlider() {
                                 />
 
                                 {/* Overlay */}
-                                <div className="absolute inset-0 bg-black/5 transition-colors duration-300 group-hover:bg-black/15" />
+                                <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10" />
 
                                 {/* Category Name */}
-                                <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-all duration-300 group-hover:opacity-100">
                                     <span
-                                        className="rounded-full bg-white px-6 py-2.5 text-[18px] font-semibold text-[#071a3d] shadow-sm transition-all duration-300 group-hover:px-7"
+                                        className="
+            rounded-full
+            bg-white
+            px-6 py-2.5
+            text-[18px]
+            font-semibold
+            text-[#071a3d]
+            shadow-sm
+            transition-all
+            duration-300
+            group-hover:px-7
+        "
                                     >
                                         {category.name}
                                     </span>

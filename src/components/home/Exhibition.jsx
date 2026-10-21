@@ -12,12 +12,9 @@ export default function Exhibition() {
     const cardsRef = useRef([]);
     const decorRef = useRef([]);
 
-    const boothImage =
-        "https://scontent-del2-2.xx.fbcdn.net/v/t39.30808-6/768546163_943147022136160_3565381334172006970_n.jpg?stp=dst-jpg_tt6&cstp=mx1080x1350&ctp=s1080x1350&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=s997vfEInyoQ7kNvwEaplDd&_nc_oc=AdoJGGrxRVFjXtwU4XCpmdirAoKBy6egNACgLeF3QjaMDaxYiVRSMbAKBxt2PeOE44E&_nc_zt=23&_nc_ht=scontent-del2-2.xx&_nc_gid=OK_MsKvwVZoXaAM2sKg38g&_nc_ss=7b2a8&oh=00_AQP8A114oM2gko4pNUKcbjn-0oxOA65DeRn-CyGgM-xsjA&oe=6ACD36BD";
-
     const cards = [
         {
-            image: boothImage,
+            image: "/ASTRIDE at INDEXPLUS 2026 (1).png",
             title: "EXHIBITIONS",
             description:
                 "Showcasing innovative seating solutions across leading industry platforms.",
@@ -369,14 +366,11 @@ export default function Exhibition() {
                             onMouseLeave={handleLeave}
                             className="
                                 absolute
-                                inset-[-3%]
-                                size-[106%]
-                                object-cover
-                                will-change-transform
+                              
                             "
                         />
 
-                        <div
+                        {/* <div
                             className="
                                 absolute
                                 inset-0
@@ -385,88 +379,7 @@ export default function Exhibition() {
                                 via-transparent
                                 to-black/[0.02]
                             "
-                        />
-
-                        {/* INFO CARD */}
-
-                        <div
-                            className="
-                                absolute
-                                bottom-5
-                                left-5
-                                right-5
-                                z-10
-                                flex
-                                items-center
-                                gap-3
-                                rounded-[18px]
-                                border
-                                border-white/50
-                                bg-white/[0.94]
-                                p-3
-                                shadow-[0_15px_35px_rgba(0,0,0,0.12)]
-                                backdrop-blur-md
-                                sm:left-6
-                                sm:right-auto
-                                sm:max-w-[440px]
-                                sm:p-4
-                            "
-                        >
-                            {/* ICON */}
-
-                            <div
-                                className="
-                                    grid
-                                    size-[48px]
-                                    shrink-0
-                                    place-items-center
-                                    rounded-[13px]
-                                    bg-gradient-to-br
-                                    from-[#b4692b]
-                                    to-[#a45c21]
-                                "
-                            >
-                                <span
-                                    className="
-                                        relative
-                                        size-[22px]
-                                        rounded-[5px]
-                                        border-2
-                                        border-white
-                                    "
-                                />
-                            </div>
-
-                            <div>
-                                <h3
-                                    className="
-                                        m-0
-                                        text-[18px]
-                                        font-black
-                                        tracking-[-0.04em]
-                                        text-[#111]
-                                        sm:text-[22px]
-                                    "
-                                >
-                                    EXHIBITIONS
-                                </h3>
-
-                                <p
-                                    className="
-                                        mt-1
-                                        mb-0
-                                        max-w-[310px]
-                                        text-[10px]
-                                        leading-[1.45]
-                                        text-[#30453f]
-                                        sm:text-xs
-                                    "
-                                >
-                                    Showcasing innovative seating solutions
-                                    across leading industry platforms.
-                                </p>
-                            </div>
-                        </div>
+                        /> */}
                     </div>
 
                     {/* =================================

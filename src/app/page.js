@@ -19,7 +19,7 @@ export default function Home() {
     <>
       <Hero />
       <CategorySlider />
-      <Exhibition />
+      {/* <Exhibition /> */}
       <FurnitureRules />
       <StatsSection />
       <CategoryShowcase />

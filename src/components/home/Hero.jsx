@@ -16,16 +16,12 @@ const slides = [
         tag: "OFFICE COLLECTION",
         title: "Work in",
         highlight: "Comfort.",
-        description:
-            "Premium office chairs designed for long hours, better posture and effortless comfort.",
     },
     {
         image: "/banner/2.png",
         tag: "GAMING COLLECTION",
         title: "Game without",
         highlight: "Limits.",
-        description:
-            "Experience immersive comfort and bold design with our premium gaming chairs.",
     },
 ];
 
@@ -101,16 +97,6 @@ export default function Hero() {
                                                 {slide.highlight}
                                             </span>
                                         </h1>
-
-                                        {/* Description */}
-                                        <p
-                                            className={`mt-7 max-w-lg text-sm leading-7 text-white/70 sm:text-base transition-all delay-500 duration-1000 ${isActive
-                                                ? "translate-y-0 opacity-100"
-                                                : "translate-y-8 opacity-0"
-                                                }`}
-                                        >
-                                            {slide.description}
-                                        </p>
 
                                         {/* Button */}
                                         <div

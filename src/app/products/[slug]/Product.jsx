@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, color, motion } from "framer-motion";
 import {
     ArrowLeft,
     ArrowRight,
@@ -86,6 +86,7 @@ const keyFeatures = [
     {
         number: "02",
         title: "Versatile by design",
+        color:true,
         description:
             "A clean, understated silhouette that sits naturally in a range of professional settings.",
         icon: BadgeCheck,
@@ -338,12 +339,12 @@ export default function Product() {
                         </div>
 
                         <div className="mt-2 flex items-center gap-3">
-                            <div className="flex items-center gap-1 text-lg text-[#d4a93a]" aria-label="4.7 out of 5 stars">
+                            <div className="flex items-center gap-1 text-lg text-[#b4e717]" aria-label="4.7 out of 5 stars">
                                 <span>★</span>
                                 <span>★</span>
                                 <span>★</span>
                                 <span>★</span>
-                                <span className="text-[#d4a93a]/60">★</span>
+                                <span className="text-[#b4e717]/50">★</span>
                             </div>
                             <span className="text-sm font-medium text-black/75">4.7</span>
                             <span className="text-sm text-black/70">[512 verified reviews]</span>
@@ -358,7 +359,7 @@ export default function Product() {
                                     <span className="text-lg text-black/40 line-through">₹10,000</span>
                                 </div>
                             </div>
-                            <p className="rounded-md text-sm mt-1 text-black/60 bg-amber-400 p-1.5">You save ₹3,501</p>
+                            <p className="rounded-md text-sm mt-1 text-black/60 bg-[#b4e717] p-1.5">You save ₹3,501</p>
                         </div>
 
                         <p className="mt-1 text-xs uppercase tracking-[0.12em] text-black/45">
@@ -424,7 +425,7 @@ export default function Product() {
                         <div className="mt-5 flex flex-col gap-3 sm:flex-row">
                             <Link
                                 href="/contact-us"
-                                className="group inline-flex min-h-12 flex-1 items-center justify-center gap-3 rounded-full bg-[#171717] px-6 py-3 text-[10px] font-medium uppercase tracking-[0.13em] text-white transition hover:bg-[#c9a227] hover:text-black"
+                                className="group inline-flex min-h-12 flex-1 items-center justify-center gap-3 rounded-full bg-[#b4e717] px-6 py-3 text-[10px] font-medium uppercase tracking-[0.13em] text-white transition hover:bg-[#000] hover:text-white"
                             >
                                 Request a quote
                                 <ArrowUpRight
@@ -530,7 +531,7 @@ export default function Product() {
                                                     key={bullet}
                                                     className="flex gap-3 rounded-xl border border-white/8 bg-white/[0.03] p-3"
                                                 >
-                                                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#c9a227] text-[10px] font-semibold text-black">
+                                                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#b4e717] text-[10px] font-semibold text-black">
                                                         {index + 1}
                                                     </span>
                                                     <span className="text-[12px] leading-[1.8] text-white/75">
@@ -587,14 +588,18 @@ export default function Product() {
 
                 <div className="grid gap-4 md:grid-cols-3">
                     {keyFeatures.map(({ number, title, description, icon: Icon }, index) => (
-                        <motion.article
-                            key={number}
-                            initial={{ opacity: 0, y: 22 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: false, amount: 0.2 }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="rounded-2xl border border-black/[0.06] bg-white p-6 sm:p-8"
-                        >
+                       <motion.article
+  key={number}
+  id={`reveal-color-true-${number}`}
+  data-reveal-color="true"
+  initial={{ opacity: 0, y: 22 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: false, amount: 0.2 }}
+  transition={{ duration: 0.5, delay: index * 0.1 }}
+  className={`rounded-2xl border border-black/[0.06] p-6 sm:p-8 ${
+    color ? "bg-[#B4E717]" : "bg-white"
+  }`}
+>
                             <div className="flex items-center justify-between">
                                 <span className="text-[10px] tracking-[0.15em] text-black/35">
                                     {number}

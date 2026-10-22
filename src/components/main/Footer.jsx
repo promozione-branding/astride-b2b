@@ -76,7 +76,7 @@ const socialLinks = [
 
 export default function Footer() {
     return (
-        <footer className="relative overflow-hidden bg-[#111111] text-white">
+        <footer className="relative overflow-hidden bg-[#1c4b42] text-white">
             <ChairOutlineSVG />
 
             <div className="relative z-10 mx-auto max-w-[1450px] px-5 py-8 sm:px-8 lg:px-10 lg:py-10">

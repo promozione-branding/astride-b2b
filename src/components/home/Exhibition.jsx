@@ -284,7 +284,7 @@ export default function Exhibition() {
                     >
                         ASTRIDE AT
 
-                        <span className="block text-[#b4692b]">
+                        <span className="block text-[#1c4b42]">
                             EXHIBITIONS
                         </span>
                     </h2>

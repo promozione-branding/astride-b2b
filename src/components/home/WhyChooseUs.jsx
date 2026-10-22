@@ -76,7 +76,7 @@ export default function WhyChooseUs() {
                             <br />
                             Timeless
                             <br />
-                            Furniture
+                           <span className="text-[#b4e717]">Furniture</span>
                         </h2>
 
                         <p className="mt-6 max-w-[340px] text-sm text-[#777]">
@@ -87,7 +87,7 @@ export default function WhyChooseUs() {
 
                         <Link
                             href="/products"
-                            className="group mt-5 inline-flex items-center gap-3 rounded-full bg-[#111111] px-6 py-3.5 text-xs font-semibold text-white transition-all duration-300 hover:bg-[#333]"
+                            className="group mt-5 inline-flex items-center gap-3 rounded-full bg-[#111111] px-6 py-3.5 text-xs font-semibold text-white transition-all duration-300 hover:bg-[#b4e717]"
                         >
                             Explore Collection
 
@@ -151,7 +151,7 @@ export default function WhyChooseUs() {
                                     </p>
                                 </div>
 
-                                <span className="absolute bottom-4 right-5 text-4xl font-light tracking-[-0.08em] text-white/90 sm:bottom-6 sm:right-7 sm:text-5xl">
+                                <span className="absolute bottom-4 right-5 text-4xl font-light tracking-[-0.08em] text-[#b4e717] sm:bottom-6 sm:right-7 sm:text-5xl">
                                     {active.number}
                                 </span>
                             </motion.div>

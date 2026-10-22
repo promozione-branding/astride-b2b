@@ -38,7 +38,7 @@ const reviews = [
     {
         id: 3,
         rating: "4.9",
-        title: <>Comfort<br />Meets<br />Character</>,
+        title: <>Comfort<br /><span className="text-[#b4e717]">Meets</span><br />Character</>,
         description:
             "A refined balance of ergonomic comfort, premium construction and contemporary design made for modern spaces.",
         videoText: <>The ultimate chair for long work sessions and intense gaming. <br />Discover the comfort,<br />details and thoughtful<br />design behind the chair.</>,
@@ -126,7 +126,7 @@ function ReviewSlide({ review }) {
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.9, delay: 0.15 }}
-                    className="font-serif text-[48px] leading-[0.9] tracking-[-2px] text-[#b4692b] sm:text-[65px] md:text-[76px] lg:text-[85px]"
+                    className="font-serif text-[48px] leading-[0.9] tracking-[-2px] text-[#000] sm:text-[65px] md:text-[76px] lg:text-[85px]"
                 >
                     {review.title}
                 </motion.h2>

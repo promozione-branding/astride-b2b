@@ -259,7 +259,7 @@ export default function AboutUsSection() {
                     className="absolute left-0 z-20 lg:left-10 lg:bottom-45"
                 >
                     <h1
-                        className="text-[60px] font-[900] leading-[0.78] tracking-[-0.065em] text-[#102321] sm:text-[70px] md:text-[80px] lg:text-[90px] xl:text-[110px]"
+                        className="text-[60px] font-[900] leading-[0.78] tracking-[-0.065em] text-[#b4e717] sm:text-[70px] md:text-[80px] lg:text-[90px] xl:text-[110px]"
                     >
                         MODERN
                     </h1>

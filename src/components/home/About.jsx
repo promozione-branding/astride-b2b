@@ -102,7 +102,7 @@ export default function FurnitureRules() {
                             className="absolute left-1/2 top-8 z-[1] h-[480px] w-[430px] -translate-x-1/2 sm:top-10 sm:h-[550px] sm:w-[480px] lg:left-0 lg:translate-x-0"
                         >
                             <motion.path
-                                fill="#E8E2D8"
+                                fill="#b4e717"
                                 d="
                   M285 15
                   C260 75 268 111 319 139
@@ -185,7 +185,7 @@ export default function FurnitureRules() {
                                 delay: 0.15,
                                 ease: [0.16, 1, 0.3, 1],
                             }}
-                            className="absolute left-1/2 top-[285px] z-[2] h-[135px] w-[430px] -translate-x-1/2 rotate-[7deg] rounded-[50%] bg-[#e8e2d8] sm:top-[350px] sm:h-[155px] sm:w-[520px] lg:left-0 lg:translate-x-0"
+                            className="absolute left-1/2 top-[285px] z-[2] h-[135px] w-[430px] -translate-x-1/2 rotate-[7deg] rounded-[50%] bg-[#916740] sm:top-[350px] sm:h-[155px] sm:w-[520px] lg:left-0 lg:translate-x-0"
                         />
 
                         <motion.img
@@ -255,7 +255,7 @@ export default function FurnitureRules() {
                     absolute
                     ${classes}
                     rounded-full
-                    bg-[#a58e7e]
+                    bg-[#1c4b42]
                     rotate-[-25deg]
                   `}
                                 />

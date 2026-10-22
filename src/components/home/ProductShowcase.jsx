@@ -157,7 +157,7 @@ export default function ProductShowcase() {
                                 {activeProduct.name}
                             </h1>
 
-                            <p className="mt-6 max-w-[370px] text-xs leading-6 text-black/55 sm:text-sm sm:leading-7">
+                            <p className="mt-6 max-w-[370px] text-xs leading-6 text-black/55 sm:text-sm sm:leading-5">
                                 {activeProduct.description}
                             </p>
 
@@ -319,7 +319,7 @@ export default function ProductShowcase() {
                                     type="button"
                                     onClick={() => handleProductClick(index)}
                                     className={`relative flex h-[110px] w-full flex-col items-start border-r border-black/10 px-3 py-3 text-left transition-colors duration-300 sm:h-[125px] sm:px-4 ${activeIndex === index
-                                        ? "bg-black text-white"
+                                        ? "bg-[#b4e717] text-white"
                                         : "bg-transparent text-black hover:bg-white"
                                         }`}
                                 >

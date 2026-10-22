@@ -171,7 +171,7 @@ export default function CategoryShowcase() {
                             <br />
 
                             <span className="font-sans font-medium not-italic text-2xl sm:text-4xl">
-                                {activeCategory.title} {activeCategory.highlight}
+                                {activeCategory.title} <span className="text-[#b4e717]">{activeCategory.highlight}</span>
                             </span>
                         </h2>
 
@@ -183,7 +183,7 @@ export default function CategoryShowcase() {
                         {/* Buttons */}
                         <div className="mt-8 flex items-center gap-4">
                             <Link href={"/products"}
-                                className="rounded-full border border-[#222] bg-[#222] px-6 py-3 flex items-center gap-3 text-sm text-white transition-all duration-300 hover:bg-black"
+                                className="rounded-full  bg-[#b4e717] px-6 py-3 flex items-center gap-3 text-sm text-black transition-all duration-300 hover:bg-black hover:text-white"
                             >
                                 Explore <ArrowRight size={15} />
                             </Link>
@@ -302,7 +302,7 @@ export default function CategoryShowcase() {
                     <button
                         onClick={() => swiperRef.current?.slideNext()}
                         aria-label="Next category"
-                        className="group absolute bottom-[65px] right-1 z-30 flex h-[42px] w-[42px] items-center justify-center rounded-full border border-[#d4d4d4] bg-white text-[#222] shadow-[0_5px_20px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-x-1 hover:border-[#111] hover:bg-[#111] hover:text-white active:scale-90"
+                        className="group absolute bottom-[65px] right-1 z-30 flex h-[42px] w-[42px] items-center justify-center rounded-full border border-[#d4d4d4] bg-[#b4e717] text-[#222] shadow-[0_5px_20px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-x-1 hover:border-[#111] hover:bg-[#111] hover:text-white active:scale-90"
                     >
                         <ArrowRight
                             size={19}

@@ -93,7 +93,7 @@ export default function Hero() {
                                         >
                                             {slide.title}
                                             <br />
-                                            <span className="font-semibold">
+                                            <span className="font-semibold text-[#b4e717]">
                                                 {slide.highlight}
                                             </span>
                                         </h1>
@@ -107,7 +107,7 @@ export default function Hero() {
                                         >
                                             <Link
                                                 href="/shop"
-                                                className="group inline-flex items-center gap-4 bg-white px-7 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-black transition-all duration-300 hover:bg-black hover:text-white hover:ring-1 hover:ring-white"
+                                                className="group inline-flex items-center gap-4 bg-white px-7 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-black transition-all duration-300 hover:bg-[#b4e717] hover:text-white hover:ring-1 hover:ring-white"
                                             >
                                                 Explore Collection
 

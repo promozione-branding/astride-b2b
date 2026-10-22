@@ -122,7 +122,7 @@ export default function About() {
     return (
         <main className="overflow-hidden bg-[#fbfaf8] text-[#22180f]">
             <section className="relative px-5 pb-14 pt-32 sm:px-8 sm:pb-20 sm:pt-36 lg:px-10 lg:pb-24 lg:pt-30 border-b border-black/20">
-                <div className="pointer-events-none absolute -right-28 -top-36 h-[420px] w-[420px] rounded-full bg-[#efece7] sm:h-[500px] sm:w-[560px]" />
+                <div className="pointer-events-none absolute -right-28 -top-36 h-[420px] w-[420px] rounded-full bg-[#1c4b42]/80 sm:h-[500px] sm:w-[560px]" />
                 <div className="relative mx-auto grid max-w-[1320px] items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
                     <motion.div
                         initial={reduceMotion ? false : { opacity: 0, x: -24 }}
@@ -138,13 +138,13 @@ export default function About() {
                             <br />
                             comfort feel
                             <br />
-                            <span className="relative italic text-[#927551]">
+                            <span className="relative italic text-[#b4e717]">
                                 considered.
                             </span>
                         </h1>
                         <Link
                             href="/products"
-                            className="mt-7 inline-flex items-center gap-3 bg-[#6e5436] px-5 py-3.5 text-xs font-medium text-white transition-colors hover:bg-[#4d3925]"
+                            className="mt-7 inline-flex items-center gap-3 bg-[#000] px-5 py-3.5 text-xs font-medium text-white transition-colors hover:bg-[#b4e717]"
                         >
                             Find your seat
                             <ArrowRight size={15} strokeWidth={1.7} />
@@ -155,7 +155,7 @@ export default function About() {
                         initial={reduceMotion ? false : { opacity: 0, y: 26, scale: 0.98 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         transition={{ duration: reduceMotion ? 0 : 0.9, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
-                        className="relative z-50 mx-auto h-[330px] w-full max-w-[540px] overflow-hidden rounded-t-[48%] rounded-b-[4px] bg-[#e8e0d4] sm:h-[430px] lg:h-[510px]"
+                        className="relative z-10 mx-auto h-[330px] w-full max-w-[540px] overflow-hidden rounded-t-[48%] rounded-b-[4px] bg-[#e8e0d4] sm:h-[430px] lg:h-[510px]"
                     >
                         <Image
                             src="/banner/4.png"
@@ -163,10 +163,10 @@ export default function About() {
                             fill
                             priority
                             sizes="(max-width: 1024px) 100vw, 50vw"
-                            className="object-cover object-right"
+                            className="object-cover z-10 object-right"
                         />
                         <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/45 to-transparent px-6 pb-6 pt-20 text-white sm:px-8 sm:pb-8">
-                            <p className="text-[9px] uppercase tracking-[0.2em] text-white/75">
+                            <p className="text-[9px] uppercase tracking-[0.2em] text-white/95">
                                 ASTRIDE / Designed for everyday
                             </p>
                         </div>
@@ -253,7 +253,7 @@ export default function About() {
                                         <p className={`${stat.featured ? "text-5xl sm:text-6xl" : "text-4xl sm:text-5xl"} font-semibold leading-none tracking-[-0.07em]`}>
                                             {stat.value}
                                         </p>
-                                        <h2 className="mt-2 text-xs font-medium sm:text-sm">
+                                        <h2 className="mt-2 text-xs font-medium text-[#b4e717] sm:text-sm">
                                             {stat.label}
                                         </h2>
                                         <p className="mt-1 max-w-[270px] text-[10px] leading-[1.55] text-white/80 sm:text-[11px]">

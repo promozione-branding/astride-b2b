@@ -222,7 +222,7 @@ function StatCard({ stat, index }) {
                     stiffness: 180,
                     damping: 14,
                 }}
-                className="relative z-10 flex h-[62px] w-[62px] shrink-0 items-center justify-center rounded-full bg-[#171717] text-white sm:h-[68px] sm:w-[68px]"
+                className="relative z-10 flex h-[62px] w-[62px] shrink-0 items-center justify-center rounded-full bg-[#b4e717] text-white sm:h-[68px] sm:w-[68px]"
             >
                 <Icon
                     strokeWidth={1.5}

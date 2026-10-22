@@ -94,7 +94,7 @@ export default function ChairProcessSection() {
                         <h2 className="font-serif text-[38px] leading-[0.95] tracking-[-1.8px] text-[#171717] sm:text-[50px] lg:text-[64px]">
                             How We Create
                             <br />
-                            Premium ASTRIDE Chairs
+                           <span className="text-[#b4e717]">Premium</span> ASTRIDE Chairs
                         </h2>
                     </motion.div>
 
@@ -227,7 +227,7 @@ function ProcessCard({ item, index }) {
                 rounded-[8px]
                 border
                 border-black/[0.07]
-                ${isBackground ? "bg-black" : "bg-[#eeeeeb]"}
+                ${isBackground ? "bg-black" : "bg-[#000]"}
             `}
         >
             {/* =====================================================
@@ -340,7 +340,7 @@ function ProcessCard({ item, index }) {
 
             {!isBackground && (
                 <>
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#f5f5f2] via-[#eeeeeb] to-[#e5e5df]" />
+                    <div className="absolute inset-0 bg-[#b4e717]" />
 
                     {/* =====================================================
             LARGE SOFT CIRCLE

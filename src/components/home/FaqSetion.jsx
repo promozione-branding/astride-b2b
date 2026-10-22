@@ -127,7 +127,7 @@ export default function FAQSection() {
                         >
                             Everything you
                             <br />
-                            need to know.
+                           <span className="text-[#b4e717]">need to know.</span>
                         </h2>
 
                         <div
@@ -185,7 +185,7 @@ export default function FAQSection() {
                                                     transition-all
                                                     duration-300
                                                     ${isOpen
-                                                        ? "bg-[#171717] text-white"
+                                                        ? "bg-[#b4e717] text-white"
                                                         : "bg-[#eeebe4] text-[#777]"
                                                     }
                                                 `}
@@ -216,7 +216,7 @@ export default function FAQSection() {
                                                     transition-all
                                                     duration-300
                                                     ${isOpen
-                                                        ? "border-[#171717] bg-[#171717] text-white"
+                                                        ? "border-[#fff] bg-[#b4e717] text-white"
                                                         : "border-black/15 text-[#222] group-hover:bg-black group-hover:text-white"
                                                     }
                                                 `}

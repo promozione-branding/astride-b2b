@@ -1,508 +1,3 @@
-// "use client";
-
-// import React, { useEffect, useState } from "react";
-// import Image from "next/image";
-// import Link from "next/link";
-// import { motion, AnimatePresence } from "framer-motion";
-
-// import {
-//     FaPhoneAlt,
-//     FaEnvelope,
-//     FaFacebookF,
-//     FaInstagram,
-//     FaLinkedinIn,
-//     FaYoutube,
-//     FaWhatsapp,
-// } from "react-icons/fa";
-// import { GiOfficeChair } from "react-icons/gi";
-// import { PiOfficeChairFill, PiStoolBold } from "react-icons/pi";
-// import {
-//     FiArrowUpRight,
-//     FiMenu,
-//     FiX,
-// } from "react-icons/fi";
-// import { CircleUserRound, Home, Info, Newspaper, Search } from "lucide-react";
-
-// export default function Navbar() {
-//     const [scrolled, setScrolled] = useState(false);
-//     const [showNav, setShowNav] = useState(true);
-//     const [mobileOpen, setMobileOpen] = useState(false);
-
-//     useEffect(() => {
-//         let lastScrollY = window.scrollY;
-
-//         const handleScroll = () => {
-//             const currentScrollY = window.scrollY;
-
-//             // Top of page
-//             if (currentScrollY <= 20) {
-//                 setScrolled(false);
-//                 setShowNav(true);
-//             }
-//             // Scrolling down
-//             else if (currentScrollY > lastScrollY) {
-//                 setScrolled(true);
-//                 setShowNav(false);
-//             }
-//             // Scrolling up
-//             else if (currentScrollY < lastScrollY) {
-//                 setScrolled(true);
-//                 setShowNav(true);
-//             }
-
-//             lastScrollY = currentScrollY;
-//         };
-
-//         window.addEventListener("scroll", handleScroll, {
-//             passive: true,
-//         });
-
-//         return () => {
-//             window.removeEventListener("scroll", handleScroll);
-//         };
-//     }, []);
-
-// const navItems = [
-//     {
-//         name: "Home",
-//         icon: Home,
-//         href: "/",
-//     },
-//     {
-//         name: "Categories",
-//         icon: GiOfficeChair,
-//         href: "/products",
-//     },
-//     {
-//         name: "About",
-//         icon: Info,
-//         href: "/about-us",
-//     },
-//     {
-//         name: "Our Articles",
-//         icon: Newspaper,
-//         href: "/our-articles",
-//     },
-//     {
-//         name: "Contact",
-//         icon: CircleUserRound,
-//         href: "/contact-us",
-//     },
-// ];
-
-//     return (
-//         <>
-//             <motion.header
-//                 initial={{ y: -100 }}
-//                 animate={{ y: 0 }}
-//                 transition={{
-//                     duration: 0.8,
-//                     ease: [0.22, 1, 0.36, 1],
-//                 }}
-//                 className="fixed left-0 top-0 z-[9999] w-full bg-white text-black"
-//             >
-//                 {/* ================================================= */}
-//                 {/* TOP BAR */}
-//                 {/* ================================================= */}
-
-//                 <div
-//                     className={`relative overflow-hidden z-30 border-b border-black/10 bg-white transition-shadow duration-500 ${scrolled
-//                         ? "shadow-[0_8px_30px_rgba(0,0,0,0.08)]"
-//                         : "shadow-none"
-//                         }`}
-//                 >
-//                     <div className="relative mx-auto flex h-[72px] max-w-[1500px] items-center justify-between px-6 lg:px-10">
-
-//                         {/* LEFT SOCIAL ICONS */}
-
-//                         <div className="hidden items-center gap-2 lg:flex">
-//                             <a
-//                                 href="#"
-//                                 aria-label="Facebook"
-//                                 className="rounded-full border bg-blue-500 p-2.5 transition-all duration-300 hover:bg-blue-600 text-white"
-//                             >
-//                                 <FaFacebookF size={13} />
-//                             </a>
-
-//                             <a
-//                                 href="#"
-//                                 aria-label="Instagram"
-//                                 className="rounded-full p-2.5 text-white transition-all duration-300 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 hover:from-yellow-500 hover:via-pink-600 hover:to-purple-700"
-//                             >
-//                                 <FaInstagram size={15} />
-//                             </a>
-
-//                             <a
-//                                 href="#"
-//                                 aria-label="LinkedIn"
-//                                 className="rounded-full border bg-blue-500 p-2.5 transition-all duration-300 hover:bg-blue-600 text-white"
-//                             >
-//                                 <FaLinkedinIn size={14} />
-//                             </a>
-
-//                             <a
-//                                 href="#"
-//                                 aria-label="Youtube"
-//                                 className="rounded-full border bg-red-500 p-2.5 transition-all duration-300 hover:bg-red-600 text-white"
-//                             >
-//                                 <FaYoutube size={15} />
-//                             </a>
-//                         </div>
-
-//                         {/* CENTER LOGO */}
-
-//                         <Link
-//                             href="/"
-//                             className="absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2 bg-white overflow-hidden"
-//                         >
-//                             <motion.div
-//                                 whileHover={{
-//                                     scale: 1.04,
-//                                 }}
-//                                 transition={{
-//                                     duration: 0.3,
-//                                 }}
-//                                 className="relative h-[80px] w-48 bg-white"
-//                             >
-//                                 <Image
-//                                     src="/logo.gif"
-//                                     alt="Logo"
-//                                     fill
-//                                     priority
-//                                     sizes="170px"
-//                                     className="object-contain bg-white"
-//                                 />
-//                             </motion.div>
-//                         </Link>
-
-//                         {/* RIGHT QUOTE */}
-
-//                         <div className="ml-auto flex items-center gap-2">
-//                             <a
-//                                 href="tel:+919999999999"
-//                                 className="rounded-full border bg-red-600 text-white p-2.5 transition-all duration-300 hover:bg-red-700"
-//                             >
-//                                 <FaPhoneAlt size={15} />
-//                             </a>
-//                             <a href="" className="rounded-full bg-green-600 text-white p-2 hover:bg-green-700 transition-all duration-300">
-//                                 <FaWhatsapp size={18} />
-//                             </a>
-//                             <Link
-//                                 href="/contact"
-//                                 className="group relative flex items-center overflow-hidden bg-black px-6 py-3 text-[13px] font-semibold text-white"
-//                             >
-//                                 <span className="absolute inset-0 origin-left scale-x-0 bg-neutral-800 transition-transform duration-500 ease-out group-hover:scale-x-100" />
-
-//                                 <span className="relative z-10">
-//                                     Get a Quote
-//                                 </span>
-
-//                                 <FiArrowUpRight
-//                                     size={17}
-//                                     className="relative z-10 ml-3 transition-transform duration-300 group-hover:rotate-45"
-//                                 />
-//                             </Link>
-//                         </div>
-//                     </div>
-//                 </div>
-
-//                 <motion.div
-//                     initial={false}
-//                     animate={{
-//                         y: showNav ? 0 : -100,
-//                         opacity: showNav ? 1 : 0,
-//                     }}
-//                     transition={{
-//                         duration: 0.45,
-//                         ease: [0.22, 1, 0.36, 1],
-//                     }}
-//                     className="absolute left-0 top-[72px] z-20 hidden w-full border-b border-black/10 bg-white lg:block"
-//                 >
-//                     <nav className="relative mx-auto flex h-[62px] max-w-[1500px] items-center justify-between px-6 lg:px-10">
-
-//                         {/* NAV TABS */}
-//                         <div className="flex items-center gap-4">
-//                             {navItems.map((item, index) => {
-//                                 const Icon = item.icon;
-
-//                                 return (
-//                                     <motion.div
-//                                         key={item.name}
-//                                         initial={{
-//                                             opacity: 0,
-//                                             y: -8,
-//                                         }}
-//                                         animate={{
-//                                             opacity: 1,
-//                                             y: 0,
-//                                         }}
-//                                         transition={{
-//                                             delay: 0.15 + index * 0.07,
-//                                             duration: 0.4,
-//                                         }}
-//                                     >
-//                                         <Link
-//                                             href={item.href}
-//                                             className="group relative flex items-center gap-2 whitespace-nowrap rounded-md px-3 py-3 text-[13px] font-medium tracking-wide transition-all duration-300 hover:bg-[#f8f7f3] hover:text-black"
-//                                         >
-//                                             {/* ICON */}
-//                                             <Icon
-//                                                 size={16}
-//                                                 strokeWidth={1.8}
-//                                                 className="shrink-0 transition-transform duration-300 group-hover:scale-110"
-//                                             />
-
-//                                             {/* NAME */}
-//                                             <span>
-//                                                 {item.name}
-//                                             </span>
-
-//                                             {/* UNDERLINE */}
-//                                             <span
-//                                                 className="absolute bottom-1 left-1/2 h-[2px] w-0 -translate-x-1/2 bg-black transition-all duration-300 group-hover:w-[calc(100%-24px)]"
-//                                             />
-//                                         </Link>
-//                                     </motion.div>
-//                                 );
-//                             })}
-//                         </div>
-
-//                         {/* SEARCH */}
-//                         <div className="ml-6 shrink-0">
-//                             <div
-//                                 className="group flex h-10 w-[220px] items-center overflow-hidden rounded-full border border-black/40 bg-white transition-all duration-300 focus-within:border-black"
-//                             >
-//                                 <input
-//                                     type="text"
-//                                     placeholder="Search..."
-//                                     className="h-full w-full bg-transparent px-4 text-[13px] text-black outline-none placeholder:text-black/60"
-//                                 />
-
-//                                 <button
-//                                     type="button"
-//                                     className="flex h-full w-12 shrink-0 items-center justify-center border-l border-black/20 text-black transition-all duration-300 hover:bg-black hover:text-white"
-//                                     aria-label="Search"
-//                                 >
-//                                     <Search
-//                                         size={17}
-//                                         strokeWidth={1.8}
-//                                     />
-//                                 </button>
-//                             </div>
-//                         </div>
-//                     </nav>
-//                 </motion.div>
-
-//                 {/* ================================================= */}
-//                 {/* MOBILE HEADER */}
-//                 {/* ================================================= */}
-
-//                 <div className="flex h-[70px] items-center justify-between bg-white px-6 lg:hidden">
-
-//                     <Link href="/">
-//                         <div className="relative h-[45px] w-[130px]">
-//                             <Image
-//                                 src="/logo.webp"
-//                                 alt="Logo"
-//                                 fill
-//                                 priority
-//                                 sizes="130px"
-//                                 className="object-contain object-left"
-//                             />
-//                         </div>
-//                     </Link>
-
-//                     <button
-//                         onClick={() =>
-//                             setMobileOpen(!mobileOpen)
-//                         }
-//                         className="flex h-11 w-11 items-center justify-center rounded-full bg-black text-white"
-//                         aria-label="Toggle navigation"
-//                     >
-//                         <AnimatePresence mode="wait">
-//                             {mobileOpen ? (
-//                                 <motion.div
-//                                     key="close"
-//                                     initial={{
-//                                         rotate: -90,
-//                                         opacity: 0,
-//                                     }}
-//                                     animate={{
-//                                         rotate: 0,
-//                                         opacity: 1,
-//                                     }}
-//                                     exit={{
-//                                         rotate: 90,
-//                                         opacity: 0,
-//                                     }}
-//                                 >
-//                                     <FiX size={22} />
-//                                 </motion.div>
-//                             ) : (
-//                                 <motion.div
-//                                     key="menu"
-//                                     initial={{
-//                                         rotate: 90,
-//                                         opacity: 0,
-//                                     }}
-//                                     animate={{
-//                                         rotate: 0,
-//                                         opacity: 1,
-//                                     }}
-//                                     exit={{
-//                                         rotate: -90,
-//                                         opacity: 0,
-//                                     }}
-//                                 >
-//                                     <FiMenu size={22} />
-//                                 </motion.div>
-//                             )}
-//                         </AnimatePresence>
-//                     </button>
-//                 </div>
-
-//                 {/* ================================================= */}
-//                 {/* MOBILE MENU */}
-//                 {/* ================================================= */}
-
-//                 <AnimatePresence>
-//                     {mobileOpen && (
-//                         <motion.div
-//                             initial={{
-//                                 height: 0,
-//                                 opacity: 0,
-//                             }}
-//                             animate={{
-//                                 height: "calc(100vh - 70px)",
-//                                 opacity: 1,
-//                             }}
-//                             exit={{
-//                                 height: 0,
-//                                 opacity: 0,
-//                             }}
-//                             transition={{
-//                                 duration: 0.5,
-//                                 ease: [0.22, 1, 0.36, 1],
-//                             }}
-//                             className="absolute left-0 top-[70px] w-full overflow-hidden bg-white lg:hidden"
-//                         >
-//                             <div className="flex h-full flex-col px-6 py-8">
-
-//                                 <div>
-//                                     {navItems.map(
-//                                         (item, index) => (
-//                                             <motion.div
-//                                                 key={item.name}
-//                                                 initial={{
-//                                                     opacity: 0,
-//                                                     x: -25,
-//                                                 }}
-//                                                 animate={{
-//                                                     opacity: 1,
-//                                                     x: 0,
-//                                                 }}
-//                                                 transition={{
-//                                                     delay:
-//                                                         0.1 +
-//                                                         index * 0.08,
-//                                                 }}
-//                                             >
-//                                                 <Link
-//                                                     href={item.href}
-//                                                     onClick={() =>
-//                                                         setMobileOpen(false)
-//                                                     }
-//                                                     className="flex items-center justify-between border-b border-black/10 py-5 text-xl font-medium"
-//                                                 >
-//                                                     {item.name}
-
-//                                                     <FiArrowUpRight
-//                                                         size={20}
-//                                                     />
-//                                                 </Link>
-//                                             </motion.div>
-//                                         )
-//                                     )}
-//                                 </div>
-
-//                                 <Link
-//                                     href="/contact"
-//                                     onClick={() =>
-//                                         setMobileOpen(false)
-//                                     }
-//                                     className="mt-8 flex w-full items-center justify-center bg-black px-6 py-4 text-sm font-semibold text-white"
-//                                 >
-//                                     Get a Quote
-
-//                                     <FiArrowUpRight
-//                                         size={18}
-//                                         className="ml-2"
-//                                     />
-//                                 </Link>
-
-//                                 <div className="mt-auto border-t border-black/10 pt-6">
-
-//                                     <a
-//                                         href="tel:+919999999999"
-//                                         className="mb-3 flex items-center gap-3 text-sm"
-//                                     >
-//                                         <FaPhoneAlt size={12} />
-//                                         +91 99999 99999
-//                                     </a>
-
-//                                     <a
-//                                         href="mailto:info@example.com"
-//                                         className="flex items-center gap-3 text-sm"
-//                                     >
-//                                         <FaEnvelope size={13} />
-//                                         info@example.com
-//                                     </a>
-
-//                                     <div className="mt-5 flex gap-3">
-//                                         <a
-//                                             href="#"
-//                                             className="flex h-9 w-9 items-center justify-center rounded-full bg-black text-white"
-//                                         >
-//                                             <FaFacebookF size={12} />
-//                                         </a>
-
-//                                         <a
-//                                             href="#"
-//                                             className="flex h-9 w-9 items-center justify-center rounded-full bg-black text-white"
-//                                         >
-//                                             <FaInstagram size={13} />
-//                                         </a>
-
-//                                         <a
-//                                             href="#"
-//                                             className="flex h-9 w-9 items-center justify-center rounded-full bg-black text-white"
-//                                         >
-//                                             <FaLinkedinIn size={12} />
-//                                         </a>
-
-//                                         <a
-//                                             href="#"
-//                                             className="flex h-9 w-9 items-center justify-center rounded-full bg-black text-white"
-//                                         >
-//                                             <FaYoutube size={13} />
-//                                         </a>
-//                                     </div>
-//                                 </div>
-//                             </div>
-//                         </motion.div>
-//                     )}
-//                 </AnimatePresence>
-//             </motion.header>
-
-//             {/* Desktop header space */}
-//             <div className="hidden h-[72px] lg:block" />
-
-//             {/* Mobile header space */}
-//             <div className="h-[70px] lg:hidden" />
-//         </>
-//     );
-// }
-
 
 "use client";
 
@@ -518,7 +13,8 @@ import {
     CircleUserRound,
     Menu,
     X,
-    ArrowUpRight, ChevronDown
+    ArrowUpRight,
+    ChevronDown,
 } from "lucide-react";
 import { GiOfficeChair } from "react-icons/gi";
 
@@ -568,10 +64,17 @@ const navItems = [
 
 export default function Navbar() {
     const pathname = usePathname();
+
     const [menuOpen, setMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [openDropdown, setOpenDropdown] = useState(null);
 
+    // Homepage can be transparent at the top.
+    // Every other route starts with a white navbar.
+    const isHomePage = pathname === "/";
+    const useWhiteNavbar = !isHomePage || scrolled;
+
+    // Update navbar state while scrolling and when routes change.
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 30);
@@ -586,12 +89,15 @@ export default function Navbar() {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, []);
-
-    useEffect(() => {
-        setMenuOpen(false);
     }, [pathname]);
 
+    // Close mobile menu after navigation.
+    useEffect(() => {
+        setMenuOpen(false);
+        setOpenDropdown(null);
+    }, [pathname]);
+
+    // Prevent background scrolling when mobile menu is open.
     useEffect(() => {
         document.body.style.overflow = menuOpen ? "hidden" : "";
 
@@ -602,46 +108,67 @@ export default function Navbar() {
 
     return (
         <>
-            <header
-                className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled ? "px-3 pt-3 md:px-5" : "px-3 pt-3 md:px-5"
-                    }`}
-            >
+            {/* NAVBAR */}
+            <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 md:px-5">
                 <motion.nav
                     initial={{ y: -30, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.5 }}
-                    className={`relative mx-auto flex h-[60px] w-full max-w-[1600px] items-center justify-between rounded-[22px] px-5 transition-all duration-300 md:h-[88px] md:px-10 lg:px-12 ${scrolled
-                        ? "bg-white/95 shadow-lg shadow-black/5 backdrop-blur-xl"
-                        : "bg-transparent"
-                        }`}
+                    className={`relative mx-auto flex h-[60px] w-full max-w-[1600px] items-center justify-between rounded-[22px] px-5 transition-all duration-300 md:h-[88px] md:px-10 lg:px-12 ${
+                        useWhiteNavbar
+                            ? "bg-white shadow-lg shadow-black/5 backdrop-blur-xl"
+                            : "bg-transparent"
+                    }`}
                 >
                     {/* LEFT LOGO */}
                     <Link
                         href="/"
-                        className="relative z-10 flex shrink-0 items-center gap-2 w-auto h-20"
+                        aria-label="Go to homepage"
+                        className="relative z-10 flex h-12 w-[110px] shrink-0 items-center md:h-20 md:w-[140px]"
                     >
-                        <img
+                        <Image
                             src="/logo.webp"
-                            alt="logo"
-                            className={`h-full w-full object-contain transition-all duration-300 ${scrolled ? "brightness-100 invert-0" : "brightness-0 invert"
-                                }`}
+                            alt="Logo"
+                            fill
+                            priority
+                            sizes="140px"
+                            className={`object-contain transition-all duration-300 ${
+                                useWhiteNavbar
+                                    ? "brightness-100 invert-0"
+                                    : "brightness-0 invert"
+                            }`}
                         />
                     </Link>
 
+                    {/* DESKTOP NAVIGATION */}
                     <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-7 lg:flex xl:gap-10">
                         {navItems.map((item) => {
                             const isActive =
                                 pathname === item.href ||
-                                (item.dropdown && pathname.startsWith("/products"));
+                                (item.href !== "/" &&
+                                    pathname.startsWith(item.href)) ||
+                                (item.dropdown &&
+                                    item.dropdown.some((subItem) =>
+                                        pathname.startsWith(
+                                            subItem.href.split("?")[0].split("#")[0]
+                                        )
+                                    ));
 
                             return (
-                                <div key={item.name} className="group relative">
+                                <div
+                                    key={item.name}
+                                    className="group relative"
+                                >
                                     <Link
                                         href={item.href}
-                                        className={`relative flex items-center gap-1.5 whitespace-nowrap py-3 text-[14px] font-medium transition-colors duration-300 xl:text-[15px] ${scrolled
-                                            ? "text-black/75 hover:text-black"
-                                            : "text-white/85 hover:text-white"
-                                            }`}
+                                        aria-current={
+                                            isActive ? "page" : undefined
+                                        }
+                                        className={`relative flex items-center gap-1.5 whitespace-nowrap py-3 text-[14px] font-medium transition-colors duration-300 xl:text-[15px] ${
+                                            useWhiteNavbar
+                                                ? "text-black/75 hover:text-black"
+                                                : "text-white/85 hover:text-white"
+                                        }`}
                                     >
                                         {item.name}
 
@@ -653,29 +180,36 @@ export default function Navbar() {
                                         )}
 
                                         <span
-                                            className={`absolute bottom-[6px] left-0 h-[1.5px] transition-all duration-300 group-hover:w-full ${isActive ? "w-full" : "w-0"
-                                                } ${scrolled ? "bg-black" : "bg-white"}`}
+                                            className={`absolute bottom-[6px] left-0 h-[1.5px] transition-all duration-300 group-hover:w-full ${
+                                                isActive ? "w-full" : "w-0"
+                                            } ${
+                                                useWhiteNavbar
+                                                    ? "bg-[#b4e717]"
+                                                    : "bg-white"
+                                            }`}
                                         />
                                     </Link>
 
-                                    {/* DROPDOWN */}
+                                    {/* DESKTOP DROPDOWN */}
                                     {item.dropdown && (
                                         <div className="invisible absolute left-1/2 top-full z-50 w-[250px] -translate-x-1/2 translate-y-2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
-                                            <div className="overflow-hidden rounded-2xl border border-black/10 bg-white p-2 shadow-xl shadow-black/10">
-                                                {item.dropdown.map((subItem) => (
-                                                    <Link
-                                                        key={subItem.name}
-                                                        href={subItem.href}
-                                                        className="group/item flex items-center justify-between rounded-xl px-4 py-3 text-[14px] font-medium text-black/75 transition-all duration-200 hover:bg-black hover:text-white"
-                                                    >
-                                                        {subItem.name}
+                                            <div className="overflow-hidden rounded-2xl border border-black/10 bg-[#b4e717] p-2 shadow-xl shadow-black/10">
+                                                {item.dropdown.map(
+                                                    (subItem) => (
+                                                        <Link
+                                                            key={subItem.name}
+                                                            href={subItem.href}
+                                                            className="group/item flex items-center justify-between rounded-xl px-4 py-3 text-[14px] font-medium text-black/75 transition-all duration-200 hover:bg-black hover:text-white"
+                                                        >
+                                                            {subItem.name}
 
-                                                        <ArrowUpRight
-                                                            size={15}
-                                                            className="opacity-0 transition-all duration-200 group-hover/item:opacity-100"
-                                                        />
-                                                    </Link>
-                                                ))}
+                                                            <ArrowUpRight
+                                                                size={15}
+                                                                className="opacity-0 transition-all duration-200 group-hover/item:opacity-100"
+                                                            />
+                                                        </Link>
+                                                    )
+                                                )}
                                             </div>
                                         </div>
                                     )}
@@ -688,10 +222,11 @@ export default function Navbar() {
                     <div className="relative z-10 flex items-center gap-3">
                         <Link
                             href="/contact-us"
-                            className={`hidden h-[48px] items-center justify-center gap-3 rounded-full px-7 text-[14px] font-semibold transition-all duration-300 hover:-translate-y-0.5 md:flex ${scrolled
-                                ? "bg-black text-white hover:bg-neutral-800"
-                                : "bg-white text-black hover:bg-neutral-200"
-                                }`}
+                            className={`hidden h-[48px] items-center justify-center gap-3 rounded-full px-7 text-[14px] font-semibold transition-all duration-300 hover:-translate-y-0.5 md:flex ${
+                                useWhiteNavbar
+                                    ? "bg-[#b4e717] text-black hover:bg-neutral-100"
+                                    : "bg-white text-black hover:bg-neutral-200"
+                            }`}
                         >
                             Contact Us
                             <ArrowUpRight size={18} />
@@ -700,15 +235,22 @@ export default function Navbar() {
                         {/* MOBILE MENU BUTTON */}
                         <button
                             type="button"
-                            onClick={() => setMenuOpen(!menuOpen)}
-                            aria-label={menuOpen ? "Close menu" : "Open menu"}
+                            onClick={() => setMenuOpen((prev) => !prev)}
+                            aria-label={
+                                menuOpen ? "Close menu" : "Open menu"
+                            }
                             aria-expanded={menuOpen}
-                            className={`flex h-11 w-11 items-center justify-center rounded-full transition-colors lg:hidden ${scrolled
-                                ? "bg-black text-white"
-                                : "bg-white text-black"
-                                }`}
+                            className={`flex h-11 w-11 items-center justify-center rounded-full transition-colors lg:hidden ${
+                                useWhiteNavbar
+                                    ? "bg-black text-white"
+                                    : "bg-white text-black"
+                            }`}
                         >
-                            {menuOpen ? <X size={23} /> : <Menu size={23} />}
+                            {menuOpen ? (
+                                <X size={23} />
+                            ) : (
+                                <Menu size={23} />
+                            )}
                         </button>
                     </div>
                 </motion.nav>
@@ -718,6 +260,7 @@ export default function Navbar() {
             <AnimatePresence>
                 {menuOpen && (
                     <>
+                        {/* BACKDROP */}
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
@@ -726,30 +269,40 @@ export default function Navbar() {
                             className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm lg:hidden"
                         />
 
+                        {/* MENU PANEL */}
                         <motion.div
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -20 }}
                             transition={{ duration: 0.25 }}
-                            className="fixed left-3 right-3 top-[94px] z-50 overflow-hidden rounded-[24px] border border-black/10 bg-white p-5 shadow-2xl md:left-5 md:right-5 lg:hidden"
+                            className="fixed left-3 right-3 top-[94px] z-50 max-h-[calc(100dvh-110px)] overflow-y-auto rounded-[24px] border border-black/10 bg-white p-5 shadow-2xl md:left-5 md:right-5 lg:hidden"
                         >
                             <div className="flex flex-col gap-1">
                                 {navItems.map((item) => {
                                     const Icon = item.icon;
-                                    const isActive = pathname === item.href;
-                                    const isExpanded = openDropdown === item.name;
+
+                                    const isActive =
+                                        pathname === item.href ||
+                                        (item.href !== "/" &&
+                                            pathname.startsWith(item.href));
+
+                                    const isExpanded =
+                                        openDropdown === item.name;
 
                                     return (
                                         <div key={item.name}>
                                             <div
-                                                className={`flex items-center rounded-xl transition-colors ${isActive
-                                                    ? "bg-black text-white"
-                                                    : "text-black hover:bg-neutral-100"
-                                                    }`}
+                                                className={`flex items-center rounded-xl transition-colors ${
+                                                    isActive
+                                                        ? "bg-black text-white"
+                                                        : "text-black hover:bg-neutral-100"
+                                                }`}
                                             >
                                                 <Link
                                                     href={item.href}
-                                                    onClick={() => setMenuOpen(false)}
+                                                    onClick={() =>
+                                                        setMenuOpen(false)
+                                                    }
                                                     className="flex flex-1 items-center gap-3 px-4 py-4 text-[15px] font-medium"
                                                 >
                                                     <Icon size={19} />
@@ -762,56 +315,91 @@ export default function Navbar() {
                                                         aria-label={`Toggle ${item.name} dropdown`}
                                                         aria-expanded={isExpanded}
                                                         onClick={() =>
-                                                            setOpenDropdown(isExpanded ? null : item.name)
+                                                            setOpenDropdown(
+                                                                isExpanded
+                                                                    ? null
+                                                                    : item.name
+                                                            )
                                                         }
                                                         className="flex h-12 w-12 items-center justify-center"
                                                     >
                                                         <ChevronDown
                                                             size={18}
-                                                            className={`transition-transform duration-300 ${isExpanded ? "rotate-180" : ""
-                                                                }`}
+                                                            className={`transition-transform duration-300 ${
+                                                                isExpanded
+                                                                    ? "rotate-180"
+                                                                    : ""
+                                                            }`}
                                                         />
                                                     </button>
                                                 ) : (
-                                                    <ArrowUpRight size={17} className="mr-4" />
+                                                    <ArrowUpRight
+                                                        size={17}
+                                                        className="mr-4"
+                                                    />
                                                 )}
                                             </div>
 
+                                            {/* MOBILE SUBMENU */}
                                             <AnimatePresence initial={false}>
-                                                {item.dropdown && isExpanded && (
-                                                    <motion.div
-                                                        initial={{ height: 0, opacity: 0 }}
-                                                        animate={{ height: "auto", opacity: 1 }}
-                                                        exit={{ height: 0, opacity: 0 }}
-                                                        transition={{ duration: 0.25 }}
-                                                        className="overflow-hidden"
-                                                    >
-                                                        <div className="ml-6 space-y-1 border-l border-black/15 py-2 pl-4">
-                                                            {item.dropdown.map((subItem) => (
-                                                                <Link
-                                                                    key={subItem.name}
-                                                                    href={subItem.href}
-                                                                    onClick={() => setMenuOpen(false)}
-                                                                    className="block rounded-lg px-3 py-3 text-sm text-black/70 transition-colors hover:bg-black hover:text-white"
-                                                                >
-                                                                    {subItem.name}
-                                                                </Link>
-                                                            ))}
-                                                        </div>
-                                                    </motion.div>
-                                                )}
+                                                {item.dropdown &&
+                                                    isExpanded && (
+                                                        <motion.div
+                                                            initial={{
+                                                                height: 0,
+                                                                opacity: 0,
+                                                            }}
+                                                            animate={{
+                                                                height: "auto",
+                                                                opacity: 1,
+                                                            }}
+                                                            exit={{
+                                                                height: 0,
+                                                                opacity: 0,
+                                                            }}
+                                                            transition={{
+                                                                duration: 0.25,
+                                                            }}
+                                                            className="overflow-hidden"
+                                                        >
+                                                            <div className="ml-6 space-y-1 border-l border-black/15 py-2 pl-4">
+                                                                {item.dropdown.map(
+                                                                    (subItem) => (
+                                                                        <Link
+                                                                            key={
+                                                                                subItem.name
+                                                                            }
+                                                                            href={
+                                                                                subItem.href
+                                                                            }
+                                                                            onClick={() =>
+                                                                                setMenuOpen(
+                                                                                    false
+                                                                                )
+                                                                            }
+                                                                            className="block rounded-lg px-3 py-3 text-sm text-black/70 transition-colors hover:bg-black hover:text-white"
+                                                                        >
+                                                                            {
+                                                                                subItem.name
+                                                                            }
+                                                                        </Link>
+                                                                    )
+                                                                )}
+                                                            </div>
+                                                        </motion.div>
+                                                    )}
                                             </AnimatePresence>
                                         </div>
                                     );
                                 })}
-
                             </div>
 
+                            {/* MOBILE CONTACT BUTTON */}
                             <div className="mt-5 border-t border-black/10 pt-5">
                                 <Link
                                     href="/contact-us"
                                     onClick={() => setMenuOpen(false)}
-                                    className="flex h-13 w-full items-center justify-center gap-2 rounded-full bg-black text-sm font-semibold text-white transition hover:bg-neutral-800"
+                                    className="flex h-[52px] w-full items-center justify-center gap-2 rounded-full bg-[#b4e717] text-sm font-semibold text-black transition hover:bg-neutral-200"
                                 >
                                     Contact Us
                                     <ArrowUpRight size={18} />

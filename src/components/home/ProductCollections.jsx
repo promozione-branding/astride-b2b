@@ -214,62 +214,33 @@ const COLLECTIONS = {
     },
 };
 
+
 function CollectionCard({
     item,
     height,
     darkText = false,
 }) {
-    const [activeHotspot, setActiveHotspot] =
-        useState(null);
+    const [activeHotspot, setActiveHotspot] = useState(null);
 
     return (
         <motion.div
-            initial={{
-                opacity: 0,
-                y: 35,
-            }}
-            whileInView={{
-                opacity: 1,
-                y: 0,
-            }}
-            viewport={{
-                once: false,
-                amount: 0.15,
-            }}
+            initial={{ opacity: 0, y: 35 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.15 }}
             transition={{
                 duration: 0.7,
                 ease: [0.22, 1, 0.36, 1],
             }}
             className="relative w-full overflow-visible"
-            style={{
-                height,
-            }}
+            style={{ height }}
         >
-            <div
-                className="
-                    group
-                    relative
-                    h-full
-                    w-full
-                    overflow-hidden
-                    rounded-[16px]
-                    bg-[#f8f7f3] 
-                "
-            >
+            <div className="group relative z-0 h-full w-full overflow-visible rounded-[16px] bg-[#f8f7f3]">
                 {/* IMAGE */}
                 <motion.img
                     src={item.image}
                     alt={item.title}
-                    className="
-                        absolute
-                        inset-0
-                        h-full
-                        w-full
-                        object-cover
-                    "
-                    initial={{
-                        scale: 1,
-                    }}
+                    className="absolute inset-0 h-full w-full rounded-[16px] object-cover"
+                    initial={{ scale: 1 }}
                     transition={{
                         duration: 0.8,
                         ease: [0.22, 1, 0.36, 1],
@@ -277,132 +248,68 @@ function CollectionCard({
                 />
 
                 {/* IMAGE OVERLAY */}
-                <div
-                    className="
-                        pointer-events-none
-                        absolute
-                        inset-0
-                        bg-gradient-to-b
-                        from-black/15
-                        via-transparent
-                        to-black/10
-                    "
-                />
+                <div className="pointer-events-none absolute inset-0 rounded-[16px] bg-gradient-to-b from-black/15 via-transparent to-black/10" />
 
                 {/* TITLE */}
-                <div
-                    className={`
-                        absolute
-                        left-7
-                        top-7
-                        z-20
-                        max-w-[170px]
-                    `}
-                >
+                <div className="absolute left-7 top-7 z-20 max-w-[170px]">
                     <h3
-                        className={`
-                            text-[20px]
-                            font-medium
-                            leading-[1.05]
-                            tracking-[-0.035em]
-                            md:text-[23px]
-                            ${darkText
+                        className={`text-[20px] font-medium leading-[1.05] tracking-[-0.035em] md:text-[23px] ${
+                            darkText
                                 ? "text-[#171717]"
                                 : "text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]"
-                            }
-                        `}
+                        }`}
                     >
                         {item.title}
                     </h3>
 
                     <div
-                        className={`
-                            mt-3
-                            h-[1px]
-                            w-7
-                            ${darkText
-                                ? "bg-[#171717]"
-                                : "bg-white"
-                            }
-                        `}
+                        className={`mt-3 h-[1px] w-7 ${
+                            darkText ? "bg-[#171717]" : "bg-white"
+                        }`}
                     />
                 </div>
 
                 {/* HOTSPOTS */}
                 {item.hotspots.map((hotspot) => {
-                    const active =
-                        activeHotspot === hotspot.id;
+                    const active = activeHotspot === hotspot.id;
 
                     return (
                         <div
                             key={hotspot.id}
-                            className="
-                                absolute
-                                z-30
-                            "
+                            className={`absolute ${
+                                active ? "z-50" : "z-10"
+                            }`}
                             style={{
                                 left: `${hotspot.x}%`,
                                 top: `${hotspot.y}%`,
                             }}
                             onMouseEnter={() =>
-                                setActiveHotspot(
-                                    hotspot.id
-                                )
+                                setActiveHotspot(hotspot.id)
                             }
                             onMouseLeave={() =>
                                 setActiveHotspot(null)
                             }
                         >
-                            {/* DOT */}
+                            {/* PLUS BUTTON */}
                             <motion.button
                                 type="button"
+                                aria-label={`View ${hotspot.title}`}
+                                aria-expanded={active}
                                 onClick={() =>
                                     setActiveHotspot(
-                                        active
-                                            ? null
-                                            : hotspot.id
+                                        active ? null : hotspot.id
                                     )
                                 }
-                                whileHover={{
-                                    scale: 1.12,
-                                }}
-                                whileTap={{
-                                    scale: 0.9,
-                                }}
-                                className="
-                                    relative
-                                    flex
-                                    h-[34px]
-                                    w-[34px]
-                                    -translate-x-1/2
-                                    -translate-y-1/2
-                                    items-center
-                                    justify-center
-                                    rounded-full
-                                    bg-white
-                                    shadow-[0_5px_18px_rgba(0,0,0,0.18)]
-                                "
+                                whileHover={{ scale: 1.12 }}
+                                whileTap={{ scale: 0.9 }}
+                                className="relative z-20 flex h-[34px] w-[34px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white hover:bg-[#b4e717] shadow-[0_5px_18px_rgba(0,0,0,0.18)]"
                             >
                                 {/* PULSE */}
                                 <motion.span
-                                    className="
-                                        absolute
-                                        inset-0
-                                        rounded-full
-                                        border
-                                        border-white
-                                    "
+                                    className="pointer-events-none absolute inset-0 rounded-full border border-white"
                                     animate={{
-                                        scale: [
-                                            1,
-                                            1.35,
-                                            1,
-                                        ],
-                                        opacity: [
-                                            0.8,
-                                            0,
-                                            0.8,
-                                        ],
+                                        scale: [1, 1.35, 1],
+                                        opacity: [0.8, 0, 0.8],
                                     }}
                                     transition={{
                                         duration: 2,
@@ -414,22 +321,18 @@ function CollectionCard({
                                 <Plus
                                     size={15}
                                     strokeWidth={2.2}
-                                    className="
-                                        relative
-                                        z-10
-                                        text-[#161616]
-                                    "
+                                    className="relative z-10 text-[#161616]"
                                 />
                             </motion.button>
 
-                            {/* DESCRIPTION */}
+                            {/* DESCRIPTION - ALWAYS BELOW PLUS */}
                             <AnimatePresence>
                                 {active && (
                                     <motion.div
                                         initial={{
                                             opacity: 0,
-                                            y: 10,
-                                            scale: 0.95,
+                                            y: 8,
+                                            scale: 0.96,
                                         }}
                                         animate={{
                                             opacity: 1,
@@ -438,76 +341,28 @@ function CollectionCard({
                                         }}
                                         exit={{
                                             opacity: 0,
-                                            y: 8,
+                                            y: 6,
                                             scale: 0.97,
                                         }}
                                         transition={{
                                             duration: 0.25,
-                                            ease: [
-                                                0.22,
-                                                1,
-                                                0.36,
-                                                1,
-                                            ],
+                                            ease: [0.22, 1, 0.36, 1],
                                         }}
-                                        className="
-                                            absolute
-                                            left-1/2
-                                            top-[45px]
-                                            z-[999]
-                                            w-[260px]
-                                            -translate-x-1/2
-                                            rounded-[15px]
-                                            bg-white
-                                            p-3
-                                            shadow-[0_20px_50px_rgba(0,0,0,0.2)]
-                                        "
+                                        className="absolute left-1/2 top-[24px] z-10 w-[260px] -translate-x-1/2 rounded-[15px] bg-white p-3 pt-5 shadow-[0_20px_50px_rgba(0,0,0,0.2)]"
                                     >
                                         <div className="flex gap-3">
                                             <div className="min-w-0 flex-1">
-                                                <h4
-                                                    className="
-                                                        text-[13px]
-                                                        font-semibold
-                                                        text-[#171717]
-                                                    "
-                                                >
-                                                    {
-                                                        hotspot.title
-                                                    }
+                                                <h4 className="text-[13px] font-semibold text-[#171717]">
+                                                    {hotspot.title}
                                                 </h4>
 
-                                                <p
-                                                    className="
-                                                        mt-1
-                                                        text-[11px]
-                                                        leading-[1.5]
-                                                        text-[#777]
-                                                    "
-                                                >
-                                                    {
-                                                        hotspot.description
-                                                    }
+                                                <p className="mt-1 text-[11px] leading-[1.5] text-[#777]">
+                                                    {hotspot.description}
                                                 </p>
                                             </div>
 
-                                            <div
-                                                className="
-                                                    flex
-                                                    h-8
-                                                    w-8
-                                                    shrink-0
-                                                    items-center
-                                                    justify-center
-                                                    self-end
-                                                    rounded-full
-                                                    bg-[#a56d4b]
-                                                    text-white
-                                                "
-                                            >
-                                                <ArrowUpRight
-                                                    size={14}
-                                                />
+                                            <div className="flex h-8 w-8 shrink-0 items-center justify-center self-end rounded-full bg-[#a56d4b] text-white">
+                                                <ArrowUpRight size={14} />
                                             </div>
                                         </div>
                                     </motion.div>
@@ -520,6 +375,7 @@ function CollectionCard({
         </motion.div>
     );
 }
+
 
 export default function ProductCollections() {
     return (
@@ -558,7 +414,7 @@ export default function ProductCollections() {
                             text-[11px]
                             uppercase
                             tracking-[0.45em]
-                            text-[#a56d4b]
+                            text-[#b4e717]
                         "
                     >
                         Product Collections
@@ -576,9 +432,10 @@ export default function ProductCollections() {
                         "
                     >
                         Explore{" "}
-                        <span className="text-[#a56d4b]">
-                            product collections
-                        </span>
+                        <span className="text-[#b4e717]">
+                            Product 
+                        </span>{" "}
+                        Collections
                     </h2>
                 </motion.div>
 

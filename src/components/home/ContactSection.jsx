@@ -61,7 +61,8 @@ export default function ContactSection() {
                         >
                             We’re here
                             <br />
-                            to help.
+                            <span className="text-[#b4e717]">to help.</span>
+                          
                         </h3>
 
                         {/* Description */}
@@ -184,7 +185,7 @@ export default function ContactSection() {
                                 </h3>
                             </div>
 
-                            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#171717] text-white">
+                            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#b4e717] text-white">
                                 <FiArrowUpRight size={18} />
                             </div>
 
@@ -276,7 +277,7 @@ export default function ContactSection() {
 
                                 <button
                                     type="submit"
-                                    className="group flex w-full items-center justify-center gap-4 rounded-full bg-[#171717] px-6 py-4 text-[11px] font-medium uppercase tracking-[0.12em] text-white transition-all duration-300 hover:bg-black sm:w-auto"
+                                    className="group flex w-full items-center justify-center gap-4 rounded-full bg-[#b4e717] px-6 py-4 text-[11px] font-medium uppercase tracking-[0.12em] text-white transition-all duration-300 hover:bg-black sm:w-auto"
                                 >
                                     Send Enquiry
 

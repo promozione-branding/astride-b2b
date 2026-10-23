@@ -331,7 +331,7 @@ export default function About() {
                             {categories.map((category) => (
                                 <span
                                     key={category}
-                                    className="border border-[#d8d0c4] px-3 py-2 text-[9px] uppercase tracking-[0.08em] text-[#62594e] sm:text-[10px]"
+                                    className="border border-[#d8d0c4] px-3 py-2 text-[9px] bg-[#1c4b42] uppercase tracking-[0.08em] text-[#fff] sm:text-[10px]"
                                 >
                                     {category}
                                 </span>

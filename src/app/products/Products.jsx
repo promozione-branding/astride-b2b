@@ -158,7 +158,7 @@ export default function Products() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="mb-9 flex w-full flex-col  justify-between gap-8 bg-[#b4e717] px-5 py-12 sm:mb-12 sm:flex-row sm:items-end sm:px-8 sm:py-13 lg:px-16 lg:pt-36"
+        className="mb-9 flex w-full flex-col  justify-between gap-8 bg-[#fbfaf8] px-5 py-12 sm:mb-12 sm:flex-row sm:items-end sm:px-8 sm:py-13 lg:px-16 lg:pt-36"
     >
         <div className="w-full">
             <p className="mb-5 text-[10px] font-medium uppercase tracking-[0.2em] text-black/55">

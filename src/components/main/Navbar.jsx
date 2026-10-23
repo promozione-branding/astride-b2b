@@ -193,13 +193,13 @@ export default function Navbar() {
                                     {/* DESKTOP DROPDOWN */}
                                     {item.dropdown && (
                                         <div className="invisible absolute left-1/2 top-full z-50 w-[250px] -translate-x-1/2 translate-y-2 pt-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
-                                            <div className="overflow-hidden rounded-2xl border border-black/10 bg-[#b4e717] p-2 shadow-xl shadow-black/10">
+                                            <div className="overflow-hidden rounded-2xl border border-black/10 bg-[#fff] p-2 shadow-xl shadow-black/10">
                                                 {item.dropdown.map(
                                                     (subItem) => (
                                                         <Link
                                                             key={subItem.name}
                                                             href={subItem.href}
-                                                            className="group/item flex items-center justify-between rounded-xl px-4 py-3 text-[14px] font-medium text-black/75 transition-all duration-200 hover:bg-black hover:text-white"
+                                                            className="group/item flex items-center justify-between rounded-xl px-4 py-3 text-[14px] font-medium text-[#1c4b42] transition-all duration-200 hover:bg-[#b4e717] "
                                                         >
                                                             {subItem.name}
 

@@ -340,7 +340,7 @@ function ProcessCard({ item, index }) {
 
             {!isBackground && (
                 <>
-                    <div className="absolute inset-0 bg-[#b4e717]" />
+                    <div className="absolute inset-0 bg-[#f6f2ee]" />
 
                     {/* =====================================================
             LARGE SOFT CIRCLE

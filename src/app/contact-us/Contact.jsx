@@ -37,7 +37,7 @@ export default function Contact() {
     return (
         <main className="overflow-hidden bg-[#fbfaf8] text-[#22180f]">
             <section className="relative px-5 pb-14 pt-32 sm:px-8 sm:pb-20 sm:pt-36 lg:px-10 lg:pb-24">
-                <div className="pointer-events-none absolute -right-32 -top-32 h-[420px] w-[420px] rounded-full bg-[#f0ece5] sm:h-[560px] sm:w-[560px]" />
+                <div className="pointer-events-none absolute -right-32 -top-32 h-[420px] w-[420px] rounded-full bg-[#1c4b42]/80 sm:h-[560px] sm:w-[560px]" />
                 <div className="relative mx-auto max-w-[1320px]">
                     <motion.div
                         initial={reduceMotion ? false : { opacity: 0, y: 24 }}
@@ -55,7 +55,7 @@ export default function Contact() {
                                 <span className="italic text-[#b4e717]">comfort.</span>
                             </h1>
                         </div>
-                        <p className="max-w-[390px] pb-1 text-sm leading-7 text-[#665d52] lg:justify-self-end">
+                        <p className="max-w-[390px] pb-1 text-sm leading-7 text-[#000] lg:justify-self-end">
                             Questions about our chairs, an order, or a business enquiry? Our team is
                             here to help you find the right answer.
                         </p>

@@ -39,10 +39,7 @@ const helpfulLinks = [
 
 const supportLinks = [
     "Help Center",
-    "Shipping & Delivery",
-    "Returns & Refunds",
-    "Warranty",
-    "Track Order",
+    
     "FAQs",
 ];
 
@@ -185,11 +182,14 @@ export default function Footer() {
                         SUPPORT
                     ================================================= */}
 
-                    <FooterColumn
+                    {/* <FooterColumn
                         title="Support"
                         items={supportLinks}
                         delay={0.3}
-                    />
+                    /> */}
+
+
+                    
 
                 </div>
 

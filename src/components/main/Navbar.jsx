@@ -127,16 +127,12 @@ export default function Navbar() {
                         className="relative z-10 flex h-12 w-[110px] shrink-0 items-center md:h-20 md:w-[140px]"
                     >
                         <Image
-                            src="/logo.webp"
+                            src="/logo5.png"
                             alt="Logo"
                             fill
                             priority
                             sizes="140px"
-                            className={`object-contain transition-all duration-300 ${
-                                useWhiteNavbar
-                                    ? "brightness-100 invert-0"
-                                    : "brightness-0 invert"
-                            }`}
+                            className={`object-contain transition-all duration-300`}
                         />
                     </Link>
 

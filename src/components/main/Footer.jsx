@@ -182,11 +182,30 @@ export default function Footer() {
                         SUPPORT
                     ================================================= */}
 
-                    {/* <FooterColumn
-                        title="Support"
-                        items={supportLinks}
-                        delay={0.3}
-                    /> */}
+                   
+<div className="w-full max-w-sm  px-6 py-2 text-white">
+  <h3 className="text-center text-base font-bold uppercase tracking-wide">
+    Trust Elite Certificate
+  </h3>
+
+  <div className="my-6 flex justify-center">
+    <div className="flex h-28 w-28 items-center justify-center rounded-full ">
+      <img
+        src="/trustseal.webp"
+        alt="Astride Office Chairs"
+        className="h-full w-full object-cover"
+      />
+    </div>
+  </div>
+
+  <p className="text-sm leading-5 text-white/90">
+    We are proud to present <strong className="text-white">Astride</strong>,
+    delivering ergonomic seating solutions designed for modern workspaces.
+    With a focus on comfort, durability, and thoughtful design, we help
+    create better working experiences for teams and professionals.
+  </p>
+</div>
+
 
 
                     

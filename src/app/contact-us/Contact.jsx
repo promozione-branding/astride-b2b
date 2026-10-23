@@ -52,7 +52,7 @@ export default function Contact() {
                             <h1 className="font-serif text-[clamp(3.8rem,9vw,8rem)] font-medium leading-[0.86] tracking-[-0.065em]">
                                 Let’s talk
                                 <br />
-                                <span className="italic text-[#927551]">comfort.</span>
+                                <span className="italic text-[#b4e717]">comfort.</span>
                             </h1>
                         </div>
                         <p className="max-w-[390px] pb-1 text-sm leading-7 text-[#665d52] lg:justify-self-end">
@@ -182,10 +182,10 @@ export default function Contact() {
                                     </p>
                                     <button
                                         type="submit"
-                                        className="group inline-flex w-full items-center justify-center gap-4 bg-[#6e5436] px-6 py-4 text-[10px] font-medium uppercase tracking-[0.14em] text-white transition-colors hover:bg-[#4d3925] sm:w-auto"
+                                        className="group inline-flex w-full items-center justify-center gap-4 bg-[#b4e717] px-6 py-4 text-[10px] font-medium uppercase tracking-[0.14em] text-white transition-colors hover:bg-[#000] sm:w-auto"
                                     >
                                         Send an enquiry
-                                        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-[#201b16] transition-transform duration-300 group-hover:rotate-45">
+                                        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-[#201b16] transition-transform duration-300 group-hover:bg-[#b4e717] group-hover:rotate-45">
                                             <ArrowUpRight size={14} />
                                         </span>
                                     </button>

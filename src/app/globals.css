@@ -53,3 +53,26 @@ body {
     transform: translateY(0);
   }
 }
+
+.exhibition-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.exhibition-pagination .swiper-pagination-bullet {
+  width: 9px;
+  height: 9px;
+  margin: 0 !important;
+  background: #1c4b42;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.exhibition-pagination .swiper-pagination-bullet-active {
+  width: 28px;
+  border-radius: 20px;
+  background: #1c4b42;
+  opacity: 1;
+}

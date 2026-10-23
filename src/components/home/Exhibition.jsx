@@ -3,7 +3,12 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Exhibition() {
@@ -12,29 +17,62 @@ export default function Exhibition() {
     const cardsRef = useRef([]);
     const decorRef = useRef([]);
 
-    const cards = [
+    const exhibitions = [
         {
-            image: "/ASTRIDE at INDEXPLUS 2026 (1).png",
-            title: "EXHIBITIONS",
-            description:
-                "Showcasing innovative seating solutions across leading industry platforms.",
-            large: true,
+            id: 1,
+            name: "INDEXPLUS 2026",
+            cards: [
+                {
+                    image: "/ASTRIDE at INDEXPLUS 2026 (1).png",
+                    title: "INDEXPLUS 2026",
+                    subtitle: "EXHIBITIONS",
+                },
+                {
+                    image: "/exhibition/1.png",
+                    title: "Explore Our Seating",
+                    subtitle: "PRODUCT SHOWCASE",
+                },
+                {
+                    image: "/exhibition/2.jpg",
+                    title: "Building Connections",
+                    subtitle: "MEET & CONNECT",
+                },
+                {
+                    image: "/exhibition/3.png",
+                    title: "See It. Feel It.",
+                    subtitle: "EXPERIENCE",
+                    description:
+                        "Experience Astride seating solutions in a real exhibition environment.",
+                },
+            ],
         },
         {
-            image: "/exhibition/1.png",
-            title: "PRODUCT SHOWCASE",
-            description: "Explore our seating solutions.",
-        },
-        {
-            image: "/exhibition/2.jpg",
-            title: "MEET & CONNECT",
-            description: "Building meaningful industry connections.",
-        },
-        {
-            image: "/exhibition/3.png",
-            title: "EXPERIENCE",
-            description: "See it. Feel it. Experience Astride.",
-            tall: true,
+            id: 2,
+            name: "EXHIBITION 2",
+            cards: [
+                {
+                    image: "/exhibition/5.png",
+                    title: "Exhibition Highlights",
+                    subtitle: "EXHIBITIONS",
+                },
+                {
+                    image: "/exhibition/6.jpg",
+                    title: "Explore Our Collection",
+                    subtitle: "PRODUCT SHOWCASE",
+                },
+                {
+                    image: "/exhibition/7.jpg",
+                    title: "Connecting With Visitors",
+                    subtitle: "MEET & CONNECT",
+                },
+                {
+                    image: "/exhibition/8.jpg",
+                    title: "Discover Astride",
+                    subtitle: "EXPERIENCE",
+                    description:
+                        "Discover our latest seating innovations and exhibition highlights.",
+                },
+            ],
         },
     ];
 
@@ -324,329 +362,246 @@ export default function Exhibition() {
                     EXHIBITION GRID
                 ================================= */}
 
-                <div
-                    className="
-                        relative
-                        z-10
+
+                {/* =================================
+    EXHIBITION SWIPER
+================================= */}
+
+                <div className="relative z-10">
+
+                    <Swiper
+                        modules={[Navigation, Pagination, Autoplay]}
+                        slidesPerView={1}
+                        spaceBetween={30}
+                        speed={900}
+                        loop={exhibitions.length > 1}
+                        grabCursor={true}
+                        autoHeight={true}
+                        autoplay={{
+                            delay: 5000,
+                            disableOnInteraction: false,
+                            pauseOnMouseEnter: true,
+                        }}
+                        navigation={{
+                            prevEl: ".exhibition-prev",
+                            nextEl: ".exhibition-next",
+                        }}
+                        pagination={{
+                            el: ".exhibition-pagination",
+                            clickable: true,
+                        }}
+                        className="exhibition-swiper"
+                    >
+                        {exhibitions.map((exhibition) => (
+                            <SwiperSlide key={exhibition.id}>
+
+                                <div
+                                    className="
                         grid
                         grid-cols-1
                         gap-4
-
                         lg:grid-cols-[1.7fr_0.72fr_0.72fr]
                         lg:grid-rows-[240px_240px]
                         lg:gap-5
                     "
-                >
+                                >
+                                    {exhibition.cards.map((card, index) => (
+                                        <div
+                                            key={index}
+                                            className={`
+                                group
+                                relative
+                                overflow-hidden
+                                bg-[#e9e0d5]
+                                shadow-[0_18px_35px_rgba(17,17,17,0.08)]
+                                rounded-[22px]
+                                lg:rounded-[25px]
+
+                                ${index === 0
+                                                    ? "min-h-[390px] lg:row-span-2 lg:min-h-0 lg:rounded-[30px]"
+                                                    : ""
+                                                }
+
+                                ${index === 1
+                                                    ? "min-h-[220px] lg:col-start-2 lg:row-start-1 lg:min-h-0"
+                                                    : ""
+                                                }
+
+                                ${index === 2
+                                                    ? "min-h-[220px] lg:col-start-2 lg:row-start-2 lg:min-h-0"
+                                                    : ""
+                                                }
+
+                                ${index === 3
+                                                    ? "min-h-[390px] lg:col-start-3 lg:row-start-1 lg:row-span-2 lg:min-h-0"
+                                                    : ""
+                                                }
+                            `}
+                                        >
+                                            {/* IMAGE */}
+                                            <img
+                                                src={card.image}
+                                                alt={card.title}
+                                                onMouseEnter={handleEnter}
+                                                onMouseLeave={handleLeave}
+                                                className="
+                                    absolute
+                                    inset-0
+                                    h-full
+                                    w-full
+                                    object-cover
+                                    object-top
+                                    transition-transform
+                                    duration-700
+                                    will-change-transform
+                                "
+                                            />
+
+                                            {/* OVERLAY */}
+                                            {index !== 0 && (
+                                                <>
+                                                    <div
+                                                        className="
+                                            pointer-events-none
+                                            absolute
+                                            inset-0
+                                            bg-gradient-to-t
+                                            from-black/60
+                                            via-black/10
+                                            to-transparent
+                                        "
+                                                    />
+
+                                                    {/* TEXT */}
+                                                    <div
+                                                        className="
+                                            pointer-events-none
+                                            absolute
+                                            bottom-5
+                                            left-4
+                                            right-4
+                                            z-10
+                                        "
+                                                    >
+                                                        <p
+                                                            className="
+                                                m-0
+                                                text-[9px]
+                                                font-bold
+                                                uppercase
+                                                tracking-[0.16em]
+                                                text-white/80
+                                            "
+                                                        >
+                                                            {card.subtitle}
+                                                        </p>
+
+                                                        <h3
+                                                            className={`
+                                                mt-1
+                                                font-bold
+                                                leading-tight
+                                                text-white
+                                                ${index === 3
+                                                                    ? "text-[18px]"
+                                                                    : "text-[15px]"
+                                                                }
+                                            `}
+                                                        >
+                                                            {card.title}
+                                                        </h3>
+
+                                                        {card.description && (
+                                                            <p
+                                                                className="
+                                                    mt-1
+                                                    text-[10px]
+                                                    leading-[1.4]
+                                                    text-white/80
+                                                "
+                                                            >
+                                                                {card.description}
+                                                            </p>
+                                                        )}
+                                                    </div>
+                                                </>
+                                            )}
+                                        </div>
+                                    ))}
+                                </div>
+
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+
                     {/* =================================
-                        CARD 1 — LARGE
-                    ================================= */}
+        CUSTOM SWIPER CONTROLS
+    ================================= */}
 
                     <div
-                        ref={(el) => {
-                            if (el) cardsRef.current[0] = el;
-                        }}
                         className="
-                            group
-                            relative
-                            min-h-[390px]
-                            overflow-hidden
-                            rounded-[26px]
-                            bg-[#e9e0d5]
-                            shadow-[0_22px_45px_rgba(17,17,17,0.09)]
-
-                            lg:row-span-2
-                            lg:min-h-0
-                            lg:rounded-[30px]
-                        "
+            relative
+            z-20
+            mt-8
+            flex
+            items-center
+            justify-center
+            gap-6
+        "
                     >
-                        <img
-                            src={cards[0].image}
-                            alt="Astride exhibition booth"
-                            onMouseEnter={handleEnter}
-                            onMouseLeave={handleLeave}
+                        {/* PREVIOUS */}
+                        <button
+                            type="button"
+                            aria-label="Previous exhibition"
                             className="
-                                absolute
-                              
-                            "
-                        />
-
-                        {/* <div
-                            className="
-                                absolute
-                                inset-0
-                                bg-gradient-to-t
-                                from-black/30
-                                via-transparent
-                                to-black/[0.02]
-                            "
-                        /> */}
-                    </div>
-
-                    {/* =================================
-                        CARD 2 — SMALL TOP
-                    ================================= */}
-
-                    <div
-                        ref={(el) => {
-                            if (el) cardsRef.current[1] = el;
-                        }}
-                        className="
-                            group
-                            relative
-                            min-h-[220px]
-                            overflow-hidden
-                            rounded-[22px]
-                            bg-[#0c2d25]
-                            shadow-[0_18px_35px_rgba(17,17,17,0.08)]
-
-                            lg:col-start-2
-                            lg:row-start-1
-                            lg:min-h-0
-                            lg:rounded-[25px]
-                        "
-                    >
-                        <img
-                            src={cards[1].image}
-                            alt="Astride product showcase"
-                            onMouseEnter={handleEnter}
-                            onMouseLeave={handleLeave}
-                            className="
-                                absolute
-                                inset-[-3%]
-                                size-[106%]
-                                object-cover
-                                will-change-transform
-                            "
-                        />
-
-                        <div
-                            className="
-                                absolute
-                                inset-0
-                                bg-gradient-to-t
-                                from-black/55
-                                via-black/10
-                                to-transparent
-                            "
-                        />
-
-                        <div
-                            className="
-                                absolute
-                                bottom-4
-                                left-4
-                                right-4
-                                z-10
-                            "
+                exhibition-prev
+                flex
+                h-11
+                w-11
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-[#1c4b42]
+                text-[#1c4b42]
+                transition-all
+                duration-300
+                hover:bg-[#1c4b42]
+                hover:text-white
+            "
                         >
-                            <p
-                                className="
-                                    m-0
-                                    text-[8px]
-                                    font-bold
-                                    uppercase
-                                    tracking-[0.16em]
-                                    text-white/75
-                                "
-                            >
-                                PRODUCT SHOWCASE
-                            </p>
+                            ←
+                        </button>
 
-                            <h3
-                                className="
-                                    mt-1
-                                    text-[15px]
-                                    font-bold
-                                    leading-tight
-                                    text-white
-                                "
-                            >
-                                Explore Our Seating
-                            </h3>
-                        </div>
-                    </div>
+                        {/* PAGINATION */}
+                        <div className="exhibition-pagination !w-auto" />
 
-                    {/* =================================
-                        CARD 3 — SMALL BOTTOM
-                    ================================= */}
-
-                    <div
-                        ref={(el) => {
-                            if (el) cardsRef.current[2] = el;
-                        }}
-                        className="
-                            group
-                            relative
-                            min-h-[220px]
-                            overflow-hidden
-                            rounded-[22px]
-                            bg-[#ddd]
-                            shadow-[0_18px_35px_rgba(17,17,17,0.08)]
-
-                            lg:col-start-2
-                            lg:row-start-2
-                            lg:min-h-0
-                            lg:rounded-[25px]
-                        "
-                    >
-                        <img
-                            src={cards[2].image}
-                            alt="Astride exhibition visitors"
-                            onMouseEnter={handleEnter}
-                            onMouseLeave={handleLeave}
+                        {/* NEXT */}
+                        <button
+                            type="button"
+                            aria-label="Next exhibition"
                             className="
-                                absolute
-                                inset-[-3%]
-                                size-[106%]
-                                object-cover
-                                will-change-transform
-                            "
-                        />
-
-                        <div
-                            className="
-                                absolute
-                                inset-0
-                                bg-gradient-to-t
-                                from-black/55
-                                via-black/10
-                                to-transparent
-                            "
-                        />
-
-                        <div
-                            className="
-                                absolute
-                                bottom-4
-                                left-4
-                                right-4
-                                z-10
-                            "
+                exhibition-next
+                flex
+                h-11
+                w-11
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-[#1c4b42]
+                text-[#1c4b42]
+                transition-all
+                duration-300
+                hover:bg-[#1c4b42]
+                hover:text-white
+            "
                         >
-                            <p
-                                className="
-                                    m-0
-                                    text-[8px]
-                                    font-bold
-                                    uppercase
-                                    tracking-[0.16em]
-                                    text-white/75
-                                "
-                            >
-                                MEET & CONNECT
-                            </p>
-
-                            <h3
-                                className="
-                                    mt-1
-                                    text-[15px]
-                                    font-bold
-                                    leading-tight
-                                    text-white
-                                "
-                            >
-                                Building Connections
-                            </h3>
-                        </div>
-                    </div>
-
-                    {/* =================================
-                        CARD 4 — TALL RIGHT
-                    ================================= */}
-
-                    <div
-                        ref={(el) => {
-                            if (el) cardsRef.current[3] = el;
-                        }}
-                        className="
-                            group
-                            relative
-                            min-h-[390px]
-                            overflow-hidden
-                            rounded-[22px]
-                            bg-[#ddd]
-                            shadow-[0_18px_35px_rgba(17,17,17,0.08)]
-
-                            lg:col-start-3
-                            lg:row-start-1
-                            lg:row-span-2
-                            lg:min-h-0
-                            lg:rounded-[25px]
-                        "
-                    >
-                        <img
-                            src={cards[3].image}
-                            alt="Astride exhibition experience"
-                            onMouseEnter={handleEnter}
-                            onMouseLeave={handleLeave}
-                            className="
-                                absolute
-                                inset-[-3%]
-                                size-[106%]
-                                object-cover
-                                will-change-transform
-                            "
-                        />
-
-                        <div
-                            className="
-                                absolute
-                                inset-0
-                                bg-gradient-to-t
-                                from-black/60
-                                via-black/5
-                                to-transparent
-                            "
-                        />
-
-                        <div
-                            className="
-                                absolute
-                                bottom-5
-                                left-4
-                                right-4
-                                z-10
-                            "
-                        >
-                            <p
-                                className="
-                                    m-0
-                                    text-[9px]
-                                    font-bold
-                                    uppercase
-                                    tracking-[0.16em]
-                                    text-white/80
-                                "
-                            >
-                                EXPERIENCE
-                            </p>
-
-                            <h3
-                                className="
-                                    mt-1
-                                    text-[18px]
-                                    font-black
-                                    leading-tight
-                                    text-white
-                                "
-                            >
-                                See It. Feel It.
-                            </h3>
-
-                            <p
-                                className="
-                                    mt-1
-                                    text-[10px]
-                                    leading-[1.4]
-                                    text-white/80
-                                "
-                            >
-                                Experience Astride seating solutions
-                                in a real exhibition environment.
-                            </p>
-                        </div>
+                            →
+                        </button>
                     </div>
                 </div>
+
             </div>
         </section>
     );

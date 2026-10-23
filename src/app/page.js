@@ -13,6 +13,7 @@ import ProductShowcase from "@/components/home/ProductShowcase";
 import ReviewSection from "@/components/home/ReviewSection";
 import StatsSection from "@/components/home/StatsSection";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
+import Client from "@/components/home/Client";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       {/* <Exhibition /> */}
       <FurnitureRules />
       <StatsSection />
+      <Client />
       <CategoryShowcase />
       <AboutUsSection />
       <ChairHero />

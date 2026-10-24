@@ -359,7 +359,7 @@ export default function Product() {
                                     <span className="text-lg text-black/40 line-through">₹10,000</span>
                                 </div>
                             </div>
-                            <p className="rounded-md text-sm mt-1 text-black/60 bg-[#b4e717] p-1.5">You save ₹3,501</p>
+                            <p className="rounded-md text-sm mt-1 text-white bg-[#1c4b42] p-1.5">You save ₹3,501</p>
                         </div>
 
                         <p className="mt-1 text-xs uppercase tracking-[0.12em] text-black/45">
@@ -425,7 +425,7 @@ export default function Product() {
                         <div className="mt-5 flex flex-col gap-3 sm:flex-row">
                             <Link
                                 href="/contact-us"
-                                className="group inline-flex min-h-12 flex-1 items-center justify-center gap-3 rounded-full bg-[#b4e717] px-6 py-3 text-[10px] font-medium uppercase tracking-[0.13em] text-white transition hover:bg-[#000] hover:text-white"
+                                className="group inline-flex min-h-12 flex-1 items-center justify-center gap-3 rounded-full bg-[#1c4b42] px-6 py-3 text-[10px] font-medium uppercase tracking-[0.13em] text-white transition hover:bg-[#000] hover:text-white"
                             >
                                 Request a quote
                                 <ArrowUpRight
@@ -531,7 +531,7 @@ export default function Product() {
                                                     key={bullet}
                                                     className="flex gap-3 rounded-xl border border-white/8 bg-white/[0.03] p-3"
                                                 >
-                                                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#b4e717] text-[10px] font-semibold text-black">
+                                                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#f1eee7] text-[10px] font-semibold text-black">
                                                         {index + 1}
                                                     </span>
                                                     <span className="text-[12px] leading-[1.8] text-white/75">
@@ -597,7 +597,7 @@ export default function Product() {
   viewport={{ once: false, amount: 0.2 }}
   transition={{ duration: 0.5, delay: index * 0.1 }}
   className={`rounded-2xl border border-black/[0.06] p-6 sm:p-8 ${
-    color ? "bg-[#B4E717]" : "bg-white"
+    color ? "bg-[#f1eee7]" : "bg-white"
   }`}
 >
                             <div className="flex items-center justify-between">

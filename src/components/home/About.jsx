@@ -102,7 +102,7 @@ export default function FurnitureRules() {
                             className="absolute left-1/2 top-8 z-[1] h-[480px] w-[430px] -translate-x-1/2 sm:top-10 sm:h-[550px] sm:w-[480px] lg:left-0 lg:translate-x-0"
                         >
                             <motion.path
-                                fill="#b4e717"
+                                fill="#1c4b42"
                                 d="
                   M285 15
                   C260 75 268 111 319 139

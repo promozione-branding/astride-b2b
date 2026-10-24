@@ -171,7 +171,7 @@ export default function CategoryShowcase() {
                             <br />
 
                             <span className="font-sans font-medium not-italic text-2xl sm:text-4xl">
-                                {activeCategory.title} <span className="text-[#b4e717]">{activeCategory.highlight}</span>
+                                {activeCategory.title} <span className="text-[#1c4b42]">{activeCategory.highlight}</span>
                             </span>
                         </h2>
 
@@ -183,7 +183,7 @@ export default function CategoryShowcase() {
                         {/* Buttons */}
                         <div className="mt-8 flex items-center gap-4">
                             <Link href={"/products"}
-                                className="rounded-full  bg-[#b4e717] px-6 py-3 flex items-center gap-3 text-sm text-black transition-all duration-300 hover:bg-black hover:text-white"
+                                className="rounded-full  bg-[#b4e717] px-6 py-3 flex items-center gap-3 text-sm text-[#1c4b42] transition-all duration-300 hover:bg-black hover:text-white"
                             >
                                 Explore <ArrowRight size={15} />
                             </Link>

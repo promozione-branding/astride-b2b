@@ -65,7 +65,7 @@ export default function CategorySlider() {
             <div className="mb-8 flex justify-between items-center">
                 <div>
                     <h2 className="text-[36px] font-semibold leading-tight tracking-[-1.5px] text-[#071a3d] md:text-[40px]">
-                        Our <span className="text-[#b4e717]">Categories</span>
+                        Our <span className="text-[#1c4b42]">Categories</span>
                     </h2>
 
                     <p className="mt-2 text-[17px] tracking-[0.5px] text-[#777]">
@@ -121,7 +121,7 @@ export default function CategorySlider() {
 
                                 {/* Category Name */}
                                 <div className="absolute inset-0 flex items-center justify-center transition-all duration-300">
-                                    <span className="rounded-full bg-[#b4e717] px-6 py-2.5 text-[18px] font-semibold text-[#071a3d] shadow-sm transition-all duration-300 group-hover:px-7">
+                                    <span className="rounded-full bg-[#b4e717] px-6 py-2.5 text-[18px] font-semibold text-[#1c4b42] shadow-sm transition-all duration-300 group-hover:px-7">
                                         {category.name}
                                     </span>
                                 </div>

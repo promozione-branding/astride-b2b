@@ -18,7 +18,21 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 
 const slides = [
+ 
   {
+    image: "/banner/bannerr5.webp",
+    tag: "GAMING COLLECTION",
+    tagColor: "#000000",
+    title: "Designed for",
+    titleColor: "#171717",
+    highlight: "Every Workspace.",
+    highlightColor: "#f39224",
+    description:
+      "Discover seating designed for comfort, focus, everyday performance.",
+    descriptionColor: "#000000",
+    featureColor: "#171717",
+  },
+   {
     image: "/banner/5.png",
     tag: "OFFICE COLLECTION",
     tagColor: "#ffffff",
@@ -30,19 +44,6 @@ const slides = [
       "Ergonomic seating solutions for modern workplaces.",
     descriptionColor: "#ffffff",
     featureColor: "#ffffff",
-  },
-  {
-    image: "/banner/6.png",
-    tag: "GAMING COLLECTION",
-    tagColor: "#000000",
-    title: "Designed for",
-    titleColor: "#171717",
-    highlight: "Every Workspace.",
-    highlightColor: "#f39224",
-    description:
-      "Discover seating designed for comfort, focus, everyday performance.",
-    descriptionColor: "#000000",
-    featureColor: "#171717",
   },
 ];
 

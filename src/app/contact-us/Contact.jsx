@@ -182,10 +182,10 @@ export default function Contact() {
                                     </p>
                                     <button
                                         type="submit"
-                                        className="group inline-flex w-full items-center justify-center gap-4 bg-[#b4e717] px-6 py-4 text-[10px] font-medium uppercase tracking-[0.14em] text-white transition-colors hover:bg-[#000] sm:w-auto"
+                                        className="group inline-flex w-full items-center justify-center gap-4 bg-[#1c4b42] px-6 py-4 text-[10px] font-medium uppercase tracking-[0.14em] text-white transition-colors hover:bg-[#000] sm:w-auto"
                                     >
                                         Send an enquiry
-                                        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-[#201b16] transition-transform duration-300 group-hover:bg-[#b4e717] group-hover:rotate-45">
+                                        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-[#201b16] transition-transform duration-300 group-hover:bg-[#fff] group-hover:rotate-45">
                                             <ArrowUpRight size={14} />
                                         </span>
                                     </button>

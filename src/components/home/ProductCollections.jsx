@@ -361,7 +361,7 @@ function CollectionCard({
                                                 </p>
                                             </div>
 
-                                            <div className="flex h-8 w-8 shrink-0 items-center justify-center self-end rounded-full bg-[#a56d4b] text-white">
+                                            <div className="flex h-8 w-8 shrink-0 items-center justify-center self-end rounded-full bg-[#1c4b42] text-white">
                                                 <ArrowUpRight size={14} />
                                             </div>
                                         </div>
@@ -414,7 +414,7 @@ export default function ProductCollections() {
                             text-[11px]
                             uppercase
                             tracking-[0.45em]
-                            text-[#b4e717]
+                            text-[#1c4b42]
                         "
                     >
                         Product Collections

@@ -14,7 +14,7 @@ const reviews = [
     {
         id: 1,
         rating: "4.9",
-        title: <>Beautiful<br />Home<br />Quality Life</>,
+        title: <><span className="text-[#1c4b42]">Beautiful</span><br />Home<br />Quality Life</>,
         description:
             "Sustainable production, eco-conscious materials and environmentally responsible manufacturing for your home.",
         videoText: <>Changed my posture completely in just 2 weeks. Best purchase of 2024.<br />Only responsibly sourced<br />wood, premium fabrics, and<br />durable hardware.</>,
@@ -26,7 +26,7 @@ const reviews = [
     {
         id: 2,
         rating: "4.9",
-        title: <>Designed<br />For<br />Better Living</>,
+        title: <>Designed<br />For<br /><span className="text-[#1c4b42]">Better Living</span></>,
         description:
             "Thoughtfully designed chairs combining comfort, timeless aesthetics and quality craftsmanship for everyday living.",
         videoText: <>The lumbar support is insane. Zero back pain after 10-hour sessions. <br />Crafted for everyday<br />comfort with carefully<br />selected materials.</>,
@@ -38,7 +38,7 @@ const reviews = [
     {
         id: 3,
         rating: "4.9",
-        title: <>Comfort<br /><span className="text-[#b4e717]">Meets</span><br />Character</>,
+        title: <>Comfort<br /><span className="text-[#1c4b42]">Meets</span><br />Character</>,
         description:
             "A refined balance of ergonomic comfort, premium construction and contemporary design made for modern spaces.",
         videoText: <>The ultimate chair for long work sessions and intense gaming. <br />Discover the comfort,<br />details and thoughtful<br />design behind the chair.</>,

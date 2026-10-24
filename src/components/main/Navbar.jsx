@@ -117,7 +117,7 @@ export default function Navbar() {
                     className={`relative mx-auto flex h-[60px] w-full max-w-[1600px] items-center justify-between rounded-[22px] px-5 transition-all duration-300 md:h-[88px] md:px-10 lg:px-12 ${
                         useWhiteNavbar
                             ? "bg-white shadow-lg shadow-black/5 backdrop-blur-xl"
-                            : "bg-transparent"
+                            : "bg-black/30 "
                     }`}
                 >
                     {/* LEFT LOGO */}

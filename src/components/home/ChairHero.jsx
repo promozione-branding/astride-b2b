@@ -122,7 +122,7 @@ export default function ChairHero({
               key={i}
               custom={i}
               variants={letterVariants}
-              className="inline-block text-[#b4e717]"
+              className="inline-block text-[#1c4b42]"
             >
               {letter}
             </motion.span>
@@ -193,7 +193,7 @@ export default function ChairHero({
         <h2 className="text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
           Sit Better.
           <br />
-          <span className="text-[#b4e717]">
+          <span className="text-[#1c4b42]">
             Live Better.
           </span>
         </h2>

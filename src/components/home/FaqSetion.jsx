@@ -127,7 +127,7 @@ export default function FAQSection() {
                         >
                             Everything you
                             <br />
-                           <span className="text-[#b4e717]">need to know.</span>
+                           <span className="text-[#1c4b42]">need to know.</span>
                         </h2>
 
                         <div

@@ -132,7 +132,11 @@ export default function Navbar() {
                             fill
                             priority
                             sizes="140px"
-                            className={`object-contain transition-all duration-300`}
+                                                        className={`object-contain transition-all duration-300 ${
+                                useWhiteNavbar
+                                    ? "brightness-100 invert-0"
+                                    : "brightness-0 invert"
+                            }`}
                         />
                     </Link>
 

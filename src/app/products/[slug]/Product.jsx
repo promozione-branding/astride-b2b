@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { AnimatePresence, color, motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import {
     ArrowLeft,
     ArrowRight,
@@ -18,87 +18,6 @@ import {
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import ContactSection from "@/components/home/ContactSection";
-
-const productImages = [
-    {
-        src: "https://pub-c853b438c28f4099b37f01f2c65a7031.r2.dev/products/1785218157137-staff-chair-Black-e127.webp",
-        alt: "ASTRIDE staff chair, front three-quarter view",
-    },
-    {
-        src: "https://pub-c853b438c28f4099b37f01f2c65a7031.r2.dev/products/1785218157137-staff-chair-Black-7b8d.webp",
-        alt: "ASTRIDE staff chair, alternate view",
-    },
-    {
-        src: "https://pub-c853b438c28f4099b37f01f2c65a7031.r2.dev/products/1785218157137-staff-chair-Black-c9ce.webp",
-        alt: "ASTRIDE staff chair, alternate view",
-    },
-    {
-        src: "https://pub-c853b438c28f4099b37f01f2c65a7031.r2.dev/products/1785218157138-staff-chair-Black-bbcf.webp",
-        alt: "ASTRIDE staff chair, alternate view",
-    },
-];
-
-const specifications = [
-    ["Category", "Office seating"],
-    ["Dimensions", "Length (18.5 inches), Width (18.5 inches), Seating Height (18 to 24 inches), Overall Height (36 inches)"],
-    ["Designed for", "Offices and workspaces"],
-    ["Availability", "Ask our team about current options"],
-    ["Available colours", "Black, blue, red, orange, green"],
-    ["Back Style", "Comfort rest back"],
-    ["Frame Material", "Polypropylene"],
-    ["Item Weight", "15 Kilograms"],
-    ["Material", "Nylon"],
-    ["Product Dimensions", "54D x 58W x 110H Centimeters"],
-    ["Recommended Uses", "Office"],
-    ["Size", "Standard"],
-    ["Special Feature", "Adjustable Height"],
-];
-
-const detailsBullets = [
-    "DIY INSTALLATION: Do it Yourself in 10 Minutes, No Extra Tools Required.",
-    "BIONIC CURVE BACKREST: The design of the backrest is based on the natural curve of the human spine and dynamic digital model of the human body. The back of this ergonomic chair naturally fits the physiological bends of the spine, providing excellent lumbar support.",
-    "RISK FREE PURCHASE: The chair has commercial-grade & BIFMA Certified components, Weight supports up to 100kgs. The installation guide is very simple to follow, no extra tools and fittings needed.",
-    "STABLE CHAIR: Passed stability testing with a load of 100 kg on seat and backrest to avoid tip-over. Passed seat and back rest durability test with a load of 100 Kg and 32 Kg respectively for 1,00,000 cycles.",
-    "SOLID CONSTRUCTION: Heavy-duty Polypropylene Mesh Back Chair, BIFMA Certified Class - 4 Hydraulic Gas Spring, BIFMA Certified 50mm Wheel Castors, for great stability and mobility, more reliable and sturdy, maximum weight handling capacity up to 100 Kgs.",
-];
-
-const benefits = [
-    "Made for everyday work",
-    "A considered, practical design",
-    "B2B enquiry support",
-];
-
-const colorOptions = [
-    { name: "Black", hex: "#171717" },
-    { name: "Walnut", hex: "#8e6949" },
-    { name: "Sand", hex: "#d4b186" },
-    { name: "Slate", hex: "#5e6976" },
-];
-
-const keyFeatures = [
-    {
-        number: "01",
-        title: "Everyday comfort",
-        description:
-            "A practical seating choice for the daily pace of offices and shared workspaces.",
-        icon: Armchair,
-    },
-    {
-        number: "02",
-        title: "Versatile by design",
-        color:true,
-        description:
-            "A clean, understated silhouette that sits naturally in a range of professional settings.",
-        icon: BadgeCheck,
-    },
-    {
-        number: "03",
-        title: "Ready for your space",
-        description:
-            "Designed for offices, workstations, institutions, and commercial environments.",
-        icon: Building2,
-    },
-];
 
 const whyAstride = [
     {
@@ -118,39 +37,33 @@ const whyAstride = [
     },
 ];
 
-const reviews = [
-    {
-        name: "Karan M.",
-        title: "Excellent office chair",
-        text: "Comfortable for long hours, very easy to assemble, and the design fits perfectly in our studio. The build quality feels premium and durable.",
-        rating: 5,
-    },
-    {
-        name: "Neha S.",
-        title: "Great value for money",
-        text: "The chair feels sturdy and supportive, especially for daily work. We ordered for multiple workstations and the experience was smooth.",
-        rating: 5,
-    },
-    {
-        name: "Rohit P.",
-        title: "Strong ergonomic support",
-        text: "The backrest support is really good and the finish looks clean. It has made our office setup much more comfortable and professional.",
-        rating: 4,
-    },
-    {
-        name: "Aisha K.",
-        title: "Very reliable purchase",
-        text: "Assembly is straightforward and the chair feels balanced and stable. It looks premium and works great in a retail workspace.",
-        rating: 5,
-    },
-];
 
-export default function Product() {
+const featureIcons = {
+    Armchair,
+    BadgeCheck,
+    Building2,
+};
+
+export default function Product({ product }) {
     const swiperRef = useRef(null);
     const [activeImage, setActiveImage] = useState(0);
     const [activeTab, setActiveTab] = useState("details");
-    const [selectedColor, setSelectedColor] = useState("Black");
+    const [selectedColor, setSelectedColor] = useState(
+        product.defaultColor ?? product.colors?.[0]?.id ?? ""
+    );
     const [isSaved, setIsSaved] = useState(false);
+
+    const activeColor =
+        product.colors?.find((colorOption) => colorOption.id === selectedColor) ??
+        product.colors?.[0];
+
+    const productImages = activeColor?.images ?? [];
+
+    const handleColorChange = (colorId) => {
+        setSelectedColor(colorId);
+        setActiveImage(0);
+        // The Swiper is keyed by selectedColor, so it remounts on variant change.
+    };
 
     const showPreviousImage = () => swiperRef.current?.slidePrev();
     const showNextImage = () => swiperRef.current?.slideNext();
@@ -199,7 +112,7 @@ export default function Product() {
                             Products
                         </Link>
                         <span aria-hidden="true">/</span>
-                        <span className="text-black/70">Staff chair</span>
+                        <span className="text-black/70">{product.name}</span>
                     </nav>
                 </div>
 
@@ -212,20 +125,22 @@ export default function Product() {
                         className="min-w-0"
                     >
                         <div className="relative overflow-hidden rounded-[16px] bg-[#f4f3f0]">
-                            <div className="aspect-[1.08] sm:aspect-[1.16] lg:aspect-[1.3]">
+                            <div className="aspect-square ">
                                 <Swiper
+                                    key={selectedColor}
                                     onSwiper={(swiper) => {
                                         swiperRef.current = swiper;
+                                        setActiveImage(0);
                                     }}
                                     onSlideChange={(swiper) =>
                                         setActiveImage(swiper.realIndex)
                                     }
                                     slidesPerView={1}
-                                    loop
+                                    loop={productImages.length > 1}
                                     className="h-full w-full"
                                 >
-                                    {productImages.map((image) => (
-                                        <SwiperSlide key={image.src}>
+                                    {productImages.map((image, index) => (
+                                        <SwiperSlide key={image}>
                                             <div className="relative h-full w-full overflow-hidden">
                                                 <motion.div
                                                     initial={{ opacity: 0, scale: 0.97 }}
@@ -236,13 +151,13 @@ export default function Product() {
                                                     }}
                                                     className="absolute inset-0"
                                                 >
-                                                    <Image
-                                                        src={image.src}
-                                                        alt={image.alt}
+                                                    <img
+                                                        src={image}
+                                                        alt={`${product.name} - ${activeColor?.name ?? "product"} view ${index + 1}`}
                                                         fill
-                                                        priority={image.src === productImages[0].src}
+                                                        priority={index === 0}
                                                         sizes="(max-width: 1024px) 100vw, 58vw"
-                                                        className="object-contain"
+                                                        className="object-cover"
                                                     />
                                                 </motion.div>
                                             </div>
@@ -271,17 +186,23 @@ export default function Product() {
                             </div>
 
                             <span className="absolute bottom-6 right-6 z-10 text-[10px] font-medium tracking-[0.16em] text-black/50">
-                                0{activeImage + 1} <span className="mx-1">/</span> 0
-                                {productImages.length}
+                                {String(activeImage + 1).padStart(2, "0")} <span className="mx-1">/</span> {String(productImages.length).padStart(2, "0")}
                             </span>
                         </div>
 
                         <div className="mt-4 flex gap-3">
                             {productImages.map((image, index) => (
                                 <button
-                                    key={image.src}
+                                    key={image}
                                     type="button"
-                                    onClick={() => swiperRef.current?.slideToLoop(index)}
+                                    onClick={() => {
+                                        if (productImages.length > 1) {
+                                            swiperRef.current?.slideToLoop(index);
+                                        } else {
+                                            swiperRef.current?.slideTo(index);
+                                            setActiveImage(index);
+                                        }
+                                    }}
                                     aria-label={`Show product image ${index + 1}`}
                                     aria-pressed={activeImage === index}
                                     className={`relative aspect-[1.3] w-24 overflow-hidden rounded-[10px] bg-[#f4f3f0] transition sm:w-28 ${activeImage === index
@@ -290,8 +211,8 @@ export default function Product() {
                                         }`}
                                 >
                                     <Image
-                                        src={image.src}
-                                        alt=""
+                                        src={image}
+                                        alt={`${activeColor?.name ?? "Product"} thumbnail ${index + 1}`}
                                         fill
                                         sizes="112px"
                                         className="object-contain p-2"
@@ -315,10 +236,10 @@ export default function Product() {
                         <div className="mt-2 flex items-start justify-between gap-4">
                             <div>
                                 <h1 className="mt-2 text-[clamp(36px,5vw,62px)] font-medium leading-[0.98] tracking-[-0.065em]">
-                                    Staff Chair
+                                    {product.name}
                                 </h1>
                             </div>
-                            <button
+                            {/* <button
                                 type="button"
                                 onClick={() => setIsSaved((saved) => !saved)}
                                 aria-label={
@@ -335,31 +256,52 @@ export default function Product() {
                                     strokeWidth={1.5}
                                     fill={isSaved ? "currentColor" : "none"}
                                 />
-                            </button>
+                            </button> */}
                         </div>
 
                         <div className="mt-2 flex items-center gap-3">
-                            <div className="flex items-center gap-1 text-lg text-[#b4e717]" aria-label="4.7 out of 5 stars">
-                                <span>★</span>
-                                <span>★</span>
-                                <span>★</span>
-                                <span>★</span>
-                                <span className="text-[#b4e717]/50">★</span>
+                            {/* Dynamic Star Rating */}
+                            <div
+                                className="flex items-center gap-1 text-lg text-[#b4e717]"
+                                aria-label={`${product.rating} out of 5 stars`}
+                            >
+                                {[1, 2, 3, 4, 5].map((star) => (
+                                    <span
+                                        key={star}
+                                        className={
+                                            product.rating >= star
+                                                ? "text-[#b4e717]"
+                                                : product.rating >= star - 1
+                                                    ? "text-transparent bg-clip-text bg-gradient-to-r from-[#b4e717] 50% to-[#b4e717]/40 50%"
+                                                    : "text-[#b4e717]/40"
+                                        }
+                                    >
+                                        ★
+                                    </span>
+                                ))}
                             </div>
-                            <span className="text-sm font-medium text-black/75">4.7</span>
-                            <span className="text-sm text-black/70">[512 verified reviews]</span>
+
+                            {/* Dynamic Rating Value */}
+                            <span className="text-sm font-medium text-black/75">
+                                {product.rating?.toFixed(1) ?? "0.0"}
+                            </span>
+
+                            {/* Dynamic Review Count */}
+                            <span className="text-sm text-black/70">
+                                {product.reviewsCount ?? 0} verified reviews
+                            </span>
                         </div>
 
                         <div className="flex gap-4 items-center">
                             <div className="mt-2 flex items-end gap-3">
                                 <div className="flex items-baseline gap-2">
                                     <span className="text-[28px] font-semibold tracking-[-0.06em] text-black">
-                                        ₹6,499
+                                        ₹{product.price}
                                     </span>
-                                    <span className="text-lg text-black/40 line-through">₹10,000</span>
+                                    <span className="text-lg text-black/40 line-through">₹{product.oldPrice}</span>
                                 </div>
                             </div>
-                            <p className="rounded-md text-sm mt-1 text-white bg-[#1c4b42] p-1.5">You save ₹3,501</p>
+                            <p className="rounded-md text-sm mt-1 text-white bg-[#1c4b42] p-1.5">You save ₹{product.oldPrice - product.price}</p>
                         </div>
 
                         <p className="mt-1 text-xs uppercase tracking-[0.12em] text-black/45">
@@ -371,33 +313,30 @@ export default function Product() {
                                 Choose colour
                             </p>
                             <div className="flex flex-wrap gap-2">
-                                {colorOptions.map((color) => (
+                                {(product.colors ?? []).map((colorOption) => (
                                     <button
-                                        key={color.name}
+                                        key={colorOption.id}
                                         type="button"
-                                        aria-label={`Select ${color.name} color`}
-                                        aria-pressed={selectedColor === color.name}
-                                        onClick={() => setSelectedColor(color.name)}
-                                        className={`flex items-center gap-2 rounded-full border px-2.5 py-1.5 text-[10px] font-medium uppercase tracking-[0.12em] transition ${selectedColor === color.name
+                                        aria-label={`Select ${colorOption.name} color`}
+                                        aria-pressed={selectedColor === colorOption.id}
+                                        onClick={() => handleColorChange(colorOption.id)}
+                                        className={`flex items-center gap-2 rounded-full border px-2.5 py-1.5 text-[10px] font-medium uppercase tracking-[0.12em] transition ${selectedColor === colorOption.id
                                             ? "border-black bg-black text-white"
                                             : "border-black/10 bg-white text-black/70 hover:border-black/30"
                                             }`}
                                     >
                                         <span
                                             className="h-3.5 w-3.5 rounded-full border border-black/10"
-                                            style={{ backgroundColor: color.hex }}
+                                            style={{ backgroundColor: colorOption.hex }}
                                         />
-                                        {color.name}
+                                        {colorOption.name}
                                     </button>
                                 ))}
                             </div>
                         </div>
 
                         <p className="mt-5 max-w-[540px] text-[13px] leading-[1.9] text-black/60 sm:text-sm">
-                            A dependable seating solution for the rhythm of a modern
-                            workplace. The ASTRIDE Staff Chair brings together practical
-                            comfort and a clean, versatile silhouette for offices,
-                            workstations, and shared spaces.
+                            {product.shortDescription}
                         </p>
 
                         <div className="mt-4">
@@ -406,17 +345,17 @@ export default function Product() {
                                     At a glance
                                 </h2>
                                 <span className="text-[10px] font-medium uppercase tracking-[0.16em] text-black/35">
-                                    {selectedColor}
+                                    {activeColor?.name ?? selectedColor}
                                 </span>
                             </div>
 
                             <div className="mt-4 flex flex-wrap gap-2">
-                                {benefits.map((benefit) => (
+                                {(product.keyFeatures ?? []).map(({ title }) => (
                                     <span
-                                        key={benefit}
+                                        key={title}
                                         className="rounded-full border border-black/10 px-3 py-2 text-xs text-black/65 sm:text-xs"
                                     >
-                                        {benefit}
+                                        {title}
                                     </span>
                                 ))}
                             </div>
@@ -505,7 +444,7 @@ export default function Product() {
                                         </div>
 
                                         <div className="grid gap-3 md:grid-cols-2">
-                                            {specifications.map(([label, value]) => (
+                                            {product.specifications.map(({ label, value }) => (
                                                 <div
                                                     key={label}
                                                     className="rounded-2xl border border-black/8 bg-white p-3 shadow-[0_10px_20px_rgba(24,24,24,0.02)]"
@@ -513,6 +452,7 @@ export default function Product() {
                                                     <dt className="mb-1 text-[9px] font-medium uppercase tracking-[0.14em] text-black/45">
                                                         {label}
                                                     </dt>
+
                                                     <dd className="text-[12px] leading-[1.7] text-black/70">
                                                         {value}
                                                     </dd>
@@ -526,7 +466,7 @@ export default function Product() {
                                             Why this chair
                                         </p>
                                         <ul className="mt-4 space-y-4">
-                                            {detailsBullets.map((bullet, index) => (
+                                            {product.whyChoose.map((bullet, index) => (
                                                 <li
                                                     key={bullet}
                                                     className="flex gap-3 rounded-xl border border-white/8 bg-white/[0.03] p-3"
@@ -587,38 +527,46 @@ export default function Product() {
                 </motion.div>
 
                 <div className="grid gap-4 md:grid-cols-3">
-                    {keyFeatures.map(({ number, title, description, icon: Icon }, index) => (
-                       <motion.article
-  key={number}
-  id={`reveal-color-true-${number}`}
-  data-reveal-color="true"
-  initial={{ opacity: 0, y: 22 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: false, amount: 0.2 }}
-  transition={{ duration: 0.5, delay: index * 0.1 }}
-  className={`rounded-2xl border border-black/[0.06] p-6 sm:p-8 ${
-    color ? "bg-[#f1eee7]" : "bg-white"
-  }`}
->
-                            <div className="flex items-center justify-between">
-                                <span className="text-[10px] tracking-[0.15em] text-black/35">
-                                    {number}
-                                </span>
-                                <Icon
-                                    aria-hidden="true"
-                                    size={19}
-                                    strokeWidth={1.5}
-                                    className="text-[#9b7b19]"
-                                />
-                            </div>
-                            <h3 className="mt-9 text-lg font-medium tracking-[-0.04em]">
-                                {title}
-                            </h3>
-                            <p className="mt-3 text-xs leading-6 text-black/55 sm:text-sm">
-                                {description}
-                            </p>
-                        </motion.article>
-                    ))}
+                    {product.keyFeatures.map(({ number, title, description, icon, color: featureColor }, index) => {
+                        const Icon = featureIcons[icon];
+
+                        return (
+                            <motion.article
+                                key={number}
+                                id={`reveal-color-true-${number}`}
+                                data-reveal-color="true"
+                                initial={{ opacity: 0, y: 22 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: false, amount: 0.2 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                className={`rounded-2xl border border-black/[0.06] p-6 sm:p-8 ${featureColor ? "bg-[#f1eee7]" : "bg-white"
+                                    }`}
+                            >
+                                <div className="flex items-center justify-between">
+                                    <span className="text-[10px] tracking-[0.15em] text-black/35">
+                                        {number}
+                                    </span>
+
+                                    {Icon && (
+                                        <Icon
+                                            aria-hidden="true"
+                                            size={19}
+                                            strokeWidth={1.5}
+                                            className="text-[#9b7b19]"
+                                        />
+                                    )}
+                                </div>
+
+                                <h3 className="mt-9 text-lg font-medium tracking-[-0.04em]">
+                                    {title}
+                                </h3>
+
+                                <p className="mt-3 text-xs leading-6 text-black/55 sm:text-sm">
+                                    {description}
+                                </p>
+                            </motion.article>
+                        );
+                    })}
                 </div>
             </section>
 
@@ -648,18 +596,20 @@ export default function Product() {
                 </motion.div>
 
                 <div className="divide-y divide-white/10">
-                    {whyAstride.map(({ title, description }, index) => (
+                    {whyAstride.map((item, index) => (
                         <motion.article
-                            key={title}
+                            key={typeof item === "string" ? item : item.title}
                             initial={{ opacity: 0, y: 14 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: false, amount: 0.2 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             className="grid gap-2 py-5 first:pt-0 last:pb-0 sm:grid-cols-[0.8fr_1.2fr] sm:gap-6"
                         >
-                            <h3 className="text-sm font-medium">{title}</h3>
+                            <h3 className="text-sm font-medium">
+                                {typeof item === "string" ? `Benefit ${String(index + 1).padStart(2, "0")}` : item.title}
+                            </h3>
                             <p className="text-xs leading-6 text-white/55 sm:text-sm">
-                                {description}
+                                {typeof item === "string" ? item : item.description}
                             </p>
                         </motion.article>
                     ))}
@@ -677,8 +627,16 @@ export default function Product() {
                         </h2>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-black/70">
-                        <span className="text-lg text-[#d4a93a]">★★★★★</span>
-                        <span className="font-medium text-black">4.7</span>
+                        <div className="flex items-center gap-2">
+                            <span className="text-lg text-[#1c4b42]" aria-label={`${product.rating ?? 0} out of 5 stars`}>
+                                {[1, 2, 3, 4, 5].map((star) => (
+                                    <span key={star} className={((product.rating ?? 0) >= star) ? "text-[#1c4b42]" : "text-[#1c4b42]/30"}>★</span>
+                                ))}
+                            </span>
+                            <span className="text-sm font-medium text-black/75">
+                                {product.rating?.toFixed(1) ?? "0.0"}
+                            </span>
+                        </div>
                     </div>
                 </div>
 
@@ -691,7 +649,7 @@ export default function Product() {
                     }}
                     className="reviews-swiper"
                 >
-                    {reviews.map(({ name, title, text, rating }) => (
+                    {(product.reviews ?? []).map(({ name, title, text, rating }) => (
                         <SwiperSlide key={name}>
                             <article className="h-full rounded-[22px] border border-black/[0.08] bg-white p-6 shadow-[0_18px_30px_rgba(19,19,19,0.04)]">
                                 <div className="flex items-center justify-between gap-3">

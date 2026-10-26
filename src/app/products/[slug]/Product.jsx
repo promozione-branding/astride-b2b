@@ -140,7 +140,7 @@ export default function Product({ product }) {
                                     className="h-full w-full"
                                 >
                                     {productImages.map((image, index) => (
-                                        <SwiperSlide key={image}>
+                                        <SwiperSlide key={`${selectedColor}-${index}-${image}`}>
                                             <div className="relative h-full w-full overflow-hidden">
                                                 <motion.div
                                                     initial={{ opacity: 0, scale: 0.97 }}
@@ -193,7 +193,7 @@ export default function Product({ product }) {
                         <div className="mt-4 flex gap-3">
                             {productImages.map((image, index) => (
                                 <button
-                                    key={image}
+                                    key={`${selectedColor}-${index}-${image}`}
                                     type="button"
                                     onClick={() => {
                                         if (productImages.length > 1) {

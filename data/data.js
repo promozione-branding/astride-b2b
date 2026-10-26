@@ -640,7 +640,7 @@ export const products = [
   price: 6499,
   oldPrice: 19999,
 
-  defaultImage: "/products/gaming-red.png",
+  defaultImage: "/products/gaming.png",
 
   colors: [
     {
@@ -651,7 +651,6 @@ export const products = [
       images: [
         "/products/gaming.png",
         "/products/gaming-grey1.jpg",
-        "/products/gaming-grey3.jpg",
         "/products/gaming-grey3.jpg",
       ],
     },
@@ -675,8 +674,8 @@ export const products = [
       images: [
         "/products/gaming-neon.png",
         "/products/gaming-neon1.jpg",
-        "/products/gaming-neon1.jpg",
-        "/products/gaming-neon1.jpg",
+        "/products/gaming-neon2.jpg",
+        "/products/gaming-neon3.jpg",
       ],
     },
     {
@@ -908,6 +907,122 @@ export const products = [
       name: "Aisha K.",
       title: "Useful for home office",
       text: "The cushioned seat and back support make it a suitable option for a home office setup.",
+      rating: 5,
+    },
+  ],
+},
+
+{
+  id: "amica-high-bar-stool",
+  name: "Amica High Bar Stool",
+  slug: "amica-high-bar-stool",
+  category: "Bar Stools & Cafe Chairs",
+  subcategory: "Bar Stools",
+
+  shortDescription:
+    "The ASTRIDE Amica High Bar Stool combines a modern design with a round cushioned seat and a sturdy metal frame. Featuring adjustable height and a sleek black finish, it is designed for bar counters, kitchen islands, cafés, and contemporary commercial interiors.",
+
+  defaultColor: "black",
+  rating: 4.7,
+  reviewsCount: 225,
+  price: 4999,
+  oldPrice: 6999,
+
+  defaultImage: "/products/amica.png",
+
+  colors: [
+    {
+      id: "black",
+      name: "Black",
+      hex: "#202020",
+      sku: "AMICA-STOOL-BLK",
+      images: [
+        "/products/amica.png",
+        "/products/amica1.jpg",
+        "/products/amica2.jpg",
+        "/products/amica3.jpg",
+      ],
+    },
+  ],
+
+  specifications: [
+    { label: "Brand", value: "ASTRIDE" },
+    { label: "Category", value: "Bar stool" },
+    {
+      label: "Product Dimensions",
+      value: "41D x 41W x 103H Centimeters",
+    },
+    { label: "Colour", value: "Black" },
+    { label: "Frame Material", value: "Metal" },
+    { label: "Seat Material Type", value: "Polyurethane Foam" },
+    { label: "Size", value: "Height Adjustable Bar Stool" },
+    { label: "Style", value: "Modern" },
+    { label: "Furniture Finish", value: "Black" },
+    { label: "Seat Height", value: "32 Inches" },
+    { label: "Shape", value: "Round" },
+    {
+      label: "Recommended Uses",
+      value: "Bar Counters, Kitchen Islands, Cafés, Commercial Interiors",
+    },
+  ],
+
+  whyChoose: [
+    "DURABLE METAL FRAME: Designed with a metal frame, with the product description highlighting stainless steel and alloy steel construction for strength and long-lasting performance.",
+    "COMFORTABLE CUSHIONED SEAT: The round polyurethane foam seat provides cushioning for everyday seating in residential and commercial settings.",
+    "HEIGHT-ADJUSTABLE DESIGN: The adjustable-height design allows the stool to accommodate different counter and bar seating arrangements.",
+    "MODERN BLACK FINISH: The sleek black finish and contemporary styling complement modern kitchens, bar counters, cafés, and commercial interiors.",
+    "VERSATILE APPLICATIONS: Suitable for a range of professional and residential environments where practical, modern bar seating is required.",
+    "EASY MAINTENANCE: Designed for regular use, with a practical finish suited to everyday seating environments.",
+  ],
+
+  keyFeatures: [
+    {
+      number: "01",
+      title: "Adjustable height",
+      description:
+        "A height-adjustable design offers flexibility for different bar counters and seating arrangements.",
+      icon: "SlidersHorizontal",
+    },
+    {
+      number: "02",
+      title: "Comfortable round seat",
+      color: true,
+      description:
+        "A round polyurethane foam seat provides cushioned support with a clean, modern appearance.",
+      icon: "Armchair",
+    },
+    {
+      number: "03",
+      title: "Modern metal frame",
+      description:
+        "A sturdy metal frame and black finish create a contemporary seating option for residential and commercial interiors.",
+      icon: "ShieldCheck",
+    },
+  ],
+
+  reviews: [
+    {
+      name: "Karan M.",
+      title: "Modern bar stool",
+      text: "The black finish and round seat give this stool a clean, contemporary look for a bar counter.",
+      rating: 5,
+    },
+    {
+      name: "Neha S.",
+      title: "Practical adjustable design",
+      text: "The height-adjustable feature makes this stool a useful option for different counter setups.",
+      rating: 5,
+    },
+    {
+      name: "Rohit P.",
+      title: "Simple and versatile",
+      text: "The modern styling works well in a contemporary kitchen or commercial seating area.",
+      rating: 4,
+    },
+    {
+      name: "Aisha K.",
+      title: "Comfortable seating option",
+      text: "The round cushioned seat and black finish make it a practical addition to a bar seating area.",
       rating: 5,
     },
   ],

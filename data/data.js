@@ -1027,4 +1027,301 @@ export const products = [
     },
   ],
 },
+
+{
+  id: "alpha-high-bar-stool",
+  name: "Alpha High Bar Stool",
+  slug: "alpha-high-bar-stool",
+  category: "Bar Stools & Cafe Chairs",
+  subcategory: "Bar Stools & Cafe Chairs",
+
+  shortDescription:
+    "The ASTRIDE Alpha High Bar Stool combines modern styling with a round cushioned seat and a sturdy metal frame. Featuring adjustable seat height from 22 to 32 inches and a sleek black finish, it is designed for bar counters, kitchen islands, cafés, and contemporary interiors.",
+
+  defaultColor: "black",
+  rating: 4.7,
+  reviewsCount: 225,
+  price: 4099,
+  oldPrice: 7499,
+
+  defaultImage: "/products/alpha.png",
+
+  colors: [
+    {
+      id: "black",
+      name: "Black",
+      hex: "#000000",
+      sku: "ALPHA-STOOL-BLK",
+      images: [
+        "/products/alpha.png",
+        "/products/alpha1.jpg",
+        "/products/alpha2.jpg",
+        "/products/alpha3.jpg",
+      ],
+    },
+    {
+      id: "brown",
+      name: "Brown",
+      hex: "#BD7108",
+      sku: "ALPHA-STOOL-BRW",
+      images: [
+        "/products/alpha-brown.png",
+        "/products/alpha-brown1.jpg",
+        "/products/alpha-brown2.jpg",
+        "/products/alpha-brown3.jpg",
+      ],
+    },
+  ],
+
+  specifications: [
+    { label: "Brand", value: "ASTRIDE" },
+    { label: "Category", value: "Bar stool" },
+    {
+      label: "Product Dimensions",
+      value: "41D x 46W x 103H Centimeters",
+    },
+    { label: "Colour", value: "Black" },
+    { label: "Frame Material", value: "Metal" },
+    { label: "Seat Material Type", value: "Polyurethane Foam" },
+    { label: "Size", value: "Height Adjustable Bar Stool" },
+    { label: "Style", value: "Modern" },
+    { label: "Furniture Finish", value: "Black" },
+    {
+      label: "Seat Height",
+      value: "Adjustable from 22 to 32 Inches",
+    },
+    { label: "Shape", value: "Round" },
+  ],
+
+  whyChoose: [
+    "DURABLE METAL FRAME: Features a metal frame designed to provide dependable support for everyday seating in residential and commercial settings.",
+    "COMFORTABLE CUSHIONED SEAT: The round polyurethane foam seat provides cushioning for a comfortable seating experience.",
+    "ADJUSTABLE SEAT HEIGHT: The seat height adjusts from 22 to 32 inches, offering flexibility for different bar counters and seating arrangements.",
+    "MODERN BLACK FINISH: The sleek black finish and contemporary styling complement modern kitchens, bar counters, cafés, and commercial interiors.",
+    "VERSATILE APPLICATIONS: Suitable for bar counters, kitchen islands, cafés, and other spaces that require practical, modern bar seating.",
+    "ROUND SEAT DESIGN: The round seat creates a clean, streamlined appearance that works well in contemporary interiors.",
+  ],
+
+  keyFeatures: [
+    {
+      number: "01",
+      title: "Adjustable seat height",
+      description:
+        "Adjusts from 22 to 32 inches to accommodate different counter heights and seating preferences.",
+      icon: "SlidersHorizontal",
+    },
+    {
+      number: "02",
+      title: "Cushioned round seat",
+      color: true,
+      description:
+        "A round polyurethane foam seat combines cushioning with a clean, modern design.",
+      icon: "Armchair",
+    },
+    {
+      number: "03",
+      title: "Modern metal frame",
+      description:
+        "A metal frame and black finish create a versatile seating option for contemporary spaces.",
+      icon: "ShieldCheck",
+    },
+  ],
+
+  reviews: [
+    {
+      name: "Karan M.",
+      title: "Modern bar stool",
+      text: "The black finish and round seat give this stool a clean, contemporary look for a bar counter.",
+      rating: 5,
+    },
+    {
+      name: "Neha S.",
+      title: "Useful height adjustment",
+      text: "The adjustable seat height is a practical feature for different counter setups.",
+      rating: 5,
+    },
+    {
+      name: "Rohit P.",
+      title: "Simple and versatile",
+      text: "The modern styling makes this stool suitable for contemporary kitchen and bar areas.",
+      rating: 4,
+    },
+    {
+      name: "Aisha K.",
+      title: "Practical seating option",
+      text: "The cushioned round seat and black finish make it a good fit for a modern interior.",
+      rating: 5,
+    },
+  ],
+},
+
+{
+  id: "rapid-high-bar-stool",
+  name: "Rapid High Bar Stool",
+  slug: "rapid-high-bar-stool",
+   category: "Bar Stools & Cafe Chairs",
+
+  subcategory: "Bar Stools",
+
+  shortDescription:
+    "The ASTRIDE Rapid High Bar Stool combines a modern design with a soft PU-covered seat, sturdy metal construction, and a chrome-finish base. Featuring adjustable seat height, a circular footrest, and anti-slip floor-protection pads, it is designed for kitchen counters, home bars, and contemporary commercial interiors.",
+
+  defaultColor: "black",
+  rating: 4.7,
+  reviewsCount: 225,
+  price: 3499,
+  oldPrice: 5499,
+
+  defaultImage: "/products/rapid.png",
+
+ 
+colors: [
+  {
+    id: "black",
+    name: "Black",
+    hex: "#202020",
+    sku: "RAPID-STOOL-BLK",
+    images: [
+      "/products/rapid.png",
+      "/products/rapid1.jpg",
+      "/products/rapid3.jpg",
+      "/products/rapid3.jpg",
+    ],
+  },
+  {
+    id: "red",
+    name: "Red",
+    hex: "#D32F2F",
+    sku: "RAPID-STOOL-RED",
+    images: [
+      "/products/rapid-red.png",
+      "/products/rapid-red1.jpg",
+      "/products/rapid-red2.jpg",
+      "/products/rapid-red3.jpg",
+    ],
+  },
+  {
+    id: "orange",
+    name: "Orange",
+    hex: "#F57C00",
+    sku: "RAPID-STOOL-ORG",
+    images: [
+      "/products/rapid-orange.png",
+      "/products/rapid-orange1.jpg",
+      "/products/rapid-orange2.jpg",
+      "/products/rapid-orange3.jpg",
+      
+    ],
+  },
+  {
+    id: "white",
+    name: "White",
+    hex: "#FFFFFF",
+    sku: "RAPID-STOOL-WHT",
+    images: [
+      "/products/rapid-white.png",
+      "/products/rapid-white1.jpg",
+      "/products/rapid-white2.jpg",
+      "/products/rapid-white3.jpg",
+    ],
+  },
+],
+
+  specifications: [
+    { label: "Brand", value: "ASTRIDE" },
+    { label: "Category", value: "Bar stool" },
+    {
+      label: "Product Dimensions",
+      value: "38D x 38W x 101H Centimeters",
+    },
+    { label: "Colour", value: "Black" },
+    { label: "Frame Material", value: "Metal" },
+    { label: "Seat Material Type", value: "Polyurethane (PU)" },
+    { label: "Size", value: "Height Adjustable Bar Stool" },
+    { label: "Style", value: "Modern" },
+    { label: "Furniture Finish", value: "Chrome" },
+    {
+      label: "Seat Height",
+      value: "Adjustable from 22 to 32 Inches",
+    },
+    { label: "Shape", value: "L-Shaped" },
+    {
+      label: "Seat Dimensions",
+      value: "16.5 inches (L) x 14.5 inches (W)",
+    },
+    {
+      label: "Seating Height (About Section)",
+      value: "Adjustable from 23 to 32.5 Inches",
+    },
+    {
+      label: "Overall Height at Full Extension",
+      value: "45 Inches",
+    },
+    { label: "Base Diameter", value: "16.5 Inches" },
+    { label: "Footrest", value: "Circular footrest" },
+    { label: "Floor Protection", value: "Rubber anti-slip pads" },
+    { label: "Warranty", value: "2 Years, as indicated in the product link title" },
+  ],
+
+  whyChoose: [
+    "OPTIMAL COMFORT: The seat is covered with high-quality soft PU for a comfortable seating experience. Its ergonomic design and circular footrest provide added comfort while working in the kitchen or relaxing at a counter.",
+    "ROBUST METAL CONSTRUCTION: A sturdy metal frame and large, thickened base measuring 16.5 inches in diameter are designed to provide stability for everyday seating.",
+    "ADJUSTABLE SEAT HEIGHT: The height-adjustable design offers flexibility for different counter heights and seating preferences.",
+    "FLOOR PROTECTION: Rubber anti-slip pads on the bottom help prevent slipping and protect floor surfaces from scratches.",
+    "MODERN CHROME FINISH: The chrome-finish base complements the black seat, creating a contemporary look for kitchens, home bars, and commercial interiors.",
+    "VERSATILE BAR SEATING: Designed for kitchen counters and relaxation areas, combining a cushioned seat, adjustable height, and practical foot support.",
+  ],
+
+  keyFeatures: [
+    {
+      number: "01",
+      title: "Comfortable PU seat",
+      description:
+        "A soft PU-covered seat and circular footrest provide comfortable support for kitchen counters and bar seating.",
+      icon: "Armchair",
+    },
+    {
+      number: "02",
+      title: "Adjustable height",
+      color: true,
+      description:
+        "The height-adjustable mechanism helps accommodate different counter heights and seating preferences.",
+      icon: "SlidersHorizontal",
+    },
+    {
+      number: "03",
+      title: "Stable chrome base",
+      description:
+        "A sturdy metal frame, thickened base, and rubber anti-slip pads support stability and help protect floors.",
+      icon: "ShieldCheck",
+    },
+  ],
+
+  reviews: [
+    {
+      name: "Karan M.",
+      title: "Modern bar stool",
+      text: "The black seat and chrome finish create a contemporary look for a kitchen counter or home bar.",
+      rating: 5,
+    },
+    {
+      name: "Neha S.",
+      title: "Comfortable seating",
+      text: "The cushioned PU seat and circular footrest are useful features for everyday counter seating.",
+      rating: 5,
+    },
+    {
+      name: "Rohit P.",
+      title: "Practical adjustable design",
+      text: "The adjustable height makes this stool a versatile option for different counter arrangements.",
+      rating: 4,
+    },
+    {
+      name: "Aisha K.",
+      title: "Clean modern finish",
+      text: "The chrome base and black seat suit a contemporary kitchen or commercial interior.",
+      rating: 5,
+    },
+  ],
+}
 ];

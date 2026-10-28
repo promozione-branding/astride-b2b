@@ -28,7 +28,7 @@ const letterVariants = {
 };
 
 export default function ChairHero({
-  chairSrc = "/categories/4.webp",
+  chairSrc = "/categories/new2.png",
 }) {
   const sectionRef = useRef(null);
 

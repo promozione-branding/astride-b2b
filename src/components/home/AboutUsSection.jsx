@@ -240,8 +240,8 @@ export default function AboutUsSection() {
                     className="absolute left-1/2 top-[115px] z-10 w-[350px] -translate-x-1/2 sm:top-[125px] sm:w-[400px] md:w-[450px] lg:top-[30px] lg:w-[500px] xl:w-[600px]"
                 >
                     <div className="relative aspect-[1/1] w-full">
-                        <Image
-                            src="/categories/7.png"
+                        <img
+                            src="/categories/study.png"
                             alt="Modern Chair"
                             fill
                             priority

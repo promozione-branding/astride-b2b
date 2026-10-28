@@ -51,7 +51,7 @@ const categories = [
         highlight: "Your Bar Area",
         description:
             "Add a stylish and functional touch to your counter or bar area with contemporary bar chairs.",
-        image: "/categories/1.webp",
+        image: "/categories/bar-stools.png",
     },
     {
         id: 6,
@@ -69,7 +69,7 @@ const categories = [
         highlight: "Your Office",
         description:
             "Discover ergonomic office chairs that combine comfort, functionality, and contemporary design for modern workspaces.",
-        image: "/categories/5.webp",
+        image: "/categories/office.png",
     },
     {
         id: 8,
@@ -78,7 +78,7 @@ const categories = [
         highlight: "Your Gaming Setup",
         description:
             "Experience superior comfort and support with gaming chairs designed for long gaming sessions and immersive gameplay.",
-        image: "https://pub-c853b438c28f4099b37f01f2c65a7031.r2.dev/products/1785180491683-gaming-chair-with-adjustable-armrest-Green-1b77.webp",
+             image: "/categories/gaming.png",
     },
     {
         id: 9,
@@ -132,7 +132,7 @@ const categories = [
         highlight: "Your Study Space",
         description:
             "Bring comfort and focus to your study area with thoughtfully designed chairs made for everyday learning.",
-        image: "/categories/7.png",
+        image: "/categories/study.png",
     },
     {
         id: 15,

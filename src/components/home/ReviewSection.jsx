@@ -43,7 +43,7 @@ const reviews = [
             "A refined balance of ergonomic comfort, premium construction and contemporary design made for modern spaces.",
         videoText: <>The ultimate chair for long work sessions and intense gaming. <br />Discover the comfort,<br />details and thoughtful<br />design behind the chair.</>,
         linkText: "Learn More",
-        chairImage: "https://pub-c853b438c28f4099b37f01f2c65a7031.r2.dev/products/1785219955488-alpha-adjustable-bar-stool-chair-for-caf-and-home-Black-2342.webp",
+        chairImage: "/bar2.png",
         videoId: "--rKEoktpGw",
         videoThumbnail: "https://img.youtube.com/vi/--rKEoktpGw/maxresdefault.jpg",
     },

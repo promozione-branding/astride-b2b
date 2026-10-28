@@ -22,7 +22,7 @@ const products = [
         description:
             "The ASTRIDE® Staff Chair is a practical and durable seating solution designed to meet the everyday requirements of modern offices, workstations, educational institutions, and commercial environments.",
         image: "https://pub-c853b438c28f4099b37f01f2c65a7031.r2.dev/products/1785218157137-staff-chair-Black-e127.webp",
-        preview: "https://pub-c853b438c28f4099b37f01f2c65a7031.r2.dev/products/1785218157138-staff-chair-Black-0ce1.webp",
+        preview: "/products/Airsense.png",
         tagline: ["Sculptural Design", "Everyday Comfort", "Built to Last"],
     },
     {
@@ -31,7 +31,7 @@ const products = [
         title: "Staff Chair",
         description:
             "The ASTRIDE® Granate Mesh Back Staff Chair is a versatile and ergonomic office seating solution designed to enhance comfort, productivity, and workplace efficiency.",
-        image: "https://pub-c853b438c28f4099b37f01f2c65a7031.r2.dev/products/1781251090021-mesh-back-staff-chair-modular-furn-Black-83ac.webp",
+        image: "/products/Erizo-Ergonomic-Chair.png",
         preview: "https://pub-c853b438c28f4099b37f01f2c65a7031.r2.dev/products/1781251090030-mesh-back-staff-chair-modular-furn-Black-af12.webp",
         tagline: ["Minimal Form", "Refined Details", "Built to Last"],
     },
@@ -61,7 +61,7 @@ const products = [
         title: "Gaming Chair",
         description:
             "The ASTRIDE® Gaming Chair with Adjustable Armrest is a high-performance ergonomic seating solution designed for gamers, streamers, professionals, and creators who spend extended hours at their desks.",
-        image: "https://pub-c853b438c28f4099b37f01f2c65a7031.r2.dev/products/1785180491676-gaming-chair-with-adjustable-armrest-Red-a842.webp",
+        image: "/products/gaming-black.png",
         preview: "https://pub-c853b438c28f4099b37f01f2c65a7031.r2.dev/products/1785180491681-gaming-chair-with-adjustable-armrest-Red-f826.webp",
         tagline: ["Soft Comfort", "Quiet Luxury", "Made to Rest"],
     },
@@ -91,7 +91,7 @@ const products = [
         title: "Study Chair",
         description:
             "The ASTRIDE® Ace Mid Back Office Chair is a versatile and ergonomic seating solution designed to provide comfort, support, and productivity across home offices, study rooms, and professional workspaces.",
-        image: "https://pub-c853b438c28f4099b37f01f2c65a7031.r2.dev/products/1785218360619-astride-ace-mid-back-office-chair-for-work-from-homestudy-chair-height-adjustable-revolving-chair-with-tilt-lock-heavy-duty-nylon-base-Black-26d1.webp",
+        image: "/products/staff.png",
         preview: "https://pub-c853b438c28f4099b37f01f2c65a7031.r2.dev/products/1785218360622-astride-ace-mid-back-office-chair-for-work-from-homestudy-chair-height-adjustable-revolving-chair-with-tilt-lock-heavy-duty-nylon-base-Black-58f9.webp",
         tagline: ["Outdoor Living", "Lasting Quality", "Modern Form"],
     },
@@ -101,7 +101,7 @@ const products = [
         title: "BAR STOOLS & CAFE CHAIR",
         description:
             "The ASTRIDE® Adjustable Swivel Bar Stool is a versatile and contemporary seating solution designed to enhance the comfort and style of modern homes, cafés, restaurants, bars, and commercial spaces.",
-        image: "https://pub-c853b438c28f4099b37f01f2c65a7031.r2.dev/products/1785219416299-adjustable-swivel-bar-stool-Black-1773.webp",
+        image: "/products/amica.png",
         preview: "https://pub-c853b438c28f4099b37f01f2c65a7031.r2.dev/products/1785219416306-adjustable-swivel-bar-stool-Black-663e.webp",
         tagline: ["Outdoor Living", "Lasting Quality", "Modern Form"],
     },
@@ -111,7 +111,7 @@ const products = [
         title: "BAR STOOLS & CAFE CHAIR",
         description:
             "The ASTRIDE® Rapid Modern High Bar Chair is a stylish and functional seating solution designed to complement modern dining areas, bars, and commercial spaces.",
-        image: "https://pub-c853b438c28f4099b37f01f2c65a7031.r2.dev/products/1785220469709-rapid-modern-high-bar-chair-for-dining-and-bar-counter-Black-a2b8.webp",
+        image: "/products/rapid.png",
         preview: "https://pub-c853b438c28f4099b37f01f2c65a7031.r2.dev/products/1785220469711-rapid-modern-high-bar-chair-for-dining-and-bar-counter-Black-1ddf.webp",
         tagline: ["Outdoor Living", "Lasting Quality", "Modern Form"],
     },

@@ -386,6 +386,262 @@ export const products = [
 
 
 {
+  id: "flex-pro-office-chair",
+  name: "Flex Pro Office Chair",
+  slug: "flex-pro-office-chair",
+  category: "Office Chairs",
+  subcategory: "Office Chairs",
+
+  shortDescription:
+    "The Flex Pro Office Chair is designed for comfortable, everyday performance in modern workspaces. Featuring a breathable mesh backrest, a cushioned seat, adjustable headrest and lumbar support, and a multi-lock reclining mechanism, it offers flexible seating for offices, home workstations, and study areas. Its modern design and smooth-rolling castors make it a practical addition to any professional workspace.",
+
+  defaultColor: "black",
+  rating: 4.7,
+  reviewsCount: 225,
+  price: 7499,
+  oldPrice: 14999,
+
+  defaultImage: "/products/Ergonomic-Office-Chair.png",
+
+  colors: [
+    {
+      id: "black",
+      name: "Black",
+      hex: "#202020",
+      sku: "ERG-CHAIR-BLK",
+      images: [
+        "/products/Ergonomic-Office-Chair.png",
+        "/products/Ergonomic-Office-Chair2.jpg",
+        "/products/Ergonomic-Office-Chair1.jpg",
+        "/products/Ergonomic-Office-Chair3.jpg",
+      ],
+    },
+  ],
+
+  specifications: [
+    { label: "Colour", value: "Black" },
+    { label: "Material", value: "Metal, Polypropylene" },
+    { label: "Frame Material", value: "Polypropylene" },
+    {
+      label: "Product Dimensions",
+      value: "64D x 66W x 118H Centimeters",
+    },
+    { label: "Size", value: "Standard" },
+    { label: "Item Weight", value: "17 Kilograms" },
+    {
+      label: "Special Features",
+      value: "Adjustable Headrest, Adjustable Lumbar, Back Support",
+    },
+    {
+      label: "Product Care Instructions",
+      value: "Wipe Clean",
+    },
+    { label: "Style", value: "Modern" },
+  ],
+
+  whyChoose: [
+    "BREATHABLE MESH BACKREST: The Flex Pro Office Chair features a breathable mesh back designed to encourage airflow, paired with a cushioned seat for comfortable everyday office use.",
+
+    "CUSTOMIZABLE SEATING COMFORT: The adjustable headrest and lumbar support help you personalize your seating position for daily desk work, meetings, and extended computer sessions.",
+
+    "MULTI-LOCK RECLINING MECHANISM: The reclining function allows you to adjust the backrest to your preferred position, with tilt tension adjustment for a more personalized seating experience.",
+
+    "ERGONOMIC ARMREST SUPPORT: The adjustable armrests help you find a suitable position for your arms while working, typing, or attending virtual meetings.",
+
+    "DURABLE EVERYDAY CONSTRUCTION: Designed with a sturdy frame, a supportive high-back design, and smooth-rolling caster wheels, the Flex Pro is suited to regular use in professional and home workspaces.",
+
+    "MODERN WORKSPACE DESIGN: The sleek black finish complements contemporary office interiors, making it a versatile choice for corporate offices, home offices, and study areas.",
+  ],
+
+  keyFeatures: [
+    {
+      number: "01",
+      title: "Breathable seating comfort",
+      description:
+        "A mesh backrest and cushioned seat combine airflow and comfortable support for everyday work and workstation use.",
+      icon: "Armchair",
+    },
+    {
+      number: "02",
+      title: "Flexible ergonomic adjustment",
+      color: true,
+      description:
+        "Adjustable headrest, lumbar support, armrests, and reclining functionality let you customize your seating position.",
+      icon: "SlidersHorizontal",
+    },
+    {
+      number: "03",
+      title: "Made for modern offices",
+      description:
+        "A high-back design, sturdy construction, and smooth-rolling castors make the Flex Pro a practical choice for professional workspaces.",
+      icon: "ShieldCheck",
+    },
+  ],
+
+  reviews: [
+    {
+      name: "Karan M.",
+      title: "Comfortable for daily work",
+      text: "The mesh backrest and cushioned seat make it a practical option for a modern office setup.",
+      rating: 5,
+    },
+    {
+      name: "Neha S.",
+      title: "Flexible adjustment options",
+      text: "The adjustable headrest and lumbar support are useful features for customizing the seating position.",
+      rating: 5,
+    },
+    {
+      name: "Rohit P.",
+      title: "Smart office design",
+      text: "The black finish and high-back styling give the chair a professional look that suits a workstation.",
+      rating: 4,
+    },
+    {
+      name: "Aisha K.",
+      title: "Practical and functional",
+      text: "The reclining function and rolling castors make the chair convenient for everyday office tasks.",
+      rating: 5,
+    },
+  ],
+},
+
+
+{
+  id: "excutive-office-chair",
+  name: "Executive Office Chair",
+  slug: "excutive-office-chair",
+  category: "Office Chairs",
+  subcategory: "Office Chairs",
+
+  shortDescription:
+    "The Executive Office Chair combines ergonomic back support, adjustable seating height, and durable construction for everyday professional use. Featuring a supportive backrest, a sturdy polypropylene frame, a Class 4 hydraulic gas spring, and smooth-rolling castors, it is designed to bring comfort and functionality to modern offices, executive workspaces, and home offices.",
+
+  defaultColor: "black",
+  rating: 4.7,
+  reviewsCount: 225,
+  price: 4199,
+  oldPrice: 9999,
+
+  defaultImage: "/products/staff.png",
+
+  colors: [
+    {
+      id: "black",
+      name: "Black",
+      hex: "#202020",
+      sku: "ACE-MB-BLK",
+      images: [
+        "/products/staff.png",
+        "/products/staff1.jpg",
+        "/products/staff2.jpg",
+        "/products/staff3.jpg",
+      ],
+    },
+  ],
+
+  // Specifications unchanged
+  specifications: [
+    { label: "Category", value: "Office seating" },
+    {
+      label: "Dimensions",
+      value:
+        "Length (18.5 inches), Width (18.5 inches), Seating Height (18 to 24 inches), Overall Height (36 inches)",
+    },
+    { label: "Recommended Uses", value: "Office" },
+    { label: "Colour", value: "Black" },
+    { label: "Back Style", value: "Comfort rest back" },
+    { label: "Frame Material", value: "Polypropylene" },
+    { label: "Material", value: "Nylon" },
+    {
+      label: "Product Dimensions",
+      value: "54D x 58W x 110H Centimeters",
+    },
+    { label: "Item Weight", value: "15 Kilograms" },
+    { label: "Size", value: "Standard" },
+    { label: "Special Feature", value: "Adjustable Height" },
+    { label: "Maximum Weight Capacity", value: "100 kg" },
+    { label: "Height Suitability", value: "5 ft to 5 ft 8 inches" },
+    {
+      label: "Gas Spring",
+      value: "BIFMA Certified Class 4 Hydraulic Gas Spring",
+    },
+    { label: "Castors", value: "BIFMA Certified 50 mm Wheel Castors" },
+    {
+      label: "Installation",
+      value: "DIY installation in approximately 10 minutes",
+    },
+  ],
+
+  whyChoose: [
+    "PROFESSIONAL DESIGN: The Executive Office Chair features a clean, professional appearance that fits naturally into executive offices, workstations, and home office environments.",
+
+    "ERGONOMIC BACK SUPPORT: The bionic curve backrest is designed to follow the natural contours of the spine, offering supportive seating throughout the working day.",
+
+    "ADJUSTABLE SEATING HEIGHT: Easily adjust the seat height between 18 and 24 inches to suit your desk and preferred working position.",
+
+    "DURABLE CONSTRUCTION: Built with a polypropylene mesh back, a BIFMA-certified Class 4 hydraulic gas spring, and BIFMA-certified 50 mm wheel castors for everyday office use.",
+
+    "STABILITY AND RELIABILITY: Designed for a maximum weight capacity of 100 kg, with components intended to support dependable everyday seating.",
+
+    "EASY DIY INSTALLATION: The chair is designed for straightforward self-assembly in approximately 10 minutes without requiring additional tools.",
+  ],
+
+  keyFeatures: [
+    {
+      number: "01",
+      title: "Executive office design",
+      description:
+        "A clean, professional design that complements executive cabins, corporate offices, and modern workstations.",
+      icon: "Armchair",
+    },
+    {
+      number: "02",
+      title: "Adjustable seating height",
+      color: true,
+      description:
+        "Customize your seating height for a more convenient working position with a practical height-adjustment mechanism.",
+      icon: "SlidersHorizontal",
+    },
+    {
+      number: "03",
+      title: "Durable everyday performance",
+      description:
+        "Features a polypropylene mesh back, a Class 4 hydraulic gas spring, and durable castors for everyday office functionality.",
+      icon: "ShieldCheck",
+    },
+  ],
+
+  reviews: [
+    {
+      name: "Karan M.",
+      title: "Professional office look",
+      text: "The black finish and simple design fit nicely into a professional office setup.",
+      rating: 5,
+    },
+    {
+      name: "Neha S.",
+      title: "Useful for daily work",
+      text: "The adjustable height is convenient, and the chair works well for a regular workstation.",
+      rating: 5,
+    },
+    {
+      name: "Rohit P.",
+      title: "Solid and functional",
+      text: "The mesh back, height adjustment, and rolling castors make it a practical office chair.",
+      rating: 4,
+    },
+    {
+      name: "Aisha K.",
+      title: "Easy to assemble",
+      text: "The assembly process is straightforward, making it convenient to set up in a home or office workspace.",
+      rating: 5,
+    },
+  ],
+},
+
+
+{
   id: "airsense-office-chair",
   name: "Airsense Office Chair",
   slug: "airsense-office-chair",
@@ -496,6 +752,130 @@ export const products = [
       name: "Aisha K.",
       title: "Practical for workspaces",
       text: "The rolling casters and adjustable seat make it suitable for everyday office use.",
+      rating: 5,
+    },
+  ],
+},
+
+
+{
+  id: "airsense-black-office-chair",
+  name: "Airsense Black Office Chair",
+  slug: "airsense-black-office-chair",
+  category: "Study Chairs",
+  subcategory: "Study Chairs",
+
+  shortDescription:
+    "The ASTRIDE Airsense Black Office Chair combines a breathable open-mesh backrest with a cushioned PU foam seat for everyday seating comfort. Its adjustable seat height, 360-degree swivel movement, and smooth-rolling casters make it a practical choice for study rooms, home offices, and modern workstations. With its sleek black finish and functional design, it brings comfort and convenience to your workspace.",
+
+  defaultColor: "black",
+  rating: 4.7,
+  reviewsCount: 225,
+  price: 3999,
+  oldPrice: 4999,
+
+  defaultImage: "/products/Airsense.png",
+
+  colors: [
+    {
+      id: "black",
+      name: "Black",
+      hex: "#202020",
+      sku: "AIRSENSE-CHR-BLK",
+      images: [
+        "/products/Airsense.png",
+        "/products/Airsense1.jpg",
+        "/products/Airsense2.png",
+        "/products/Airsense3.jpg",
+        "/products/Airsense4.jpg",
+      ],
+    },
+  ],
+
+  // Specifications unchanged
+  specifications: [
+    { label: "Brand", value: "ASTRIDE" },
+    { label: "Category", value: "Office seating" },
+    { label: "Colour", value: "Black" },
+    { label: "Material", value: "Polypropylene" },
+    { label: "Product Dimensions", value: "55D x 57W x 98H Centimeters" },
+    { label: "Size", value: "22 × 22.5 inches" },
+    { label: "Back Style", value: "Air Natural Back" },
+    {
+      label: "Special Features",
+      value: "Adjustable Height, Rolling, Seat Lock",
+    },
+    { label: "Product Care Instructions", value: "Wipe Clean" },
+    { label: "Net Quantity", value: "1 Piece" },
+    { label: "Seat Material Type", value: "PU Foam" },
+    { label: "Backrest", value: "Open mesh" },
+    { label: "Seat Height Adjustment", value: "Pneumatic" },
+    { label: "Swivel", value: "360-degree rotation" },
+    { label: "Base", value: "Caster base with smooth-rolling wheels" },
+  ],
+
+  whyChoose: [
+    "BREATHABLE MESH BACKREST: The Airsense Black Office Chair features an open-mesh backrest designed to encourage airflow, making it a practical choice for everyday study and office sessions.",
+
+    "COMFORTABLE PU FOAM SEAT: The padded PU foam seat provides cushioning for daily activities, whether you are studying, working on a computer, or managing office tasks.",
+
+    "ADJUSTABLE SEATING HEIGHT: The pneumatic height-adjustment mechanism allows you to adjust the seat position to suit your desk and preferred working setup.",
+
+    "360-DEGREE SWIVEL MOVEMENT: The swivel mechanism makes it convenient to turn and reach different areas of your workstation without repeatedly moving the chair.",
+
+    "SMOOTH-ROLLING CASTERS: The caster base supports convenient movement around your study area or office workspace.",
+
+    "SLEEK BLACK FINISH: The clean black design complements a variety of interiors, making the Airsense a versatile addition to study rooms, home offices, and professional workstations.",
+  ],
+
+  keyFeatures: [
+    {
+      number: "01",
+      title: "Breathable mesh backrest",
+      description:
+        "The open-mesh backrest encourages airflow and gives the Airsense chair a lightweight, modern look for everyday study and office use.",
+      icon: "Armchair",
+    },
+    {
+      number: "02",
+      title: "Customizable seating height",
+      color: true,
+      description:
+        "Pneumatic seat-height adjustment helps you find a suitable seating position for your desk, computer, or study table.",
+      icon: "SlidersHorizontal",
+    },
+    {
+      number: "03",
+      title: "Easy swivel and mobility",
+      description:
+        "The 360-degree swivel mechanism and smooth-rolling casters make moving around your workspace more convenient.",
+      icon: "Move",
+    },
+  ],
+
+  reviews: [
+    {
+      name: "Karan M.",
+      title: "Great for everyday study",
+      text: "The mesh back and adjustable seat make it a practical option for a study table and daily computer use.",
+      rating: 5,
+    },
+    {
+      name: "Neha S.",
+      title: "Simple and versatile",
+      text: "The black finish looks neat, and the height adjustment is useful for setting up a comfortable workstation.",
+      rating: 5,
+    },
+    {
+      name: "Rohit P.",
+      title: "Functional design",
+      text: "The mesh backrest and cushioned seat give the chair a practical design for everyday office tasks.",
+      rating: 4,
+    },
+    {
+      name: "Aisha K.",
+      title: "Convenient for home office",
+      text: "The swivel movement and rolling casters make it convenient to use around a desk or study area.",
       rating: 5,
     },
   ],
@@ -785,6 +1165,153 @@ export const products = [
   ],
 },
 
+
+{
+  id: "armrest-study-chair",
+  name: "Armrest Study Chair",
+  slug: "armrest-study-chair",
+  category: "Study Chairs",
+  subcategory: "study Chairs",
+
+  shortDescription:
+    "The ASTRIDE Armrest Study Chair is designed to bring comfort and functionality to your everyday study and work routine. Featuring a breathable mesh backrest, a cushioned PU foam seat, and adjustable armrests, it offers practical support for long study sessions and computer work. With adjustable lumbar support, head support, and seat height, this high-back chair is a versatile addition to study rooms, home offices, and modern workspaces.",
+
+  defaultColor: "red",
+  rating: 4.7,
+  reviewsCount: 225,
+  price: 6499,
+  oldPrice: 19999,
+
+  defaultImage: "/products/gaming-red.png",
+
+  colors: [
+    
+   
+    {
+      id: "red",
+      name: "Red",
+      hex: "#ED0909",
+      sku: "GAMING-CHAIR-RED",
+      images: [
+        "/products/gaming-red.png",
+        "/products/gaming-red1.jpg",
+        "/products/gaming-red2.jpg",
+        "/products/gaming-red3.jpg",
+      ],
+    },
+     {
+      id: "black",
+      name: "Black",
+      hex: "#000000",
+      sku: "GAMING-CHAIR-BLACK",
+      images: [
+        "/products/gaming-black.png",
+        "/products/gaming-black1.jpg",
+        "/products/gaming-black2.jpg",
+        "/products/gaming-black3.jpg",
+        "/products/gaming-black4.jpg",
+      ],
+    },
+  ],
+
+  specifications: [
+    { label: "Brand", value: "ASTRIDE" },
+    { label: "Category", value: "Gaming chair" },
+    { label: "Colour", value: "Grey" },
+    { label: "Furniture Finish", value: "Grey-White" },
+    { label: "Material", value: "Polyamide (Nylon)" },
+    { label: "Product Dimensions", value: "64D x 61W x 119H Centimeters" },
+    { label: "Size", value: "High Back" },
+    { label: "Back Style", value: "Mesh Back" },
+    {
+      label: "Special Features",
+      value: "Adjustable Lumbar, Adjustable Height, Adjustable Arm Rest, Adjustable Head Support",
+    },
+    { label: "Product Care Instructions", value: "Wipe Clean" },
+    { label: "Net Quantity", value: "1 Piece" },
+    {
+      label: "Seat Material Type",
+      value: "Breathable Microfibre Cloth Covered in PU Foam",
+    },
+    { label: "Recommended Uses", value: "Gaming, Office" },
+    { label: "Seat Height", value: "50.8 Centimeters" },
+    { label: "Seat Depth", value: "48.4 Centimeters" },
+    { label: "Seat Length", value: "64 Centimeters" },
+    { label: "Fill Material", value: "Polyurethane Foam" },
+    { label: "Backrest", value: "Reinforced breathable mesh" },
+    { label: "Hydraulic Gas Spring", value: "BIFMA Certified Class 4" },
+    { label: "Caster Wheels", value: "BIFMA Certified 60 mm Wheel Castors" },
+    { label: "Assembly", value: "DIY assembly with instruction manual" },
+  ],
+
+  whyChoose: [
+    "ERGONOMIC BACK SUPPORT: The high-back mesh design with adjustable lumbar support and head support is designed to accommodate a comfortable sitting position during study sessions and everyday computer work.",
+
+    "COMFORTABLE CUSHIONED SEAT: The PU foam-filled seat with breathable microfibre covering provides cushioning for daily studying, reading, and working at your desk.",
+
+    "ADJUSTABLE ARMRESTS: Adjustable armrests help you customize your seating position, while adjustable seat height, lumbar support, and head support offer additional flexibility.",
+
+    "DURABLE CONSTRUCTION: Built with polyamide (nylon), a reinforced mesh backrest, a BIFMA-certified Class 4 hydraulic gas spring, and BIFMA-certified 60 mm caster wheels for everyday functionality.",
+
+    "SMOOTH MOVEMENT: The caster-wheel base allows convenient movement around your study table or workstation, making everyday tasks easier to manage.",
+
+    "RED AND BLACK COLOR OPTIONS: Choose between bold red and classic black finishes to complement your study room, gaming corner, or home office setup.",
+  ],
+
+  keyFeatures: [
+    {
+      number: "01",
+      title: "Supportive high-back design",
+      description:
+        "The breathable mesh backrest, adjustable lumbar support, and head support provide flexibility for your everyday study and work setup.",
+      icon: "Armchair",
+    },
+    {
+      number: "02",
+      title: "Adjustable armrest comfort",
+      color: true,
+      description:
+        "Adjustable armrests, seat height, lumbar support, and head support help you customize your preferred seating position.",
+      icon: "SlidersHorizontal",
+    },
+    {
+      number: "03",
+      title: "Built for everyday use",
+      description:
+        "A durable nylon structure, Class 4 hydraulic gas spring, and 60 mm caster wheels support regular use in study and office spaces.",
+      icon: "ShieldCheck",
+    },
+  ],
+
+  reviews: [
+    {
+      name: "Karan M.",
+      title: "Comfortable for studying",
+      text: "The high-back design and adjustable armrests make it a practical option for a study table and computer setup.",
+      rating: 5,
+    },
+    {
+      name: "Neha S.",
+      title: "Useful adjustment features",
+      text: "The adjustable head support, lumbar support, and armrests offer flexibility for everyday desk work.",
+      rating: 5,
+    },
+    {
+      name: "Rohit P.",
+      title: "Stylish color options",
+      text: "The red and black options make it easy to choose a look that suits a study room or gaming corner.",
+      rating: 4,
+    },
+    {
+      name: "Aisha K.",
+      title: "Practical for daily use",
+      text: "The cushioned seat, mesh backrest, and rolling wheels make it a functional choice for studying and working.",
+      rating: 5,
+    },
+  ],
+},
+
+
 {
   id: "erizo-ergonomic-chair",
   name: "Erizo Ergonomic Chair",
@@ -911,6 +1438,127 @@ export const products = [
     },
   ],
 },
+
+
+{
+  id: "erizo-study-chair",
+  name: "Erizo Study Chair",
+  slug: "erizo-study-chair",
+  category: "Office Chairs",
+  subcategory: "Office Chairs",
+
+  shortDescription:
+    "The ASTRIDE Erizo Study Chair combines an ergonomic contoured backrest, breathable mesh, and a cushioned seat for comfortable everyday studying and desk work. Designed with supportive seating and a modern grey finish, it is a practical addition to study rooms, home offices, and contemporary workspaces.",
+
+  defaultColor: "whote",
+  rating: 4.7,
+  reviewsCount: 225,
+  price: 7999,
+  oldPrice: 29999,
+
+  defaultImage:   "/products/Erizo-white.png",
+
+  colors: [
+   {
+      id: "white",
+      name: "White",
+      hex: "#fff",
+      sku: "ERIZO-CHAIR-W",
+      images: [
+        "/products/Erizo-white.png",
+        "/products/Erizo-white1.jpg",
+        "/products/Erizo-white2.jpg",
+        "/products/Erizo-white3.jpg",
+        "/products/Erizo-white4.jpg",
+
+      ],
+    },
+  ],
+
+  specifications: [
+    { label: "Brand", value: "ASTRIDE" },
+    {
+      label: "Item Dimensions",
+      value: "64D x 66W x 124H Centimeters",
+    },
+    { label: "Size", value: "Standard" },
+    { label: "Item Weight", value: "17 Kilograms" },
+    { label: "Unit Count", value: "1 Piece" },
+    { label: "Seat Back Interior Height", value: "90 Centimetres" },
+    { label: "Seat Height", value: "47 Centimetres" },
+    { label: "Seat Depth", value: "50 Centimeters" },
+    { label: "Seat Length", value: "50 Centimetres" },
+    { label: "Arm Height", value: "25 Centimetres" },
+    { label: "Chair Backrest Width", value: "47 Centimetres" },
+  ],
+
+  whyChoose: [
+    "ERGONOMIC BACK SUPPORT: The contoured backrest is designed to follow the natural curve of the spine, offering supportive seating for studying, reading, and everyday desk work.",
+
+    "BREATHABLE MESH DESIGN: The mesh backrest encourages airflow, making the Erizo Study Chair a practical choice for daily use in study rooms and home workspaces.",
+
+    "CUSHIONED SEATING COMFORT: The molded seat provides cushioning for everyday activities, including studying, computer work, and online classes.",
+
+    "SUPPORTIVE HEADREST: The headrest is designed to provide additional head and neck support while working or studying at a desk.",
+
+    "MODERN GREY APPEARANCE: The grey color gives the chair a clean, versatile look that complements contemporary study tables, bedrooms, and home offices.",
+
+    "PRACTICAL EVERYDAY USE: Combining an ergonomic design, breathable mesh, and cushioned seating, the Erizo Study Chair is suited to everyday study and workstation needs.",
+  ],
+
+  keyFeatures: [
+    {
+      number: "01",
+      title: "Ergonomic back support",
+      description:
+        "The contoured backrest is designed to follow the natural curve of the spine for supportive seating during study sessions and desk work.",
+      icon: "Armchair",
+    },
+    {
+      number: "02",
+      title: "Breathable seating design",
+      color: true,
+      description:
+        "The mesh backrest and cushioned seat combine airflow and comfort for everyday studying and computer use.",
+      icon: "Wind",
+    },
+    {
+      number: "03",
+      title: "Modern study workspace",
+      description:
+        "The versatile grey finish and supportive design make this chair a practical fit for study rooms and home offices.",
+      icon: "BookOpen",
+    },
+  ],
+
+  reviews: [
+    {
+      name: "Karan M.",
+      title: "Comfortable for studying",
+      text: "The supportive backrest and cushioned seat make it a practical choice for a daily study setup.",
+      rating: 5,
+    },
+    {
+      name: "Neha S.",
+      title: "Clean and modern design",
+      text: "The grey finish looks neat and fits well with a modern study table and home workspace.",
+      rating: 5,
+    },
+    {
+      name: "Rohit P.",
+      title: "Good for desk work",
+      text: "The mesh backrest and ergonomic design make it a useful option for everyday computer work.",
+      rating: 4,
+    },
+    {
+      name: "Aisha K.",
+      title: "Suitable for a home study",
+      text: "The cushioned seat and supportive backrest make it a practical addition to a home study area.",
+      rating: 5,
+    },
+  ],
+},
+
 
 {
   id: "amica-high-bar-stool",

@@ -218,7 +218,7 @@ export default function Hero() {
                       }`}
                     >
                       <Link
-                        href="/shop"
+                        href="/products"
                         className="group inline-flex items-center gap-5 rounded-full bg-[#f39224] py-2 pl-7 pr-2 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:bg-[#df7c13] sm:py-2.5 sm:pl-8"
                       >
                         Explore Our Range

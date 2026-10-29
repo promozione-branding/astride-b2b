@@ -17,6 +17,7 @@ import {
     ChevronDown,
 } from "lucide-react";
 import { GiOfficeChair } from "react-icons/gi";
+import EnquiryPopup from "../EnquiryPopup";
 
 const navItems = [
     {
@@ -68,6 +69,7 @@ export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [openDropdown, setOpenDropdown] = useState(null);
+     const [enquiryOpen, setEnquiryOpen] = useState(false);
 
     // Homepage can be transparent at the top.
     // Every other route starts with a white navbar.
@@ -220,8 +222,8 @@ export default function Navbar() {
 
                     {/* RIGHT BUTTONS */}
                     <div className="relative z-10 flex items-center gap-3">
-                        <Link
-                            href="/contact-us"
+                        <button
+                            onClick={() => setEnquiryOpen(true)}
                             className={`hidden h-[48px] items-center justify-center gap-3 rounded-full px-7 text-[14px] font-semibold transition-all duration-300 hover:-translate-y-0.5 md:flex ${
                                 useWhiteNavbar
                                     ? "bg-[#b4e717] text-black hover:bg-neutral-100"
@@ -230,7 +232,7 @@ export default function Navbar() {
                         >
                             Contact Us
                             <ArrowUpRight size={18} />
-                        </Link>
+                        </button>
 
                         {/* MOBILE MENU BUTTON */}
                         <button
@@ -254,6 +256,11 @@ export default function Navbar() {
                         </button>
                     </div>
                 </motion.nav>
+                <EnquiryPopup
+                isOpen={enquiryOpen}
+                onClose={() => setEnquiryOpen(false)}
+            />
+
             </header>
 
             {/* MOBILE MENU */}

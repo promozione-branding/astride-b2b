@@ -3,6 +3,7 @@ import "./globals.css";
 import SmoothScroll from "@/components/main/SmoothScroll";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
+import { Toaster } from "react-hot-toast";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${poppins.variable}`}>
       <body>
+        <Toaster position="top-right" />
         <Navbar />
         <SmoothScroll />
         {children}

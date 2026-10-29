@@ -20,7 +20,7 @@ const stats = [
         value: "75,000+",
         label: "Orders delivered",
         detail: "Seating for homes and workspaces across India.",
-        image: "/banner/1.png",
+        image: "/1781008351275-office-chair.jpeg",
         imageAlt: "ASTRIDE chairs in a contemporary office",
         className: "lg:row-span-2",
         featured: true,
@@ -162,6 +162,7 @@ export default function About() {
                             alt="Astride ergonomic chair in a warm, light-filled interior"
                             fill
                             priority
+                            unoptimized
                             sizes="(max-width: 1024px) 100vw, 50vw"
                             className="object-cover z-10 object-right"
                         />

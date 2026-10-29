@@ -29,13 +29,13 @@ const navItems = [
         icon: GiOfficeChair,
         href: "/products",
         dropdown: [
-            { name: "Staff Chair", href: "/products?category=staff-chair" },
-            { name: "Office Chair", href: "/products?category=office-chair" },
-            { name: "Gaming Chair", href: "/products?category=gaming-chair" },
-            { name: "Study Chair", href: "/products?category=study-chair" },
+            { name: "Staff Chairs", href: "/products?category=staff-chairs" },
+            { name: "Office Chairs", href: "/products?category=office-chairs" },
+            { name: "Gaming Chairs", href: "/products?category=gaming-chairs" },
+            { name: "Study Chairs", href: "/products?category=study-chairs" },
             {
                 name: "Bar Stools & Cafe Chair",
-                href: "/products?category=bar-stools-cafe-chair",
+                href: "/products?category=bar-stools-and-cafe-chairs",
             },
         ],
     },

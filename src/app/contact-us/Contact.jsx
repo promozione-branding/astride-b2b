@@ -105,9 +105,9 @@ export default function Contact() {
                                 </ContactDetail>
                             </div>
 
-                            <div className="pointer-events-none absolute -bottom-4 -right-5 h-[220px] w-[220px] opacity-80 sm:h-[280px] sm:w-[280px]">
+                            <div className="pointer-events-none absolute -bottom-0 -right-5 h-[220px] w-[220px] opacity-80 sm:h-[280px] sm:w-[280px]">
                                 <Image
-                                    src="/5.png"
+                                    src="/products/Erizo-white.png"
                                     alt="ASTRIDE chair"
                                     fill
                                     sizes="(max-width: 640px) 220px, 280px"

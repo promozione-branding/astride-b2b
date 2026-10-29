@@ -43,12 +43,12 @@ const categories = [
 ];
 
 const helpfulLinks = [
-  { key: "About Us", href: "/" },
+  { key: "About Us", href: "/about-us" },
   { key: "Our Process", href: "/" },
-  { key: "Products", href: "/" },
+  { key: "Products", href: "/products" },
   { key: "New Arrivals", href: "/" },
   { key: "Best Sellers", href: "/" },
-  { key: "Contact Us", href: "/" },
+  { key: "Contact Us", href: "/contact-us" },
 ];
 
 const supportLinks = [

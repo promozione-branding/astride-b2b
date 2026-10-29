@@ -45,11 +45,12 @@ const categories = [
 
 const helpfulLinks = [
   { key: "About Us", href: "/about-us" },
-  { key: "Our Process", href: "/" },
+//   { key: "Our Process", href: "/" },
   { key: "Products", href: "/products" },
-  { key: "New Arrivals", href: "/" },
-  { key: "Best Sellers", href: "/" },
+//   { key: "New Arrivals", href: "/" },
+//   { key: "Best Sellers", href: "/" },
   { key: "Contact Us", href: "/contact-us" },
+  { key: "Our Articles", href: "/" },
 ];
 
 const supportLinks = [
@@ -132,40 +133,44 @@ export default function Footer() {
                         {/* Contact */}
                         <div className="mt-2 space-y-3">
 
+                            <a target="_blank"
+                                        rel="noreferrer" href="https://maps.app.goo.gl/R9HBpyrWzmpeUN3u7" className="flex items-center gap-3 text-[12px] leading-[1.5] text-white/80">
+                                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10">
+                                    <FiMapPin size={14} />
+                                </span>
+
+                                <span>
+                                   J-113 & 114, DSIIDC Industrial Area, Sector 4, Bawana, New Delhi, Delhi-110039
+                                </span>
+                            </a>
+
+
+
                             <a
-                                href="mailto:hello@astride.com"
+                                href="mailto:support@astride.in"
                                 className="group flex items-center gap-3 text-[12px] text-white/80 transition-colors hover:text-white"
                             >
                                 <span className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10">
                                     <FiMail size={14} />
                                 </span>
 
-                                hello@astride.com
+                              support@astride.in
                             </a>
 
 
                             <a
-                                href="tel:+911234567890"
+                                href="tel:+917311164111"
                                 className="group flex items-center gap-3 text-[12px] text-white/80 transition-colors hover:text-white"
                             >
                                 <span className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10">
                                     <FiPhone size={14} />
                                 </span>
 
-                                +91 12345 67890
+                                +91 73111 64111
                             </a>
 
 
-                            <div className="flex items-center gap-3 text-[12px] leading-[1.5] text-white/80">
-                                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/10">
-                                    <FiMapPin size={14} />
-                                </span>
-
-                                <span>
-                                    New Delhi, India
-                                </span>
-                            </div>
-
+                            
                         </div>
 
                     </motion.div>

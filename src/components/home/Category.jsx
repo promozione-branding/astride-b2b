@@ -6,6 +6,7 @@ import { Autoplay, EffectCreative } from "swiper/modules";
 import { ArrowRight } from "lucide-react";
 import "swiper/css";
 import Link from "next/link";
+import EnquiryPopup from "../EnquiryPopup";
 
 const categories = [
     {
@@ -148,6 +149,8 @@ const categories = [
 export default function CategoryShowcase() {
     const swiperRef = useRef(null);
     const [activeIndex, setActiveIndex] = useState(0);
+         const [enquiryOpen, setEnquiryOpen] = useState(false);
+
 
     const activeCategory = categories[activeIndex];
 
@@ -188,7 +191,7 @@ export default function CategoryShowcase() {
                                 Explore <ArrowRight size={15} />
                             </Link>
 
-                            <button className="bg-white flex items-center gap-3 px-6 py-3 rounded-full border transition-all duration-300 border-black text-sm hover:bg-black hover:text-white">
+                            <button onClick={() => setEnquiryOpen(true)} className="bg-white flex items-center gap-3 px-6 py-3 rounded-full border transition-all duration-300 border-black text-sm hover:bg-black hover:text-white">
                                 Inquiry Now  <ArrowRight size={15} />
                             </button>
                         </div>
@@ -323,6 +326,10 @@ export default function CategoryShowcase() {
                     {activeCategory.name}
                 </span>
             </div>
+
+              <EnquiryPopup
+                isOpen={enquiryOpen}
+                onClose={() => setEnquiryOpen(false)}/>
 
         </section>
     );

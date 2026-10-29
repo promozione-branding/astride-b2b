@@ -95,7 +95,7 @@ export default function ChairHero({
         className="absolute right-6 top-8 z-30 sm:right-12 lg:right-20"
       >
         <Link
-          href="/contact"
+           href="tel:+917311164111"
           className="group flex items-center gap-3 rounded-full border border-black/15 bg-white/50 py-2 pl-5 pr-2 text-xs font-medium text-black backdrop-blur-md transition-all hover:bg-black hover:text-white"
         >
           Let's Talk

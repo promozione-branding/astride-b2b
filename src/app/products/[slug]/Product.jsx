@@ -18,6 +18,7 @@ import {
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import ContactSection from "@/components/home/ContactSection";
+import EnquiryPopup from "@/components/EnquiryPopup";
 
 const whyAstride = [
     {
@@ -48,6 +49,8 @@ export default function Product({ product }) {
     const swiperRef = useRef(null);
     const [activeImage, setActiveImage] = useState(0);
     const [activeTab, setActiveTab] = useState("details");
+         const [enquiryOpen, setEnquiryOpen] = useState(false);
+
     const [selectedColor, setSelectedColor] = useState(
         product.defaultColor ?? product.colors?.[0]?.id ?? ""
     );
@@ -292,7 +295,7 @@ export default function Product({ product }) {
                             </span>
                         </div>
 
-                        <div className="flex gap-4 items-center">
+                        {/* <div className="flex gap-4 items-center">
                             <div className="mt-2 flex items-end gap-3">
                                 <div className="flex items-baseline gap-2">
                                     <span className="text-[28px] font-semibold tracking-[-0.06em] text-black">
@@ -302,11 +305,11 @@ export default function Product({ product }) {
                                 </div>
                             </div>
                             <p className="rounded-md text-sm mt-1 text-white bg-[#1c4b42] p-1.5">You save ₹{product.oldPrice - product.price}</p>
-                        </div>
+                        </div> */}
 
-                        <p className="mt-1 text-xs uppercase tracking-[0.12em] text-black/45">
+                        {/* <p className="mt-1 text-xs uppercase tracking-[0.12em] text-black/45">
                             Inclusive of all taxes.
-                        </p>
+                        </p> */}
 
                         <div className="mt-4">
                             <p className="mb-3 text-[10px] font-medium uppercase tracking-[0.18em] text-black/45">
@@ -362,8 +365,8 @@ export default function Product({ product }) {
                         </div>
 
                         <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-                            <Link
-                                href="/contact-us"
+                            <button
+                               onClick={() => setEnquiryOpen(true)}
                                 className="group inline-flex min-h-12 flex-1 items-center justify-center gap-3 rounded-full bg-[#1c4b42] px-6 py-3 text-[10px] font-medium uppercase tracking-[0.13em] text-white transition hover:bg-[#000] hover:text-white"
                             >
                                 Request a quote
@@ -371,7 +374,7 @@ export default function Product({ product }) {
                                     size={15}
                                     className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                                 />
-                            </Link>
+                            </button>
                             <Link
                                 href="/products"
                                 className="inline-flex min-h-12 items-center justify-center rounded-full border border-black/15 px-6 py-3 text-[10px] font-medium uppercase tracking-[0.13em] transition hover:border-black"
@@ -679,6 +682,10 @@ export default function Product({ product }) {
             <div className="mt-5 rounded-md">
                 <ContactSection />
             </div>
+
+              <EnquiryPopup
+                isOpen={enquiryOpen}
+                onClose={() => setEnquiryOpen(false)}/>
 
         </main>
     );

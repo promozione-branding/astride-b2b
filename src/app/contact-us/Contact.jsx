@@ -132,7 +132,7 @@ export default function Contact() {
                             </h1>
                         </div>
 
-                        <p className="max-w-[390px] pb-1 text-sm leading-7 text-[#000] lg:justify-self-end">
+                        <p className="max-w-[390px] pb-1 text-sm leading-7 text-[#000] md:pr-40 ">
                             Questions about our chairs, an order, or a
                             business enquiry? Our team is here to help
                             you find the right answer.
@@ -409,7 +409,7 @@ export default function Contact() {
                     <div className="h-[320px] overflow-hidden rounded-[22px] border border-black/[0.08] bg-[#efede9] sm:h-[420px]">
                         <iframe
                             title="Map showing the ASTRIDE office in Bawana, New Delhi"
-                            src="https://maps.google.com/maps?q=J-113%20%26%20114%2C%20DSIIDC%20Industrial%20Area%2C%20Sector%204%2C%20Bawana%2C%20New%20Delhi%2C%20Delhi-110039&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3496.7279551912648!2d77.0596778749625!3d28.787373177033373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d07419efaff77%3A0x6170600600072515!2sAstride%20Furniture!5e0!3m2!1sen!2sus!4v1793267147988!5m2!1sen!2sus"
                             width="100%"
                             height="100%"
                             loading="lazy"

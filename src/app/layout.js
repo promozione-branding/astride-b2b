@@ -4,6 +4,7 @@ import SmoothScroll from "@/components/main/SmoothScroll";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 import { Toaster } from "react-hot-toast";
+import FloatingContactButtons from "@/components/FloatingContactButtons";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${poppins.variable}`}>
       <body>
         <Toaster position="top-right" />
+        <FloatingContactButtons/>
         <Navbar />
         <SmoothScroll />
         {children}

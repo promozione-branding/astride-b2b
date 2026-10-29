@@ -57,12 +57,7 @@ const navItems = [
         name: "About",
         icon: Info,
         href: "/about-us",
-        dropdown: [
-            { name: "Our Story", href: "/about-us#our-story" },
-            { name: "Who we are", href: "/about-us#who-we-are" },
-            { name: "Our Philosophy", href: "/about-us#our-philosophy" },
-            { name: "Team", href: "/about-us#team" },
-        ],
+        
     },
     {
         name: "Our Articles",

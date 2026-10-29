@@ -80,19 +80,19 @@ export default function ContactSection() {
                             <ContactInfo
                                 icon={<FiMail size={16} />}
                                 label="Email"
-                                value="hello@astride.in"
+                                value="support@astride.in"
                             />
 
                             <ContactInfo
                                 icon={<FiPhone size={16} />}
                                 label="Phone"
-                                value="+91 00000 00000"
+                                value="+91 73111 64111"
                             />
 
                             <ContactInfo
                                 icon={<FiMapPin size={16} />}
                                 label="Visit Us"
-                                value="New Delhi, India"
+                                value="J-113 & 114, DSIIDC Industrial Area, Sector 4, Bawana, New Delhi, Delhi-110039"
                             />
 
                         </div>
@@ -338,7 +338,7 @@ function ContactInfo({
     value,
 }) {
     return (
-        <div className="flex items-center gap-4">
+        <div className="flex w-55 items-center gap-4">
 
             <div
                 className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-white/70"

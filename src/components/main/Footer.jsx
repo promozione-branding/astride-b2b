@@ -20,21 +20,35 @@ import {
 } from "react-icons/fi";
 
 const categories = [
-    "Office Chairs",
-    "Executive Chairs",
-    "Ergonomic Chairs",
-    "Visitor Chairs",
-    "Lounge Chairs",
-    "Dining Chairs",
+  {
+    key: "Staff Chairs",
+    href: "/products?category=staff-chairs",
+  },
+  {
+    key: "Office Chairs",
+    href: "/products?category=office-chairs",
+  },
+  {
+    key: "Gaming Chairs",
+    href: "/products?category=gaming-chairs",
+  },
+  {
+    key: "Study Chairs",
+    href: "/products?category=study-chairs",
+  },
+  {
+    key: "Bar Stools & Cafe Chairs",
+    href: "/products?category=bar-stools-and-cafe-chairs",
+  },
 ];
 
 const helpfulLinks = [
-    "About Us",
-    "Our Process",
-    "Products",
-    "New Arrivals",
-    "Best Sellers",
-    "Contact Us",
+  { key: "About Us", href: "/" },
+  { key: "Our Process", href: "/" },
+  { key: "Products", href: "/" },
+  { key: "New Arrivals", href: "/" },
+  { key: "Best Sellers", href: "/" },
+  { key: "Contact Us", href: "/" },
 ];
 
 const supportLinks = [
@@ -310,11 +324,11 @@ function FooterColumn({ title, items, delay = 0 }) {
                     <li key={item}>
 
                         <a
-                            href="#"
+                            href={item.href}
                             className="group flex w-fit items-center gap-2 text-[12px] text-white/85 transition-colors duration-300 hover:text-white"
                         >
                             <span>
-                                {item}
+                                {item.key}
                             </span>
 
                             <FiArrowUpRight

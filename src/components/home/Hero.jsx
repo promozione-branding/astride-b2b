@@ -63,11 +63,7 @@ const features = [
     title: "Premium",
     subtitle: "Quality",
   },
-  {
-    icon: UsersRound,
-    title: "Ideal for",
-    subtitle: "Workspaces",
-  },
+ 
 ];
 
 export default function Hero() {

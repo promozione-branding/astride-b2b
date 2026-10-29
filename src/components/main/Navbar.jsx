@@ -29,27 +29,27 @@ const navItems = [
     {
         name: "Categories",
         icon: GiOfficeChair,
-        href: "/products",
+        href: "/category",
         dropdown: [
             {
                 name: "Staff Chairs",
-                href: `/products/${categorySlugs["Staff Chairs"]}`,
+                href: `/category/${categorySlugs["Staff Chairs"]}`,
             },
             {
                 name: "Office Chairs",
-                href: `/products/${categorySlugs["Office Chairs"]}`,
+                href: `/category/${categorySlugs["Office Chairs"]}`,
             },
             {
                 name: "Gaming Chairs",
-                href: `/products/${categorySlugs["Gaming Chairs"]}`,
+                href: `/category/${categorySlugs["Gaming Chairs"]}`,
             },
             {
                 name: "Study Chairs",
-                href: `/products/${categorySlugs["Study Chairs"]}`,
+                href: `/category/${categorySlugs["Study Chairs"]}`,
             },
             {
                 name: "Bar Stools & Cafe Chair",
-                href: `/products/${categorySlugs["Bar Stools & Cafe Chairs"]}`,
+                href: `/category/${categorySlugs["Bar Stools & Cafe Chairs"]}`,
             },
         ],
     },

@@ -347,14 +347,9 @@ export default function FurnitureRules() {
                             }}
                             className="relative mt-7 h-[250px] w-full overflow-hidden rounded-[100px] bg-[#222] shadow-[0_18px_45px_rgba(0,0,0,0.06)] sm:h-[310px] sm:rounded-[150px] lg:h-[357px] lg:w-180 lg:rounded-[200px]"
                         >
+                            <img src="/group.webp" alt="" className="object-cover" />
                             {/* YouTube */}
-                            <iframe
-                                src="https://www.youtube.com/embed/1weP2jgyQrs?autoplay=0&controls=1&rel=0&modestbranding=1&playsinline=1"
-                                title="SØLREM furniture collection"
-                                className="absolute inset-0 h-full w-full border-0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen
-                            />
+                          
                         </motion.div>
                     </div>
                 </div>

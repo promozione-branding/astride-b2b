@@ -308,11 +308,13 @@ export default function Contact() {
                                             className="w-full border-b border-black/15 bg-transparent py-3 text-[13px] text-[#332a21] outline-none transition-colors focus:border-[#927551]"
                                         >
                                             <option>
-                                                Product / bulk enquiry
+                                                Product
                                             </option>
-                                            <option>Order support</option>
-                                            <option>Warranty</option>
-                                            <option>Other</option>
+                                            <option>Staff Chairs</option>
+                                            <option>Office Chairs</option>
+                                            <option>Gaming Chairs</option>
+                                            <option>Study Chairs</option>
+                                            <option>Bar Stools & Cafe Chairs</option>
                                         </select>
                                     </div>
                                 </div>

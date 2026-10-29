@@ -63,28 +63,20 @@ const socialLinks = [
     {
         name: "Instagram",
         icon: FaInstagram,
-        href: "#",
+        href: "https://www.instagram.com/astride.furniture/",
     },
     {
         name: "Facebook",
         icon: FaFacebookF,
-        href: "#",
+        href: "https://www.facebook.com/Astride.furniture",
     },
     {
         name: "YouTube",
         icon: FaYoutube,
-        href: "#",
+        href: "https://www.youtube.com/@astride.furniture",
     },
-    {
-        name: "LinkedIn",
-        icon: FaLinkedinIn,
-        href: "#",
-    },
-    {
-        name: "Pinterest",
-        icon: FaPinterestP,
-        href: "#",
-    },
+   
+
 ];
 
 export default function Footer() {

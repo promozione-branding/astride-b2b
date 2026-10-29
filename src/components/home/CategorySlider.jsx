@@ -8,11 +8,13 @@ import "swiper/css";
 import "swiper/css/navigation";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { categorySlugs } from "../../../data/category-slugs";
 
 export default function CategorySlider() {
     const categories = [
         {
             id: 1,
+            category: "Staff Chairs",
             name: "Staff Chair",
             title: "Transform",
             highlight: "Your Workspace",
@@ -22,6 +24,7 @@ export default function CategorySlider() {
         },
         {
             id: 2,
+            category: "Office Chairs",
             name: "Office Chair",
             title: "Transform",
             highlight: "Your Office",
@@ -31,6 +34,7 @@ export default function CategorySlider() {
         },
         {
             id: 3,
+            category: "Gaming Chairs",
             name: "Gaming Chair",
             title: "Upgrade",
             highlight: "Your Gaming Setup",
@@ -40,6 +44,7 @@ export default function CategorySlider() {
         },
         {
             id: 4,
+            category: "Study Chairs",
             name: "Study Chair",
             title: "Create",
             highlight: "Your Study Space",
@@ -49,6 +54,7 @@ export default function CategorySlider() {
         },
         {
             id: 5,
+            category: "Bar Stools & Cafe Chairs",
             name: "Bar Stool & Cafe Chair",
             title: "Elevate",
             highlight: "Your Bar Area",
@@ -106,7 +112,10 @@ export default function CategorySlider() {
             >
                 {categories.map((category) => (
                     <SwiperSlide key={category.id}>
-                        <Link href="/products" className="group flex justify-center">
+                        <Link
+                            href={`/products/${categorySlugs[category.category]}`}
+                            className="group flex justify-center"
+                        >
                             <div className="relative aspect-square w-full max-w-[300px] overflow-hidden rounded-full">
 
                                 {/* Image */}

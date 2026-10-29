@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import { GiOfficeChair } from "react-icons/gi";
 import EnquiryPopup from "../EnquiryPopup";
+import { categorySlugs } from "../../../data/category-slugs";
 
 const navItems = [
     {
@@ -30,13 +31,25 @@ const navItems = [
         icon: GiOfficeChair,
         href: "/products",
         dropdown: [
-            { name: "Staff Chairs", href: "/products?category=staff-chairs" },
-            { name: "Office Chairs", href: "/products?category=office-chairs" },
-            { name: "Gaming Chairs", href: "/products?category=gaming-chairs" },
-            { name: "Study Chairs", href: "/products?category=study-chairs" },
+            {
+                name: "Staff Chairs",
+                href: `/products/${categorySlugs["Staff Chairs"]}`,
+            },
+            {
+                name: "Office Chairs",
+                href: `/products/${categorySlugs["Office Chairs"]}`,
+            },
+            {
+                name: "Gaming Chairs",
+                href: `/products/${categorySlugs["Gaming Chairs"]}`,
+            },
+            {
+                name: "Study Chairs",
+                href: `/products/${categorySlugs["Study Chairs"]}`,
+            },
             {
                 name: "Bar Stools & Cafe Chair",
-                href: "/products?category=bar-stools-and-cafe-chairs",
+                href: `/products/${categorySlugs["Bar Stools & Cafe Chairs"]}`,
             },
         ],
     },

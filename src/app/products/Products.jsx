@@ -8,6 +8,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, Search } from "lucide-react";
 import { categories, products } from "../../../data/data";
+import { categorySlugs } from "../../../data/category-slugs";
 
 function slugify(value = "") {
     return value
@@ -18,11 +19,12 @@ function slugify(value = "") {
         .replace(/^-|-$/g, "");
 }
 
-function ProductsContent() {
+function ProductsContent({ initialCategorySlug }) {
     const router = useRouter();
     const searchParams = useSearchParams();
 
-    const categoryParam = searchParams.get("category");
+    const categoryParam =
+        initialCategorySlug || searchParams.get("category");
 
     const [activeCategory, setActiveCategory] = useState("All Products");
     const [searchQuery, setSearchQuery] = useState("");
@@ -37,7 +39,8 @@ function ProductsContent() {
         const matchedCategory = categories.find(
             (category) =>
                 category !== "All Products" &&
-                slugify(category) === slugify(categoryParam)
+                (categorySlugs[category] === categoryParam ||
+                    slugify(category) === slugify(categoryParam))
         );
 
         setActiveCategory(matchedCategory || "All Products");
@@ -45,20 +48,12 @@ function ProductsContent() {
 
     // Update the URL when a category is selected.
     const handleCategoryChange = (category) => {
-        const params = new URLSearchParams(searchParams.toString());
+        const categoryPath =
+            category === "All Products"
+                ? "/products"
+                : `/products/${categorySlugs[category]}`;
 
-        if (category === "All Products") {
-            params.delete("category");
-        } else {
-            params.set("category", slugify(category));
-        }
-
-        const queryString = params.toString();
-
-        router.push(
-            queryString ? `/products?${queryString}` : "/products",
-            { scroll: false }
-        );
+        router.push(categoryPath, { scroll: false });
     };
 
     // Filter products by category and search query.
@@ -345,7 +340,7 @@ function ProductsContent() {
 }
 
 // Suspense supports useSearchParams during Next.js prerendering.
-export default function Products() {
+export default function Products({ initialCategorySlug }) {
     return (
         <Suspense
             fallback={
@@ -357,7 +352,7 @@ export default function Products() {
                 </main>
             }
         >
-            <ProductsContent />
+            <ProductsContent initialCategorySlug={initialCategorySlug} />
         </Suspense>
     );
 }

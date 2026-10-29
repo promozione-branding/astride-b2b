@@ -18,27 +18,28 @@ import {
     FiMapPin,
     FiArrowRight,
 } from "react-icons/fi";
+import { categorySlugs } from "../../../data/category-slugs";
 
 const categories = [
   {
     key: "Staff Chairs",
-    href: "/products?category=staff-chairs",
+    href: `/products/${categorySlugs["Staff Chairs"]}`,
   },
   {
     key: "Office Chairs",
-    href: "/products?category=office-chairs",
+    href: `/products/${categorySlugs["Office Chairs"]}`,
   },
   {
     key: "Gaming Chairs",
-    href: "/products?category=gaming-chairs",
+    href: `/products/${categorySlugs["Gaming Chairs"]}`,
   },
   {
     key: "Study Chairs",
-    href: "/products?category=study-chairs",
+    href: `/products/${categorySlugs["Study Chairs"]}`,
   },
   {
     key: "Bar Stools & Cafe Chairs",
-    href: "/products?category=bar-stools-and-cafe-chairs",
+    href: `/products/${categorySlugs["Bar Stools & Cafe Chairs"]}`,
   },
 ];
 

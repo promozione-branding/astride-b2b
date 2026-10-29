@@ -9,10 +9,6 @@ export const categories = [
   "Bar Stools & Cafe Chairs",
 ];
 
-
-
-
-
 export const products = [
   // {
   //   id: "chair-001",
